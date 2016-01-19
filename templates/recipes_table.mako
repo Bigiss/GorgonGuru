@@ -1,11 +1,23 @@
 <%!
     from gorgon.utils import myescape, itemlink, build_ingredient
 %>
-
+<div class="page-header">
+  <h1>Recipes</h1>
+  <p class="lead">Use the recipes table to quickly find recipes of your interest. The search box on your right is your friend:
+  <ul>
+    <li>Type "Blacksmithing" on the search box to find all recipes of the Blacksmithing class or that contain the word</li>
+    <li>Type "Red Apple" to find all recipes you could craft with that <span class="itemtooltip" rel="items/item_5309.html">Red Apple</span> you just picked</li>
+  </ul>
+</div>
 <script>
+  // Generate the table
   $(document).ready(function() {
     $('#recipes').DataTable({
       data: dataSet,
+      dom: "<'row'<'col-sm-5'l><'col-sm-1'f><'col-sm-6'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>",
+      fixedHeader: {
+          headerOffset: $('#navMenu').outerHeight()
+      },
       columns: [
         { title: "Skill" },
         { title: "Level" },
@@ -37,8 +49,10 @@
               classes: "qtip-tipsy"
             }
         });
-    })
+    });
+
   });
+
 
   var dataSet = [
 
@@ -51,5 +65,5 @@
 % endfor
   ];
 </script>
-    <table id="recipes" class="display" cellspacing="0" width="100%">
+    <table id="recipes" class="display compact table table-striped table-bordered" cellspacing="0" width="100%">
     </table>

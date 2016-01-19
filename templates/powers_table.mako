@@ -1,11 +1,22 @@
 <%!
     from gorgon.utils import myescape, itemlink, build_ingredient
 %>
+<div class="page-header">
+  <h1>Mods</h1>
+  <p class="lead">Use the following table to list all mods for a particlar skill.</p>
+  <ul>
+    <li>Type "See Red" in the search box to find all mods for this skill</li>
+  </ul>
+</div>
 
 <script>
   $(document).ready(function() {
     $('#mods').DataTable({
       data: dataSet,
+      dom: "<'row'<'col-sm-5'l><'col-sm-1'f><'col-sm-6'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>",
+      fixedHeader: {
+          headerOffset: $('#navMenu').outerHeight()
+      },
       columns: [
         { title: "Skill" },
         { title: "Prefix" },
@@ -46,5 +57,5 @@
   ];
 </script>
 
-    <table id="mods" class="display" cellspacing="0" width="100%">
+    <table id="mods" class="display compact table table-striped table-bordered" cellspacing="0" width="100%">
     </table>

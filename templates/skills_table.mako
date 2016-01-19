@@ -35,7 +35,7 @@
 %     endfor
   ];
 </script>
-    <table id="skill${skill.id}" class="display" cellspacing="0" width="100%">
+    <table id="skill${skill.id}" class="display compact table table-striped table-bordered" cellspacing="0" width="100%">
     </table>
 
 %   endif
