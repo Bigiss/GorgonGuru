@@ -53,7 +53,6 @@
 
   });
 
-
   var dataSet = [
 
 % for recipe in recipes:

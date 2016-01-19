@@ -46,8 +46,6 @@
         });
       });
     </script>
-
-
   </head>
   <body>
 
