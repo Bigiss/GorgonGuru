@@ -1,5 +1,6 @@
 import re
 
+
 def myescape(text):
     return text.replace(u"\n", u'<br>').replace(u'"', u'\\"')
 
@@ -16,5 +17,6 @@ def build_ingredient(ingredient):
 
 def colorize(text):
     def colorizer(matchobj):
-      return u'<span class="highlight">%s</span>' % matchobj.group(0)
+        return u'<span class="highlight">%s</span>' % matchobj.group(0)
+
     return re.sub("([0-9]+%?)", colorizer, text)
