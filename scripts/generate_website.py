@@ -54,12 +54,13 @@ if __name__ == "__main__":
             Output("items.html", reporter.ItemsReport())
         if "powers" in args.assets:
             Output("powers.html", reporter.PowersReport())
-        if "skills" in args.assets:
-            Output("skills.html", reporter.SkillsReport())
         if "abilities" in args.assets:
             Output("abilities.html", reporter.AbilitiesReport())
         if "recipes" in args.assets:
             Output("recipes.html", reporter.RecipesReport())
+        if not args.dry and "skills" in args.assets:
+            reporter.DumpSkills(os.path.join(args.version_output_directory, "skills/"))
+
         if not args.dry and "tooltips" in args.assets:
             reporter.DumpItems(os.path.join(args.version_output_directory, "items/"))
 

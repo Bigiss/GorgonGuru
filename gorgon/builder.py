@@ -12,11 +12,12 @@ def html(func):
     def f(*args, **kwargs):
         (builder,) = args
         header = Template(filename="templates/header.mako").render(
-                home_location="/", items_location="items.html",
-                skills_location="skills.html",
-                powers_location="powers.html",
-                recipes_location="recipes.html",
-                abilities_location="abilities.html")
+            home_location="/", items_location="/items.html",
+            skills_location="/skills.html",
+            powers_location="/powers.html",
+            recipes_location="/recipes.html",
+            abilities_location="/abilities.html",
+            parser=builder.parser)
         footer = Template(filename="templates/footer.mako").render()
         return header + func(*args, **kwargs) + footer
 
@@ -44,9 +45,21 @@ class Builder(object):
     def PowersReport(self):
         return Template(filename="templates/powers_table.mako").render(powers=self.parser.powers.values())
 
-    @html
-    def SkillsReport(self):
-        return Template(filename="templates/skills_table.mako").render(skills=self.parser.skills.values())
+    def DumpSkills(self, directory):
+        print "Dumping skills to directory: %s" % directory
+        try:
+            os.makedirs(directory)
+        except OSError:
+            pass
+
+        for skill in self.parser.skills.values():
+            if not skill.id:
+                continue
+
+            with codecs.open(os.path.join(directory, "%d.html" % skill.id), "wb", encoding="utf-8") as fd:
+                skill_page = Template(filename="templates/skill_page.mako").render(skill=skill, skills=self.parser.skills)
+                content = html(lambda x:skill_page)(self)
+                fd.write(content)
 
     @html
     def AbilitiesReport(self):
@@ -73,7 +86,7 @@ class Builder(object):
             for skill_base, chance, source in ability.mods["SkillBase"]:
                 if chance < 1.0:
                     percent_mods.append(
-                        '<span title="%s">%d%% (%d%%)</span>' % (source, skill_base * 100, chance * 100))
+                            '<span title="%s">%d%% (%d%%)</span>' % (source, skill_base * 100, chance * 100))
                 else:
                     percent_mods.append('<span title="%s">%d%%</span>' % (source, skill_base * 100))
 
@@ -81,7 +94,7 @@ class Builder(object):
             for flat_bonus, flat_chance, source in ability.mods["SkillFlat"]:
                 if flat_chance < 1.0:
                     flat_mods.append(
-                        '<span title="%s">%d (%d%%)</span>' % (source, flat_bonus * 100, flat_chance * 100))
+                            '<span title="%s">%d (%d%%)</span>' % (source, flat_bonus * 100, flat_chance * 100))
                 else:
                     flat_mods.append('<span title="%s">%d</span>' % (source, flat_bonus))
 

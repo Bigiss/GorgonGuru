@@ -60,10 +60,63 @@
           </button>
           <a class="navbar-brand" href="${home_location}">GorgonEye <span class="label label-danger">BETA</span></a>
         </div>
+<%
+    combat_skills = sorted([s for s in parser.skills.values() if s.combat and not s.parents], key=lambda x:x.name)
+    crafting_skills = sorted([s for s in parser.skills.values() if s.crafting and not s.parents], key=lambda x:x.name)
+    foraging_skills = sorted([s for s in parser.skills.values() if s.foraging and not s.parents], key=lambda x:x.name)
+    other_skills = sorted([s for s in parser.skills.values() if not s.crafting and not s.combat and not s.foraging and not s.parents],
+                          key=lambda x:x.name)
+%>
+
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="${items_location}" title="View and search all items">Items</a></li>
-            <li><a href="${skills_location}" title="Explore every skill">Skills</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" title="Explore every skill">
+                    Skills <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li class="dropdown-submenu">
+                        <a href="#">Combat</a>
+                        <ul class="dropdown-menu">
+% for skill in combat_skills:
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+% endfor
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#">Crafting</a>
+                        <ul class="dropdown-menu">
+% for skill in crafting_skills:
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+% endfor
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#">Foraging</a>
+                        <ul class="dropdown-menu">
+% for skill in foraging_skills:
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+% endfor
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#">Other (A..M)</a>
+                        <ul class="dropdown-menu">
+% for skill in [s for s in other_skills if re.match("[A-Ma-m]", s.name[0])]:
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+% endfor
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#">Other (N..Z)</a>
+                        <ul class="dropdown-menu">
+% for skill in [s for s in other_skills if re.match("[N-Zn-z]", s.name[0])]:
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+% endfor
+                        </ul>
+                    </li>                </ul>
+            </li>
             <li><a href="${abilities_location}">Abilities</a></li>
             <li><a href="${powers_location}">Mods</a></li>
             <li><a href="${recipes_location}">Recipes</a></li>

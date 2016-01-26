@@ -8,6 +8,31 @@ from gorgon import model
 
 
 class GorgonJsonParser(object):
+    CRAFTING_SKILLS = [
+        "Alchemy",
+        "Artistry",
+        "Blacksmithing",
+        "BuckleArtistry",
+        "Carpentry",
+        "Cheesemaking",
+        "Cooking",
+        "DyeMaking",
+        "Fletching",
+        "Leatherworking",
+        "Mycology",
+        "Tailoring",
+        "Tanning",
+        "Textiles",
+        "Toolcrafting"]
+
+    FORAGING_SKILLS = [
+        "Butchering",
+        "Fishing",
+        "Foraging",
+        "Geology",
+        "Mining",
+        "Surveying"]
+
     def __init__(self, version=None):
         self.version = version
         self.attributes = dict()
@@ -41,6 +66,7 @@ class GorgonJsonParser(object):
         self.ParseEffects()
         self.ParseAbilities()
         self.ParseSkills()
+        self.LinkSkills()
         self.ParseTSysClientInfo()
         self.ParseRecipes()
 
@@ -262,26 +288,40 @@ class GorgonJsonParser(object):
             _rewards = skill_data.get("Rewards")
             name = skill_data.get("Name", skill)
             rewards = {}
+            crafting = skill in self.CRAFTING_SKILLS
+            foraging = skill in self.FORAGING_SKILLS
+
             for level, reward_dict in _rewards.iteritems():
                 level = int(level)
                 grant_ability = reward_dict.get("Ability")
-                if grant_ability:
-                    grant_ability = "Ability granted: %s" % self.abilities.get(grant_ability, grant_ability)
+                grant_ability = self.GetAbility(grant_ability, grant_ability)
                 skill_bonus = reward_dict.get("BonusToSkill")
                 if skill_bonus:
-                    skill_bonus = "+1 %s" % self.skills.get(skill_bonus, skill_bonus)
+                    skill_bonus = "+1 %s" % self.GetSkills(skill_bonus, skill_bonus)
                 recipe_bonus = reward_dict.get("Recipe")
+                recipe_bonus = self.GetRecipe(recipe_bonus, recipe_bonus)
                 note_bonus = reward_dict.get("Notes")
                 rewards[level] = filter(None, [grant_ability, skill_bonus, recipe_bonus, note_bonus])
 
             skill = model.Skill(id=id_, name=name, description=desc, combat=combat, maxlevel=maxlevel,
-                                rewards=rewards, advtable=advtable, xptable=xptable, parents=parents)
+                                rewards=rewards, advtable=advtable, xptable=xptable, parents=parents,
+                                crafting=crafting, foraging=foraging)
             self.skills[id_] = skill
             self.skills_alias[id_] = skill
             self.skills_alias[name] = skill
 
             for key in skill_data:
                 self.skills_properties.add(key)
+
+    def LinkSkills(self):
+        for skill in self.skills.values():
+            if skill.parents:
+                for parent in skill.parents:
+                    parent_skill = self.GetSkills(parent)
+                    if not parent_skill:
+                        logging.error("Unable to find parent skill %s of %s", parent, skill.name)
+                        continue
+                    parent_skill.subskills.append(skill)
 
     def GetSkills(self, id_, default=None):
         return self.skills_alias.get(id_, default)

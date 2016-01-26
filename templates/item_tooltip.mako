@@ -26,6 +26,15 @@
       <div class="footer">
         <div class="value">Value: ${item.value}</div>
         <div class="stack">Stack: ${item.stack_size}</div>
+% if item.keywords:
+        <div id="keywords">
+            <ul>
+%   for keyword in item.keywords:
+                <li>${keyword}</li>
+%   endfor
+            </ul>
+        </div>
+% endif
       </div>
     </div>
   </body>

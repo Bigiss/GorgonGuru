@@ -1,5 +1,6 @@
 <%!
     from gorgon.utils import myescape, itemlink, build_ingredient
+    from gorgon import model
 %>
 <div class="page-header">
   <h1>Recipes</h1>
@@ -24,6 +25,7 @@
         { title: "Name" },
         { title: "Ingredients" },
         { title: "Results" },
+        { title: "Value" },
         { title: "XP" }
       ],
     })
@@ -59,8 +61,9 @@
 <%
     ingredients = u"\n".join([build_ingredient(ingredient) for ingredient in recipe.ingredients])
     results = u"\n".join([build_ingredient(result) for result in recipe.results])
+    result_value = sum([int(result[0])*int(result[1].value) for result in recipe.results if isinstance(result[1], model.Item)])
 %>
-    ["${recipe.skill | myescape}", "${recipe.skill_level_req | myescape}", "${recipe.name | myescape}", "${ingredients | myescape}", "${results | myescape}", "${recipe.reward_skill_xp} (${recipe.reward_skill_xp_1st})"],
+    ["${recipe.skill | myescape}", "${recipe.skill_level_req | myescape}", "${recipe.name | myescape}", "${ingredients | myescape}", "${results | myescape}", ${result_value}, "${recipe.reward_skill_xp} (${recipe.reward_skill_xp_1st})"],
 % endfor
   ];
 </script>

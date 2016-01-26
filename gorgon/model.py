@@ -85,7 +85,7 @@ class Ability(BaseGorgonObject):
 
 class Skill(BaseGorgonObject):
     def __init__(self, id=None, name=None, description=None, combat=False, maxlevel=None, rewards=None, advtable=None,
-                 xptable=None, parents=None, **kwargs):
+                 xptable=None, parents=None, crafting=False, foraging=False, **kwargs):
         super(Skill, self).__init__(**kwargs)
         self.id = id
         self.name = name
@@ -96,6 +96,9 @@ class Skill(BaseGorgonObject):
         self.advtable = advtable
         self.xptable = xptable
         self.parents = parents or []
+        self.crafting = crafting or False
+        self.foraging = foraging or False
+        self.subskills = []
 
     def __unicode__(self):
         return unicode(self.name)
