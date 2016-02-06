@@ -1,18 +1,10 @@
 <%!
     from gorgon.utils import myescape, itemlink, build_ingredient
 %>
-<div class="page-header">
-  <h1>Mods</h1>
-  <p class="lead">Use the following table to list all mods for a particlar skill.</p>
-  <ul>
-    <li>Type "See Red" in the search box to find all mods for this skill</li>
-  </ul>
-</div>
-
 <script>
   $(document).ready(function() {
     $('#mods').DataTable({
-      data: dataSet,
+      data: dataSetPowers,
       dom: "<'row'<'col-sm-5'l><'col-sm-1'f><'col-sm-6'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>",
       fixedHeader: {
           headerOffset: $('#navMenu').outerHeight()
@@ -21,6 +13,7 @@
         { title: "Skill" },
         { title: "Prefix" },
         { title: "Suffix" },
+        { title: "Slots" },
         { title: "Effects" },
       ],
     })
@@ -34,7 +27,11 @@
                   text: 'Loading...',
                   ajax: {
                       url: $(this).attr('rel')
-                  } 
+                  }
+            },
+            hide: {
+                fixed: true,
+                delay: 400
             },
             show: {
                 event: event.type,
@@ -46,16 +43,26 @@
     })
   });
 
-  var dataSet = [
+  var dataSetPowers = [
 
-% for power in powers:
+% if powers:
+%   for power in powers:
 <%
-    tiers = u"<br>".join([u"TIER %d: %s" % (t[0], u"<br>".join(t[1])) for t in power.tiers.iteritems()])
+      if power.tiers:
+        tiers = u"<br>".join([u"TIER %d: %s" % (t[0], u"<br>".join(t[1])) for t in power.tiers.iteritems()])
+      else:
+        tiers = ""
+
+      if power.slots:
+        slots = u"<br/>".join([slot for slot in power.slots])
+      else:
+        slots = ""
 %>
-    ["${power.skill | myescape}", "${power.prefix | myescape}", "${power.suffix | myescape}", "${tiers | myescape}"],
-% endfor
+    ["${power.skill | myescape}", "${power.prefix | myescape}", "${power.suffix | myescape}", "${slots | myescape}", "${tiers | myescape}"],
+%   endfor
+% endif
   ];
 </script>
 
-    <table id="mods" class="display compact table table-striped table-bordered" cellspacing="0" width="100%">
+    <table id="mods" class="display table table-condensed table-striped table-bordered" cellspacing="0" width="100%">
     </table>

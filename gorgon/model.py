@@ -1,12 +1,19 @@
+import logging
+
 from mako.template import Template
 
 
 class IconMixin(object):
     """A mixin to be able to render icons."""
+    def __init__(self, *args, **kwargs):
+        super(IconMixin, self).__init__(*args, **kwargs)
 
-    def RenderIcon(self):
+    def RenderIcon(self, hidden=False, height=32, width=32):
         if self.icon:
-            template = Template(u"<img src=\"http://cdn.projectgorgon.com/v${version}/icons/icon_${iconid}.png\">")
+            if hidden:
+                template = Template(u"<img class=\"loading\" orig=\"http://cdn.projectgorgon.com/v${version}/icons/icon_${iconid}.png\" width=\"%d\" height=\"%d\">" % (width, height))
+            else:
+                template = Template(u"<img src=\"http://cdn.projectgorgon.com/v${version}/icons/icon_${iconid}.png\" width=\"%d\" height=\"%d\">" % (width, height))
             return template.render(version=self.version, iconid=self.icon or "unknown")
 
 
@@ -14,7 +21,15 @@ class BaseGorgonObject(object):
     """Base class for all Gorgon objects."""
 
     def __init__(self, **kwargs):
-        pass
+        super(BaseGorgonObject, self).__setattr__('_attributes', {})
+        self._attributes.update(kwargs)
+        self.keywords = kwargs.get('keywords', [])
+
+    def __getattr__(self, item):
+        return self._attributes.get(item, None)
+
+    def __setattr__(self, key, value):
+        self._attributes[key] = value
 
     def __unicode__(self):
         return unicode(self.name) or repr(self)
@@ -22,83 +37,55 @@ class BaseGorgonObject(object):
     def __str__(self):
         return str(self.name) or repr(self)
 
+    def __eq__(self, other):
+        return all([getattr(self, attr, None) == getattr(other, attr, None) for attr in self._attributes])
+
+    def Differences(self, other):
+        diffs = {}
+        for attr_name, attr_value in self._attributes.iteritems():
+            if attr_name in ("version", "sellers", "keywords", "mods"):
+                continue
+            other_value = getattr(other, attr_name, None)
+            if attr_value != other_value:
+                diffs[attr_name] = [other_value, attr_value]
+        return diffs
+
 
 class Item(BaseGorgonObject, IconMixin):
     """Base class for all Gorgon items."""
 
-    def __init__(self, name=None, description=None, id=None, required_appearance=None, skill_reqs=None, value=None,
-                 effects=None, slot=None, icon=None, version=None, keywords=None, stack_size=None, **kwargs):
+    def __init__(self, **kwargs):
         super(Item, self).__init__(**kwargs)
-        self.version = version
-        self.name = name
-        self.description = description
-        self.id = id
-        self.required_appearance = required_appearance
-        self.skill_reqs = skill_reqs
-        self.value = value
-        self.effects = effects or []
-        self.slot = slot
-        self.icon = icon
-        self.keywords = keywords or []
-        self.stack_size = stack_size or 1
+        self.effects = kwargs.get('effects', [])
+        self.keywords = kwargs.get('keywords', [])
+        self.stack_size = kwargs.get('stack_size', 1)
+        self.sellers = kwargs.get('sellers', [])
 
     def __unicode__(self):
         return u"%s (%dc): '%s'" % (self.name, self.value, self.description)
 
 
 class Recipe(BaseGorgonObject, IconMixin):
-    def __init__(self, id=None, name=None, desc=None, iconid=None, internal_name=None, skill=None, skill_level_req=None,
-                 reward_skill=None, reward_skill_xp=None, reward_skill_xp_1st=None, ingredients=None, results=None,
-                 **kwargs):
-        super(Recipe, self).__init__(**kwargs)
-        self.id = id
-        self.name = name
-        self.desc = desc
-        self.iconid = iconid
-        self.internal_name = internal_name
-        self.skill = skill
-        self.skill_level_req = skill_level_req
-        self.reward_skill = reward_skill
-        self.reward_skill_xp = reward_skill_xp
-        self.reward_skill_xp_1st = reward_skill_xp_1st
-        self.ingredients = ingredients
-        self.results = results
+    pass
 
 
-class Ability(BaseGorgonObject):
-    def __init__(self, id=None, name=None, description=None, damage=None, damage_type=None, internal_name=None,
-                 range=None, power_cost=None, cooldown=None, skill=None, level=None, **kwargs):
+class Ability(BaseGorgonObject, IconMixin):
+    def __init__(self, **kwargs):
         super(Ability, self).__init__(**kwargs)
-        self.id = id
-        self.name = name
-        self.description = description
-        self.damage = damage
-        self.damage_type = damage_type
-        self.internal_name = internal_name
-        self.range = range
-        self.power_cost = power_cost
-        self.cooldown = cooldown
-        self.skill = skill or "Unknown"
-        self.level = level
-        self.mods = dict(SkillBase=[], SkillFlat=[])
+        self.skill = kwargs.get('skill', 'Unknown')
+        self.textual_mods = kwargs.get("mods")
+        self.mods = kwargs.get('mods', dict(SkillBase=[], SkillFlat=[]))
 
 
 class Skill(BaseGorgonObject):
-    def __init__(self, id=None, name=None, description=None, combat=False, maxlevel=None, rewards=None, advtable=None,
-                 xptable=None, parents=None, crafting=False, foraging=False, **kwargs):
+    def __init__(self, **kwargs):
         super(Skill, self).__init__(**kwargs)
-        self.id = id
-        self.name = name
-        self.description = description
-        self.combat = combat or False
-        self.maxlevel = maxlevel
-        self.rewards = rewards or {}
-        self.advtable = advtable
-        self.xptable = xptable
-        self.parents = parents or []
-        self.crafting = crafting or False
-        self.foraging = foraging or False
-        self.subskills = []
+        self.combat = kwargs.get('combat', False)
+        self.crafting = kwargs.get('crafting', False)
+        self.foraging = kwargs.get('foraging', False)
+        self.rewards = kwargs.get('rewards', {})
+        self.parents = kwargs.get('parents', {})
+        self.subskills = kwargs.get('subskills', [])
 
     def __unicode__(self):
         return unicode(self.name)
@@ -108,12 +95,9 @@ class Skill(BaseGorgonObject):
 
 
 class Attribute(BaseGorgonObject):
-    def __init__(self, id=None, name=None, label=None, is_hidden=None, **kwargs):
+    def __init__(self, **kwargs):
         super(Attribute, self).__init__(**kwargs)
-        self.id = id
-        self.name = name
-        self.label = label
-        self.is_hidden = is_hidden or False
+        self.is_hidden = kwargs.get('is_hidden', False)
 
     def __unicode__(self):
         return self.label
@@ -122,10 +106,81 @@ class Attribute(BaseGorgonObject):
         return str(self.label)
 
 
+class Merchant(BaseGorgonObject):
+    def __init__(self, **kwargs):
+        super(Merchant, self).__init__(**kwargs)
+        self.sales = kwargs.get('sales', [])
+
+    def Item(self, item):
+        return self.sales[item]
+
+
+class ShopItem(BaseGorgonObject):
+    def __init__(self, **kwargs):
+        super(ShopItem, self).__init__(**kwargs)
+        self.multiple = kwargs.get('multiple', 1)
+
+
 class Power(BaseGorgonObject):
-    def __init__(self, prefix=None, suffix=None, tiers=None, skill=None, **kwargs):
+    def __init__(self, **kwargs):
         super(Power, self).__init__(**kwargs)
-        self.prefix = prefix
-        self.suffix = suffix
-        self.tiers = tiers
-        self.skill = None
+        self.slots = kwargs.get("slots", ["??"])
+        self.tiers = kwargs.get("tiers", {})
+
+class ItemFilter(BaseGorgonObject):
+    """Represents a list of items by a filter."""
+    def __init__(self, **kwargs):
+        super(ItemFilter, self).__init__(**kwargs)
+        self._items_computed = False
+        self._items = False
+
+    def Keys(self):
+        for key in self.keys:
+            key_category = None
+            try:
+                key_category, key_value = key.split(":")
+            except ValueError:
+                try:
+                    key_value = key.split(":")
+                    key_category = u"Keyword"
+                except ValueError:
+                    logging.error("Found item key %s. Don't know how toparse.", key)
+                    import ipdb;ipdb.set_trace()
+            if isinstance(key_value, list):
+                yield key_category, u" ".join(key_value)
+            else:
+                yield key_category, key_value
+
+    def KeysFilter(self):
+        return u"&".join([u"%s:%s" % (k, v) for k, v in self.Keys()])
+
+    def Items(self, parser):
+        if self._items.parsed:
+            return self._items
+
+        self._items = []
+        for item in self.parser.items.values():
+            matches = True
+            # Filter the item by the item filters
+            for category, value in self.Keys():
+                if category == "Keyword":
+                    if value not in item.keywords:
+                        matches = False
+                        break
+                elif category == "EquipmentSlot":
+                    if value != item.slot:
+                        break
+                else:
+                    # Don't match cause we don't know how
+                    matches = False
+
+            if not matches:
+                continue
+
+            self._items.append(item)
+
+    def RenderIcon(self, *args, **kwargs):
+        return u""
+
+class Effect(BaseGorgonObject):
+    pass

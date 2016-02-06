@@ -2,19 +2,19 @@
     from gorgon.utils import myescape, itemlink, build_ingredient
     from gorgon import model
 %>
-<div class="page-header">
-  <h1>Recipes</h1>
-  <p class="lead">Use the recipes table to quickly find recipes of your interest. The search box on your right is your friend:
-  <ul>
-    <li>Type "Blacksmithing" on the search box to find all recipes of the Blacksmithing class or that contain the word</li>
-    <li>Type "Red Apple" to find all recipes you could craft with that <span class="itemtooltip" rel="items/item_5309.html">Red Apple</span> you just picked</li>
-  </ul>
-</div>
 <script>
   // Generate the table
   $(document).ready(function() {
+    function lazy_imageload(nRow, aData, iDisplayIndex)
+    {
+        var images = $('img.loading', nRow);
+        images.each(function(index, img) {
+            $(img).attr('src', $(img).attr('orig'));
+        });
+        return nRow;
+    };
     $('#recipes').DataTable({
-      data: dataSet,
+      data: dataSetRecipes,
       dom: "<'row'<'col-sm-5'l><'col-sm-1'f><'col-sm-6'p>><'row'<'col-sm-12'tr>><'row'<'col-sm-5'i><'col-sm-7'p>>",
       fixedHeader: {
           headerOffset: $('#navMenu').outerHeight()
@@ -23,14 +23,15 @@
         { title: "Skill" },
         { title: "Level" },
         { title: "Name" },
-        { title: "Ingredients" },
+        { title: "Ingredients", contentPadding: "mmmmmmmmmmm" },
         { title: "Results" },
         { title: "Value" },
         { title: "XP" }
       ],
+      fnRowCallback: lazy_imageload
     })
     .page.len(25)
-    .order([[0, "asc"], [1, "asc"] ])
+    .order([[0, "asc"], [1, "asc"], [2, "asc"]])
     .draw()
     .on('mouseover', '.itemtooltip', function(event) {
         overwrite: false,
@@ -39,7 +40,11 @@
                   text: 'Loading...',
                   ajax: {
                       url: $(this).attr('rel')
-                  } 
+                  }
+            },
+            hide: {
+                fixed: true,
+                delay: 400
             },
             show: {
                 event: event.type,
@@ -55,17 +60,28 @@
 
   });
 
-  var dataSet = [
+  var dataSetRecipes = [
 
 % for recipe in recipes:
 <%
-    ingredients = u"\n".join([build_ingredient(ingredient) for ingredient in recipe.ingredients])
-    results = u"\n".join([build_ingredient(result) for result in recipe.results])
+    ingredients = u"\n".join([build_ingredient(ingredient, with_image=True, hidden=True) for ingredient in recipe.ingredients])
+    results = [build_ingredient(result, with_image=True, hidden=True) for result in recipe.results]
+
+    result_effects = []
+    for result, description in recipe.result_effects:
+        if isinstance(result, model.Item):
+            result_effects.append(u"%s %s %s" % (result.RenderIcon(),
+                                                 itemlink(result),
+                                                 description))
+        else:
+            result_effects.append(description)
+    results = "\n".join(results + result_effects)
+
     result_value = sum([int(result[0])*int(result[1].value) for result in recipe.results if isinstance(result[1], model.Item)])
 %>
     ["${recipe.skill | myescape}", "${recipe.skill_level_req | myescape}", "${recipe.name | myescape}", "${ingredients | myescape}", "${results | myescape}", ${result_value}, "${recipe.reward_skill_xp} (${recipe.reward_skill_xp_1st})"],
 % endfor
   ];
 </script>
-    <table id="recipes" class="display compact table table-striped table-bordered" cellspacing="0" width="100%">
+    <table id="recipes" class="display table table-compact table-condensed table-striped table-bordered">
     </table>

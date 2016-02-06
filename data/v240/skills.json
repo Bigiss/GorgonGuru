@@ -1,0 +1,5225 @@
+{
+  "Unarmed" : 
+  {
+    "Id" : 1,
+    "Description" : "Mastery of the martial arts. Not especially damaging, but with great controlling and stunning abilities. Generally requires one or both hands to be empty, although you can use kicks even with other items wielded.",
+    "HideWhenZero" : false,
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "Combat" : true,
+    "TSysCategories" : [ ],
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Unarmed_60" : 50,
+        "LevelCap_Unarmed_70" : 60,
+        "LevelCap_Unarmed_80" : 70,
+        "LevelCap_Unarmed_90" : 80,
+        "LevelCap_Unarmed_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Unarmed, gain favor with Furlak in the Winter Nexus."
+    },	
+    "Rewards" :
+  	{
+        "1" : {
+            "Ability" : "Kick"
+        },
+        "3" : {
+            "Ability" : "Barrage"
+        },
+        "5" :  {
+            "Ability" : "CobraStrike"
+        },
+        "7" :  { 
+            "Ability" : "HipThrow"
+        },
+        "10" : { 
+            "Ability" : "Punch2"
+        },
+        "15" : { 
+            "Ability" : "Barrage2"
+        },
+        "18" : { 
+            "Ability" : "Kick2"
+        },
+        "20" : { 
+            "Ability" : "CobraStrike2"
+        },
+        "23" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "25" : { 
+            "Ability" : "Punch3"
+        },
+        "28" : { 
+            "Ability" : "Barrage3"
+        },
+        "30" : { 
+            "Ability" : "HipThrow2"
+        },
+        "35" : { 
+            "Ability" : "Kick3"
+        },
+        "40" : { 
+            "Ability" : "CobraStrike3"
+        },
+        "43" : { 
+            "BonusToSkill" : "Meditation"
+        },
+        "45" : { 
+            "Ability" : "Barrage4"
+        },
+        "46" : { 
+            "Ability" : "Punch4"
+        },
+        "49" : { 
+            "Ability" : "Kick4"
+        },
+        "50" : { 
+            "Ability" : "HipThrow3"
+        }
+	}
+  },
+  "Mycology" : 
+  {
+    "Id" : 2,
+    "Description" : "Mastery of fungus in all its forms.",
+    "XpTable" : "GatheringSkill",
+    "AdvancementTable" : "PowerPassive",
+    "MaxLevel" : 50,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Mycology_60" : 50,
+        "LevelCap_Mycology_70" : 60,
+        "LevelCap_Mycology_80" : 70,
+        "LevelCap_Mycology_90" : 80,
+        "LevelCap_Mycology_100" : 90
+    },
+  	"Rewards" :
+  	{
+        "10" : {
+            "BonusToSkill" : "Alchemy"
+        },
+        "20" : {
+            "BonusToSkill" : "Pig"
+        },
+        "40" : {
+            "BonusToSkill" : "Alchemy"
+        },
+        "50" : {
+            "BonusToSkill" : "Pig"
+        }
+	}
+  },
+  "Fishing" : 
+  {
+    "Id" : 3,
+    "Description" : "The art of collecting fish.",
+    "XpTable" : "GatheringSkill",
+    "AdvancementTable" : "ModestPassive",
+    "MaxLevel" : 50,
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Fishing_60" : 50,
+        "LevelCap_Fishing_70" : 60,
+        "LevelCap_Fishing_80" : 70,
+        "LevelCap_Fishing_90" : 80,
+        "LevelCap_Fishing_100" : 90
+    },
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "5" : { "Ability" : "FishGut1" },
+        "10" : { "BonusToSkill" : "Anatomy_Fish" },
+        "15" : { "Ability" : "FishGut2" },
+        "20" : { "BonusToSkill" : "Anatomy_Fish" },
+        "25" : { "Ability" : "FishGut3" },
+        "30" : { "BonusToSkill" : "Anatomy_Fish" },
+        "40" : { "BonusToSkill" : "Anatomy_Fish" },
+        "45" : { "Ability" : "FishGut4" },
+        "50" : { "BonusToSkill" : "Anatomy_Fish" }
+	}
+  },
+  "Lore" : 
+  {
+    "Id" : 4,
+    "Description" : "Mastery of ancient knowledge.",
+    "XpTable" : "Lore",
+    "AdvancementTable" : "Lore",
+    "Combat" : false,
+    "MaxBonusLevels" : 5,
+  	"Rewards" :
+  	{
+      "3" : { "Recipe" : "WordOfPower" },
+      "5" : { "Recipe" : "WordOfPower3" },
+      "7" : { "Recipe" : "WordOfPower4" },
+      "9" : { "Recipe" : "WordOfPower5" }
+	}
+  },
+  "Sword" : 
+  {
+    "Id" : 5,
+    "Description" : "Expertise with swords, rapiers, and the like. Swords are very damaging, and can reduce an opponent's Rage.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "HideWhenZero" : false,
+    "AdvancementTable" : "Balanced",
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Sword_60" : 50,
+        "LevelCap_Sword_70" : 60,
+        "LevelCap_Sword_80" : 70,
+        "LevelCap_Sword_90" : 80,
+        "LevelCap_Sword_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Sword, gain favor with Janet Lews in Kur Mountains."
+    },
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "SwordParry"
+        },
+        "3" : {
+            "Ability" : "ManyCuts"
+        },
+        "5" : {
+            "Ability" : "WindStrike"
+        },
+        "7" : {
+            "Ability" : "FinishingBlow"
+        },
+        "9" : {
+            "Ability" : "DebilitatingBlow1"
+        },
+        "10" : { 
+            "Ability" : "HackingBlade1"
+        },
+        "12" : { 
+            "Ability" : "SwordSlash2"
+        },
+        "15" : { 
+            "Ability" : "ManyCuts2"
+        },
+        "18" : { 
+            "Ability" : "SwordParry2"
+        },
+        "20" : { 
+            "Ability" : "WindStrike2"
+        },
+        "27" : { 
+            "Ability" : "ManyCuts3"
+        },
+        "28" : {
+            "Ability" : "DebilitatingBlow2"
+        },
+        "30" : { 
+            "Ability" : "FinishingBlow2"
+        },
+        "31" : { 
+            "Ability" : "HackingBlade2"
+        },
+        "33" : { 
+            "Ability" : "SwordSlash3"
+        },
+        "34" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "35" : { 
+            "Ability" : "SwordParry3"
+        },
+        "36" : { 
+            "Ability" : "WindStrike3"
+        },
+        "40" : { 
+            "Ability" : "ManyCuts4"
+        },
+        "43" : {
+            "Ability" : "DebilitatingBlow3"
+        },
+        "44" : { 
+            "BonusToSkill" : "Shield"
+        },
+        "45" : {
+            "Ability" : "SwordParry4"
+        },
+        "47" : {
+            "Ability" : "SwordSlash4"
+        },
+        "48" : { 
+            "Ability" : "WindStrike4"
+        },
+        "49" : { 
+            "Ability" : "HackingBlade3"
+        },
+        "50" : { 
+            "Ability" : "FinishingBlow3"
+        }
+	}
+  },
+  "Mining" : 
+  {
+    "Id" : 6,
+    "Description" : "Digging metals and ores out of the ground.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "25" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "50" : { 
+            "BonusToSkill" : "Geology"
+        }
+	}
+  },
+  "MushroomFarming" :
+  {
+    "Id" : 7,
+    "Name" : "Mushroom Farming",
+    "Description" : "The specialized art of growing mushrooms in special grow-boxes.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "Rewards" :
+    {
+    },
+    "Parents" : [ "Mycology" ]
+  },
+  "Dying" : 
+  {
+    "Id" : 8,
+    "Description" : "The art of dying.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "Dying",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { "Notes" : "New death action" },
+        "20" : { 
+            "BonusToSkill" : "Necromancy"
+        },
+        "30" : { 
+            "BonusToSkill" : "Necromancy"
+        }
+	},
+    "Reports" :
+    {
+        "1" : "See Ways You've Died"
+    }
+  },
+  "Gardening" : 
+  {
+    "Id" : 9,
+    "Description" : "Growing things in a garden: herbs, food, and flowers.",
+    "XpTable" : "Gardening",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Gardening_60" : 50,
+        "LevelCap_Gardening_70" : 60,
+        "LevelCap_Gardening_80" : 70,
+        "LevelCap_Gardening_90" : 80,
+        "LevelCap_Gardening_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Gardening, gain favor with Kelim in Amulna, a town in the Ilmari Desert."
+    },	
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "30" : { 
+            "BonusToSkill" : "Cooking"
+        },
+        "40" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "45" : {
+            "BonusToSkill" : "Pig"
+        },
+        "50" : { 
+            "BonusToSkill" : "Cooking"
+        },
+        "55" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "60" : { 
+            "BonusToSkill" : "Mycology"
+        }
+	}
+  },
+  "Cooking" : 
+  {
+    "Id" : 10,
+    "Description" : "Skill in preparing food for consumption.",
+    "XpTable" : "Gardening",
+    "AdvancementTable" : "PowerPassive",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Cooking_60" : 50,
+        "LevelCap_Cooking_70" : 60,
+        "LevelCap_Cooking_80" : 70,
+        "LevelCap_Cooking_90" : 80,
+        "LevelCap_Cooking_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Cooking, gain favor with Selaxi in Amulna, a town in the Ilmari Desert."
+    },	
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Gardening"
+        },
+        "30" : { 
+            "BonusToSkill" : "Alchemy"
+        },
+        "40" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "50" : { 
+            "BonusToSkill" : "FireMagic"
+        }
+	}
+  },
+  "Axe" : 
+  {
+    "Id" : 11,
+    "Description" : "Axing people.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "Combat" : true,
+  	"Rewards" :
+  	{
+	}
+  },
+  "FireMagic" : 
+  {
+    "Id" : 12,
+    "Name" : "Fire Magic",
+    "Description" : "Using Fire to destroy your enemies. This is a very potent offensive skill, including long-range and area-effect attacks, and even some Cold attacks for versatility. However, there are drawbacks: Fire Magic is extremely Power-intensive; all creatures generate extra Rage when they are burned; and many creatures have some resistance to fire.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "FireMagic",
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_FireMagic_60" : 50,
+        "LevelCap_FireMagic_70" : 60,
+        "LevelCap_FireMagic_80" : 70,
+        "LevelCap_FireMagic_90" : 80,
+        "LevelCap_FireMagic_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Fire Magic, gain favor with The Sand Seer in Amulna, a town in the Ilmari Desert."
+    },	
+  	"Rewards" :
+  	{
+        "1" : { "Notes" : "Access to new research recipe" },
+        "5" : { "Notes" : "Access to new research recipe" },
+        "10" : { "Notes" : "Access to new research recipe" },
+        "15" : { "Notes" : "Access to new research recipe" },
+        "20" : { "Notes" : "Access to new research recipe" },
+        "23" : { "BonusToSkill" : "Cooking" },
+        "25" : { "Notes" : "Access to new research recipe" },
+        "30" : { "Notes" : "Access to new research recipe" },
+        "35" : { "Notes" : "Access to new research recipe" },
+        "40" : { "Notes" : "Access to new research recipe" },
+        "43" : { "BonusToSkill" : "Gourmand" },
+        "45" : { "Notes" : "Access to new research recipe" },
+        "50" : { "Notes" : "Access to new research recipe" },
+        "55" : { "Notes" : "Access to new research recipe" },
+        "60" : { "Notes" : "Access to new research recipe" }
+	}
+  },
+  "Gourmand" : 
+  {
+    "Id" : 13,
+    "Description" : "The art of appreciating what you eat. A high gourmand skill allows you to get more benefits from fancier foods.\n\nEach food has a Gourmet Level, which caps your benefits from this skill. If you eat a food with a Gourmet Level lower than your Gourmand skill, you will get benefits as if your skill was the food's Gourmet Level.",
+    "XpTable" : "Gourmand",
+    "AdvancementTable" : "Gourmand",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { "Notes" : "+1 Max Health from health-raising food" },
+        "2" : { "Notes" : "+1 Max Health from health-raising food" },
+        "3" : { "Notes" : "+1 Max Health from health-raising food" },
+        "4" : { "Notes" : "+1 Max Health from health-raising food" },
+        "5" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "6" : { "Notes" : "+1 Max Health from health-raising food" },
+        "7" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "8" : { "Notes" : "+1 Max Health from health-raising food" },
+        "9" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "10" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "11" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "12" : { "Notes" : "+1 Max Health from health-raising food" },
+        "13" : { "Notes" : "+1 Max Health from health-raising food" },
+        "14" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "15" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "16" : { "Notes" : "+1 Max Health from health-raising food" },
+        "17" : { "Notes" : "+1 Max Health from health-raising food" },
+        "18" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "19" : { "Notes" : "+1 Max Health from health-raising food" },
+        "20" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "21" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "22" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "23" : { "Notes" : "+1 Max Health from health-raising food" },
+        "24" : { "Notes" : "+1 Max Health from health-raising food" },
+        "25" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "26" : { "Notes" : "+1 Max Health from health-raising food" },
+        "27" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "28" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "29" : { "Notes" : "+1 Max Health from health-raising food" },
+        "30" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "31" : { "Notes" : "+1 Max Health from health-raising food" },
+        "32" : { "Notes" : "+1 Max Health from health-raising food" },
+        "33" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "34" : { "Notes" : "+1 Max Health from health-raising food" },
+        "35" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food\n+1 Power from instant-power food" },
+        "36" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "37" : { "Notes" : "+1 Max Health from health-raising food" },
+        "38" : { "Notes" : "+1 Max Health from health-raising food" },
+        "39" : { "Notes" : "+1 Max Health from health-raising food" },
+        "40" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "41" : { "Notes" : "+1 Max Health from health-raising food" },
+        "42" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "43" : { "Notes" : "+1 Max Health from health-raising food" },
+        "44" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "45" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food\n+1 Health Regen from health-regen food" },
+        "46" : { "Notes" : "+1 Max Health from health-raising food" },
+        "47" : { "Notes" : "+1 Max Health from health-raising food" },
+        "48" : { "Notes" : "+1 Max Health from health-raising food" },
+        "49" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "50" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "51" : { "Notes" : "+1 Max Health from health-raising food" },
+        "52" : { "Notes" : "+1 Max Health from health-raising food" },
+        "53" : { "Notes" : "+1 Max Health from health-raising food" },
+        "54" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "55" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food\n+1 Power Regen from power-regen food" },
+        "56" : { "Notes" : "+1 Max Health from health-raising food" },
+        "57" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "58" : { "Notes" : "+1 Max Health from health-raising food" },
+        "59" : { "Notes" : "+1 Max Health from health-raising food" },
+        "60" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "61" : { "Notes" : "+1 Max Health from health-raising food" },
+        "62" : { "Notes" : "+1 Max Health from health-raising food" },
+        "63" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "64" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "65" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "66" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "67" : { "Notes" : "+1 Max Health from health-raising food" },
+        "68" : { "Notes" : "+1 Max Health from health-raising food" },
+        "69" : { "Notes" : "+1 Max Health from health-raising food" },
+        "70" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "71" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "72" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "73" : { "Notes" : "+1 Max Health from health-raising food" },
+        "74" : { "Notes" : "+1 Max Health from health-raising food" },
+        "75" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "76" : { "Notes" : "+1 Max Health from health-raising food" },
+        "77" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "78" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "79" : { "Notes" : "+1 Max Health from health-raising food" },
+        "80" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "81" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health Regen from health-regen food" },
+        "82" : { "Notes" : "+1 Max Health from health-raising food" },
+        "83" : { "Notes" : "+1 Max Health from health-raising food" },
+        "84" : { "Notes" : "+1 Max Health from health-raising food" },
+        "85" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food\n+1 Power from instant-power food" },
+        "86" : { "Notes" : "+1 Max Health from health-raising food" },
+        "87" : { "Notes" : "+1 Max Health from health-raising food" },
+        "88" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power Regen from power-regen food" },
+        "89" : { "Notes" : "+1 Max Health from health-raising food" },
+        "90" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food\n+1 Health Regen from health-regen food" },
+        "91" : { "Notes" : "+1 Max Health from health-raising food" },
+        "92" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food" },
+        "93" : { "Notes" : "+1 Max Health from health-raising food" },
+        "94" : { "Notes" : "+1 Max Health from health-raising food" },
+        "95" : { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" },
+        "96" : { "Notes" : "+1 Max Health from health-raising food" },
+        "97" : { "Notes" : "+1 Max Health from health-raising food" },
+        "98" : { "Notes" : "+1 Max Health from health-raising food" },
+        "99" : { "Notes" : "+1 Max Health from health-raising food\n+1 Power from instant-power food\n+1 Power Regen from power-regen food\n+1 Health Regen from health-regen food" },
+        "100": { "Notes" : "+1 Max Health from health-raising food\n+1 Health from instant-heal food" }
+    },
+    "Reports" :
+    {
+        "1" : "See Foods Eaten"
+    }
+  },
+  "Werewolf" : 
+  {
+    "Id" : 14,
+    "Name" : "Lycanthropy",
+    "Description" : "Skill in fighting as a wolf beast. Also indicates your ability to control and suppress the beast mode.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "PlayerWerewolf",
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Werewolf_60" : 50,
+        "LevelCap_Werewolf_70" : 60,
+        "LevelCap_Werewolf_80" : 70,
+        "LevelCap_Werewolf_90" : 80,
+        "LevelCap_Werewolf_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Lycanthropy, seek out the Altar of Norala during a full moon."
+    },	
+  	"Rewards" :
+  	{
+        "2" :  {
+            "Ability" : "WerewolfBite"
+        },
+        "3" :  {
+            "Ability" : "PackAttack1"
+        },
+        "5" :  {
+            "Ability" : "WerewolfPounce1"
+        },
+        "7" :  { 
+            "Ability" : "WerewolfHowlMode"
+        },
+        "10" : { 
+            "Ability" : "WerewolfBite2"
+        },
+        "12" : { 
+            "Ability" : "ShadowFeint1"
+        },
+        "15" : { 
+            "Ability" : "WerewolfClaw2"
+        },
+        "20" : { 
+            "Ability" : "PackAttack2"
+        },
+        "25" : { 
+            "Ability" : "WerewolfPounce2"
+        },
+        "28" : { 
+            "Ability" : "WerewolfBite3"
+        },
+        "30" : { 
+            "Ability" : "WerewolfClaw3"
+        },
+        "35" : { 
+            "Ability" : "ShadowFeint2"
+        },
+        "40" : { 
+            "Ability" : "PackAttack3"
+        },
+        "45" : { 
+            "Ability" : "WerewolfPounce3"
+        },
+        "46" : { 
+            "Ability" : "WerewolfBite4"
+        },
+        "48" : { 
+            "Ability" : "WerewolfClaw4"
+        },
+        "50" : { 
+            "Ability" : "ShadowFeint3"
+        }
+
+	}
+  },
+  "BeastSpeech" : 
+  {
+    "Id" : 15,
+    "Name" : "Beast Speech",
+    "Description" : "Skill in speaking while in the form of an animal or monstrous beast. (You earn XP in Beast Speech by speaking aloud. You can't earn XP more than once per minute.)",
+    "XpTable" : "BeastSpeech",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Parents" : [ "Werewolf" ]
+  },
+  "Howling" : 
+  {
+    "Id" : 16,
+    "Description" : "Skill in howling as a werewolf.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Parents" : [ "Werewolf" ]
+  },
+  "WerewolfMetabolism" : 
+  {
+    "Id" : 17,
+    "Name" : "Beast Metabolism",
+    "Description" : "Represents your metabolic efficiency when consuming raw meats.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "WerewolfMetabolism",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Parents" : [ "Werewolf" ]
+  },
+  "Anatomy" : 
+  {
+    "Id" : 18,
+    "Name" : "Anatomy",
+    "Description" : "Knowledge of the physiology of creatures in general. This is an umbrella skill that encompasses a vast suite of sub-skills for particular types of creatures. This skill represents generalized knowledge that applies to all creatures in the world.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 125,
+    "SkipBonusLevelsIfSkillUnlearned" : false,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Parents" : [ ]
+  },
+  "Pathology" : 
+  {
+    "Id" : 19,
+    "Name" : "Pathology",
+    "Description" : "Skill in figuring out how someone or something died. Higher skill allows more details to be determined and more difficult organisms to be examined.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "15" : { 
+            "BonusToSkill" : "Alchemy"
+        },
+        "30" : { 
+            "BonusToSkill" : "BattleChemistry"
+        },
+        "45" : { 
+            "BonusToSkill" : "Anatomy"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "ArtHistory" : 
+  {
+    "Id" : 20,
+    "Name" : "Art History",
+    "Description" : "Understanding of the rich history of art in Alharth. This skill can help you identify valuable artwork, but more importantly, it helps you to be a well-rounded individual.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Artistry"
+        },
+        "20" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "30" : { 
+            "BonusToSkill" : "Artistry"
+        },
+        "40" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "50" : { 
+            "BonusToSkill" : "Artistry"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "PoetryAppreciation" : 
+  {
+    "Id" : 21,
+    "Name" : "Poetry Appreciation",
+    "Description" : "Skill in finding the meaning of poems, especially difficult and tedious ones.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Vocabulary"
+        },
+        "20" : { 
+            "BonusToSkill" : "Artistry"
+        },
+        "30" : { 
+            "BonusToSkill" : "Vocabulary"
+        },
+        "40" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "50" : { 
+            "BonusToSkill" : "Vocabulary"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "GenderStudies" : 
+  {
+    "Id" : 22,
+    "Name" : "Gender Studies",
+    "Description" : "A careful exploration of gender roles and sexuality, focusing on Human, Elven, and Raksasha cultures. This knowledge is not directly applicable to combat or crafting, but it helps you to be a well-rounded individual.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "5" : { 
+            "BonusToSkill" : "Anatomy_Humans"
+        },
+        "10" : { 
+            "BonusToSkill" : "Anatomy_Elves"
+        },
+        "15" : { 
+            "BonusToSkill" : "Anatomy_Rakshasa"
+        },
+        "20" : { 
+            "BonusToSkill" : "Compassion"
+        },
+        "25" : { 
+            "BonusToSkill" : "Vocabulary"
+        },
+        "30" : { 
+            "BonusToSkill" : "Psychology"
+        },
+        "35" : { 
+            "BonusToSkill" : "Mentalism"
+        },
+        "40" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "45" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "50" : { 
+            "BonusToSkill" : "Lore"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "Autodidacticism" : 
+  {
+    "Id" : 23,
+    "Name" : "Autodidacticism",
+    "Description" : "The ability to learn new skills on your own, just from reading a book.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Parents" : [ ]
+  },
+  "Calligraphy" : 
+  {
+    "Id" : 23,
+    "Name" : "Calligraphy",
+    "Description" : "The art of writing things. Handy for... writing things. It's also a valuable art for swordsmen and other warriors, who can infuse their art with potent additional effects.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { "Recipe" : "Calligraphy1" },
+        "2" : { "Recipe" : "Calligraphy2" },
+        "3" : { "Recipe" : "Calligraphy3" },
+        "4" : { "Recipe" : "Calligraphy4" },
+        "5" : { "Recipe" : "Calligraphy5" },
+        "6" : { "Recipe" : "Calligraphy6" },
+        "7" : { "Recipe" : "Calligraphy7" },
+        "8" : { "Recipe" : "Calligraphy8" },
+        "9" : { "Recipe" : "Calligraphy9" },
+        "10" : { "Recipe" : "Calligraphy10" },
+        "11" : { "Recipe" : "Calligraphy11" },
+        "12" : { "Recipe" : "Calligraphy12" },
+        "13" : { "Recipe" : "Calligraphy13" },
+        "14" : { "Recipe" : "Calligraphy14" },
+        "15" : { "Recipe" : "Calligraphy15" },
+        "16" : { "Recipe" : "Calligraphy16" },
+        "17" : { "Recipe" : "Calligraphy17" },
+        "18" : { "Recipe" : "Calligraphy18" },
+        "19" : { "Recipe" : "Calligraphy19" },
+        "20" : { "Recipe" : "Calligraphy20" },
+        "21" : { "Recipe" : "Calligraphy21" },
+        "22" : { "Recipe" : "Calligraphy22" },
+        "23" : { "Recipe" : "Calligraphy23" },
+        "24" : { "Recipe" : "Calligraphy24" },
+        "25" : { "Recipe" : "Calligraphy25", "BonusToSkill" : "Sword" },
+        "26" : { "Recipe" : "Calligraphy26" },
+        "27" : { "Recipe" : "Calligraphy27" },
+        "28" : { "Recipe" : "Calligraphy28" },
+        "29" : { "Recipe" : "Calligraphy29" },
+        "30" : { "Recipe" : "Calligraphy30" },
+        "31" : { "Recipe" : "Calligraphy31" },
+        "32" : { "Recipe" : "Calligraphy32" },
+        "33" : { "Recipe" : "Calligraphy33" },
+        "34" : { "Recipe" : "Calligraphy34" },
+        "35" : { "Recipe" : "Calligraphy35" },
+        "36" : { "Recipe" : "Calligraphy36" },
+        "37" : { "Recipe" : "Calligraphy37" },
+        "38" : { "Recipe" : "Calligraphy38" },
+        "39" : { "Recipe" : "Calligraphy39" },
+        "40" : { "Recipe" : "Calligraphy40" },
+        "41" : { "Recipe" : "Calligraphy41" },
+        "42" : { "Recipe" : "Calligraphy42" },
+        "43" : { "Recipe" : "Calligraphy43" },
+        "44" : { "Recipe" : "Calligraphy44" },
+        "45" : { "Recipe" : "Calligraphy45" },
+        "46" : { "Recipe" : "Calligraphy46" },
+        "47" : { "Recipe" : "Calligraphy47" },
+        "48" : { "Recipe" : "Calligraphy48" },
+        "49" : { "Recipe" : "Calligraphy49" },
+        "50" : { "Recipe" : "Calligraphy50", "BonusToSkill" : "Sword" }
+	},
+    "Parents" : [ ]
+  },
+  "FirstAid" : 
+  {
+    "Id" : 24,
+    "Name" : "First Aid",
+    "Description" : "The ability to use first aid kits to heal yourself or others.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { 
+            "Ability" : "FirstAid1"
+        },
+        "10" : { 
+            "Ability" : "FirstAid2"
+        },
+        "15" : { 
+            "Ability" : "TreatDisease1"
+        },
+        "20" : { 
+            "Ability" : "FirstAid3"
+        },
+        "30" : { 
+            "Ability" : "FirstAid4"
+        },
+        "35" : { 
+            "Ability" : "TreatDisease2"
+        },
+        "40" : { 
+            "Ability" : "FirstAid5"
+        },
+        "50" : { 
+            "Ability" : "TreatDisease3"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "ArmorPatching" : 
+  {
+    "Id" : 25,
+    "Name" : "Armor Patching",
+    "Description" : "The ability to use repair kits to fix up your armor.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { 
+            "Ability" : "ArmorPatching1"
+        },
+        "10" : { 
+            "Ability" : "ArmorPatching2"
+        },
+        "20" : { 
+            "Ability" : "ArmorPatching3"
+        },
+        "30" : { 
+            "Ability" : "ArmorPatching4"
+        },
+        "35" : { 
+            "BonusToSkill" : "Blacksmithing"
+        },
+        "40" : { 
+            "Ability" : "ArmorPatching5"
+        },
+        "50" : { 
+            "BonusToSkill" : "Blacksmithing"
+        }
+
+	},
+    "Parents" : [ ]
+  },
+  "Carpentry" : 
+  {
+    "Id" : 26,
+    "Name" : "Carpentry",
+    "Description" : "Preparing and treating lumber, and making things out of wood.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "40" : { 
+            "BonusToSkill" : "Artistry"
+        },
+        "50" : { 
+            "BonusToSkill" : "Blacksmithing"
+        }
+        
+	},
+    "Parents" : [ ]
+  },
+  "Psychology" : 
+  {
+    "Id" : 27,
+    "Name" : "Psychology",
+    "Description" : "Understanding the mind of sentient creatures. Also, using that knowledge in combat and other stressful situations.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Psychology_60" : 50,
+        "LevelCap_Psychology_70" : 60,
+        "LevelCap_Psychology_80" : 70,
+        "LevelCap_Psychology_90" : 80,
+        "LevelCap_Psychology_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Psychology, gain favor with Nissim in Amulna, a town in the Ilmari Desert."
+    },	
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "Psychoanalyze1"
+        },
+        "3" : {
+            "Ability" : "TellMeAboutYourMother1"
+        },
+        "5" :  { 
+            "Ability" : "StrikeANerve1"
+        },
+        "7" :  { 
+            "Ability" : "CauseTerror1"
+        },
+        "8" : {
+            "Ability" : "Soothe1"
+        },
+        "10" : { 
+            "Ability" : "PepTalk1"
+        },
+        "13" : { 
+            "Ability" : "Ridicule1"
+        },
+        "15" : { 
+            "Ability" : "FastTalk1"
+        },
+        "16" : { 
+            "Ability" : "Psychoanalyze2"
+        },
+        "18" : { 
+            "Ability" : "PositiveAttitude1"
+        },
+        "20" : { 
+            "Ability" : "TellMeAboutYourMother2"
+        },
+        "23" : { 
+            "Ability" : "InspireConfidence1"
+        },
+        "25" : { 
+            "Ability" : "StrikeANerve2"
+        },
+        "28" : {
+            "Ability" : "Soothe2"
+        },
+        "30" : { 
+            "Ability" : "CauseTerror2"
+        },
+        "33" : { 
+            "Ability" : "PositiveAttitude2"
+        },
+        "34" : { 
+            "BonusToSkill" : "Mentalism"
+        },
+        "35" : { 
+            "Ability" : "PepTalk2"
+        },
+        "36" : { 
+            "Ability" : "Ridicule2"
+        },
+        "38" : { 
+            "Ability" : "StrikeANerve3"
+        },
+        "40" : { 
+            "Ability" : "TellMeAboutYourMother3"
+        },
+        "41" : { 
+            "BonusToSkill" : "Mentalism"
+        },
+        "43" : { 
+            "Ability" : "InspireConfidence2"
+        },
+        "45" : { 
+            "Ability" : "PepTalk3"
+        },
+        "47" : { 
+            "Ability" : "Psychoanalyze3"
+        },
+        "48" : {
+            "Ability" : "Soothe3"
+        },
+        "50" : { 
+            "Ability" : "StrikeANerve4"
+        },
+        "52" : { 
+            "Ability" : "Ridicule3"
+        }
+	},
+    "Parents" : [ ]
+  },
+  "Myconic" : 
+  {
+    "Id" : 28,
+    "Description" : "Knowledge of the secret language of ancient fungus creatures.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Mycology" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "30" : {
+            "BonusToSkill" : "Mycology"
+        },
+        "45" : {
+            "BonusToSkill" : "Pig"
+        },
+        "50" : {
+            "BonusToSkill" : "Mycology"
+        }
+	}
+  },
+  "Foraging" : 
+  {
+    "Id" : 29,
+    "Description" : "The art of picking things up. Except mushrooms, those are special for some reason. Experts at Foraging are also experts at tracking down stationary items and locations (such as many Quest Objectives).",
+    "XpTable" : "GatheringSkill",
+    "AdvancementTable" : "Foraging",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Foraging_60" : 50,
+        "LevelCap_Foraging_70" : 60,
+        "LevelCap_Foraging_80" : 70,
+        "LevelCap_Foraging_90" : 80,
+        "LevelCap_Foraging_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Foraging, gain favor with Jesina the Fairy in Eltibule."
+    },	
+  	"Rewards" :
+  	{
+        "5" :  {
+            "Ability" : "SeekObjective"
+        },
+        "15" :  {
+            "Ability" : "ObjectiveOrienteering"
+        },
+        "25" : { 
+            "BonusToSkill" : "Deer"
+        },
+        "30" : {
+            "BonusToSkill" : "Mycology"
+        },
+        "35" : { 
+            "BonusToSkill" : "Pig"
+        },
+        "40" : {
+            "BonusToSkill" : "Surveying"
+        },
+        "45" : {
+            "BonusToSkill" : "Pig"
+        },
+        "50" : {
+            "BonusToSkill" : "Geology"
+        },
+        "55" : {
+            "BonusToSkill" : "Mycology"
+        },
+        "60" : {
+            "BonusToSkill" : "Endurance"
+        }
+        
+	}
+  },
+  "Pig" : 
+  {
+    "Id" : 30,
+    "Description" : "The art of living and fighting as a pig.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "PlayerPig",
+    "MaxBonusLevels" : 25,
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" :  {
+            "Ability" : "PigBite1"
+        },
+        "3" :  {
+            "Ability" : "PigRend1"
+        },
+        "5" :  { 
+            "Ability" : "TruffleSniff1"
+        },
+        "6" :  { 
+            "Ability" : "PigChomp1"
+        },
+        "7" : { 
+            "Ability" : "Mudbath1"
+        },
+        "8" :  { 
+            "Ability" : "PigMushroomHeal1"
+        },
+        "10" : { 
+            "Ability" : "PigBite2"
+        },
+        "11" : { 
+            "Ability" : "PigFrenzy1"
+        },
+        "12" : { 
+            "Ability" : "PigPunt1"
+        },
+        "13" : { 
+            "Ability" : "PigDash1"
+        },
+        "15" : { 
+            "Ability" : "TruffleSniff2"
+        },
+        "18" : { 
+            "Ability" : "PigMushroomHeal2"
+        },
+        "19" : { 
+            "Ability" : "PigChomp2"
+        },
+        "20" : { 
+            "Ability" : "PigBite3"
+        },
+        "22" : { 
+            "Ability" : "Squeal1"
+        },
+        "24" : { 
+            "Ability" : "PigRend2"
+        },
+        "25" : { 
+            "Ability" : "TruffleSniff3"
+        },
+        "26" : { 
+            "BonusToSkill" : "Foraging"
+        },
+        "27" : { 
+            "Ability" : "Mudbath2"
+        },
+        "28" : { 
+            "Ability" : "PigMushroomHeal3"
+        },
+        "30" : { 
+            "Ability" : "PigBite4"
+        },
+        "32" : { 
+            "Ability" : "PigPunt2"
+        },
+        "34" : { 
+            "Ability" : "PigFrenzy2"
+        },
+        "35" : { 
+            "Ability" : "TruffleSniff4"
+        },
+        "36" : { 
+            "BonusToSkill" : "Mycology"
+        },
+        "37" : { 
+            "Ability" : "PigDash2"
+        },
+        "38" : { 
+            "Ability" : "PigMushroomHeal4"
+        },
+        "39" : { 
+            "Ability" : "Squeal2"
+        },
+        "40" : { 
+            "Ability" : "PigBite5"
+        },
+        "43" : { 
+            "Ability" : "Mudbath3"
+        },
+        "45" : { 
+            "Ability" : "TruffleSniff5"
+        },
+        "46" : { 
+            "Ability" : "PigChomp3"
+        },
+        "47" : { 
+            "Ability" : "PigPunt3"
+        },
+        "48" : { 
+            "Ability" : "PigMushroomHeal5"
+        },
+        "50" : { 
+            "Ability" : "PigBite6"
+        },
+        "51" : { 
+            "Ability" : "Squeal3"
+        },
+        "54" : { 
+            "Ability" : "PigRend3"
+        }
+	}
+  },
+  "Deer" : 
+  {
+    "Id" : 31,
+    "Description" : "The art of living and fighting as a deer.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "PlayerDeer",
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" :  {
+            "Ability" : "DeerSlash1"
+        },
+        "3" :  {
+            "Ability" : "DeerKick1"
+        },
+        "5" :  { 
+            "Ability" : "DeerBash1"
+        },
+        "7" :  { 
+            "Ability" : "DeerPummel1"
+        },
+        "8" :  { 
+            "Ability" : "DeerBuff1"
+        },
+        "10" : { 
+            "Ability" : "DeerSlash2"
+        },
+        "11" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "12" : {
+            "Ability" : "SummonDeer1"
+        },
+        "13" : {
+            "Ability" : "KingOfTheForest1"
+        },
+        "14" : { 
+            "Ability" : "DeerBash2"
+        },
+        "15" : { 
+            "Ability" : "DeerDash1"
+        },
+        "17" :  { 
+            "Ability" : "DeerPummel2"
+        },
+        "18" :  {
+            "Ability" : "DeerKick2"
+        },
+        "20" : { 
+            "Ability" : "DeerSlash3"
+        },
+        "23" : { 
+            "Ability" : "DeerBuff2"
+        },
+        "25" : { 
+            "Ability" : "DeerBash3"
+        },
+        "26" : {
+            "Ability" : "SummonDeer2"
+        },
+        "27" :  {
+            "Ability" : "DeerKick3"
+        },
+        "28" : { 
+            "Ability" : "DeerBlast1"
+        },
+        "29" :  { 
+            "Ability" : "DeerPummel3"
+        },
+        "30" : { 
+            "Ability" : "DeerSlash4"
+        },
+        "31" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "32" : {
+            "Ability" : "KingOfTheForest2"
+        },
+        "33" :  {
+            "Ability" : "DeerKick4"
+        },
+        "34" : { 
+            "Ability" : "DeerBash4"
+        },
+        "35" : { 
+            "Ability" : "DeerDash2"
+        },
+        "36" : { 
+            "Ability" : "DeerBlast2"
+        },
+        "37" :  { 
+            "Ability" : "DeerPummel4"
+        },
+        "38" : { 
+            "Ability" : "DeerBuff3"
+        },
+        "40" : { 
+            "Ability" : "DeerSlash5"
+        },
+        "42" : {
+            "Ability" : "SummonDeer3"
+        },
+        "43" :  {
+            "Ability" : "DeerKick5"
+        },
+        "45" : { 
+            "Ability" : "DeerBash5"
+        },
+        "46" : {
+            "Ability" : "KingOfTheForest3"
+        },
+        "47" :  { 
+            "Ability" : "DeerPummel5"
+        },
+        "48" : { 
+            "Ability" : "DeerBlast3"
+        },
+        "50" : { 
+            "Ability" : "DeerSlash6"
+        },
+        "51" : { 
+            "Ability" : "DeerDash3"
+        }
+
+	}
+  },
+  "Cow" : 
+  {
+    "Id" : 32,
+    "Description" : "The art of living and fighting as a cow.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "PlayerCow",
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" :  {
+            "Ability" : "CowStomp1"
+        },
+        "2" :  { 
+            "Ability" : "CowKick1"
+        },
+        "3" :  { 
+            "Ability" : "CowBash1"
+        },
+        "5" :  { 
+            "Ability" : "Graze1"
+        },
+        "7" :  { 
+            "Ability" : "ChewCud1"
+        },
+        "10" : { 
+            "Ability" : "CowStomp2"
+        },
+        "11" : { 
+            "Ability" : "MooOfDetermination1"
+        },
+        "14" : { 
+            "Ability" : "CowKick2"
+        },
+        "15" : { 
+            "Ability" : "MooOfCalm1"
+        },
+        "18" : { 
+            "Ability" : "CollectMilk"
+        },
+        "19" : { 
+            "BonusToSkill" : "Cheesemaking"
+        },
+        "20" : { 
+            "Ability" : "CowStomp3"
+        },
+        "25" : { 
+            "Ability" : "CowKick3"
+        },
+        "28" : { 
+            "Ability" : "ChewCud2"
+        },
+        "30" : { 
+            "Ability" : "CowStomp4"
+        },
+        "31" : { 
+            "Ability" : "MooOfDetermination2"
+        },
+        "33" :  { 
+            "Ability" : "CowBash2"
+        },
+        "35" : { 
+            "Ability" : "MooOfCalm2"
+        },
+        "36" : { 
+            "Ability" : "CowKick4"
+        },
+        "37" : { 
+            "Ability" : "CollectMilk2"
+        },
+        "39" : { 
+            "Ability" : "ChewCud3"
+        },
+        "40" : { 
+            "Ability" : "CowStomp5"
+        },
+        "41" : { 
+            "BonusToSkill" : "Cheesemaking"
+        },
+        "43" : { 
+            "Ability" : "MooOfDetermination3"
+        },
+        "45" : { 
+            "Ability" : "CowKick5"
+        },
+        "46" :  { 
+            "Ability" : "CowBash3"
+        },
+        "48" : { 
+            "Ability" : "MooOfCalm3"
+        },
+        "50" : { 
+            "Ability" : "CowStomp6"
+        },
+        "52" : { 
+            "Ability" : "CollectMilk3"
+        }
+
+	}
+  },
+  "Meditation" : 
+  {
+    "Id" : 33,
+    "Description" : "Skill in centering yourself and creating inner focus. This is especially helpful when using Unarmed combat skill.\n\nTo meditate, you must be near a Meditation Pillar. Each meditation also requires a simple focus item, such as a fruit or flower.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { "Recipe" : "Meditation1" },
+        "2" : { "Recipe" : "Meditation2" },
+        "3" : { "Recipe" : "Meditation3" },
+        "4" : { "Recipe" : "Meditation4" },
+        "5" : { "Recipe" : "Meditation5" },
+        "6" : { "Recipe" : "Meditation6" },
+        "7" : { "Recipe" : "Meditation7" },
+        "8" : { "Recipe" : "Meditation8" },
+        "9" : { "Recipe" : "Meditation9" },
+        "10" : { "Recipe" : "Meditation10" },
+        "11" : { "Recipe" : "Meditation11" },
+        "12" : { "Recipe" : "Meditation12" },
+        "13" : { "Recipe" : "Meditation13" },
+        "14" : { "Recipe" : "Meditation14" },
+        "15" : { "Recipe" : "Meditation15" },
+        "16" : { "Recipe" : "Meditation16" },
+        "17" : { "Recipe" : "Meditation17" },
+        "18" : { "Recipe" : "Meditation18" },
+        "19" : { "Recipe" : "Meditation19" },
+        "20" : { "Recipe" : "Meditation20", "BonusToSkill" : "Psychology" },
+        "21" : { "Recipe" : "Meditation21" },
+        "22" : { "Recipe" : "Meditation22" },
+        "23" : { "Recipe" : "Meditation23" },
+        "24" : { "Recipe" : "Meditation24" },
+        "25" : { "Recipe" : "Meditation25" },
+        "26" : { "Recipe" : "Meditation26" },
+        "27" : { "Recipe" : "Meditation27" },
+        "28" : { "Recipe" : "Meditation28" },
+        "29" : { "Recipe" : "Meditation29" },
+        "30" : { "Recipe" : "Meditation30" },
+        "31" : { "Recipe" : "Meditation31" },
+        "32" : { "Recipe" : "Meditation32" },
+        "33" : { "Recipe" : "Meditation33" },
+        "34" : { "Recipe" : "Meditation34" },
+        "35" : { "Recipe" : "Meditation35" },
+        "36" : { "Recipe" : "Meditation36" },
+        "37" : { "Recipe" : "Meditation37" },
+        "38" : { "Recipe" : "Meditation38" },
+        "39" : { "Recipe" : "Meditation39" },
+        "40" : { "Recipe" : "Meditation40", "BonusToSkill" : "Mentalism" },
+        "41" : { "Recipe" : "Meditation41" },
+        "42" : { "Recipe" : "Meditation42" },
+        "43" : { "Recipe" : "Meditation43" },
+        "44" : { "Recipe" : "Meditation44" },
+        "45" : { "Recipe" : "Meditation45" },
+        "46" : { "Recipe" : "Meditation46" },
+        "47" : { "Recipe" : "Meditation47" },
+        "48" : { "Recipe" : "Meditation48" },
+        "49" : { "Recipe" : "Meditation49" },
+        "50" : { "Recipe" : "Meditation50" },
+        "51" : { "Recipe" : "Meditation51" }
+	}
+  },
+  "Alchemy" : 
+  {
+    "Id" : 34,
+    "Description" : "The art of combining esoteric things together to make potions and poisons.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "ModestPassive",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "Ability" : "PoisonBlade1"
+        },
+        "15" : { 
+            "BonusToSkill" : "Mycology"
+        },
+        "20" : { 
+            "Ability" : "PoisonBlade2"
+        },
+        "25" : { 
+            "BonusToSkill" : "BattleChemistry"
+        },
+        "30" : { 
+            "Ability" : "PoisonBlade3"
+        },
+        "40" : { 
+            "Ability" : "PoisonBlade4"
+        },
+        "45" : { 
+            "BonusToSkill" : "BattleChemistry"
+        },
+        "50" : { 
+            "Ability" : "PoisonBlade5"
+        }
+	}
+  },
+  "AnimalHandling" : 
+  {
+    "Id" : 35,
+    "Name" : "Animal Handling",
+    "Description" : "The art of taming animals and teaching them to fight alongside you.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" : { 
+            "Ability" : "TamePet"
+        },
+        "2" : { 
+            "Ability" : "StabledPet1"
+        },
+        "3" : { 
+            "Ability" : "FeedPet1"
+        },
+        "4" : { 
+            "Ability" : "SicEm1"
+        },
+        "5" : { 
+            "Ability" : "ThatllDo1"
+        },
+        "6" : { 
+            "Ability" : "GetItOffMe1"
+        },
+        "7" : { 
+            "Ability" : "MonstrousRage1"
+        },
+        "8" : { 
+            "Ability" : "ShrillCommand1"
+        },
+        "11" : { 
+            "Ability" : "ThatllDo2"
+        },
+        "13" : { 
+            "Ability" : "FeedPet2"
+        },
+        "14" : { 
+            "Ability" : "SicEm2"
+        },
+        "15" : { 
+            "Ability" : "StabledPet2"
+        },
+        "16" : { 
+            "Ability" : "GetItOffMe2"
+        },
+        "17" : { 
+            "Ability" : "MonstrousRage2"
+        },
+        "18" : { 
+            "Ability" : "ShrillCommand2"
+        },
+        "20" : { 
+            "Ability" : "NimbleLimbs1"
+        },
+        "21" : { 
+            "Ability" : "ThatllDo3"
+        },
+        "23" : { 
+            "Ability" : "FeedPet3"
+        },
+        "24" : { 
+            "Ability" : "SicEm3"
+        },
+        "25" : { 
+            "BonusToSkill" : "Deer"
+        },
+        "26" : { 
+            "Ability" : "GetItOffMe3"
+        },
+        "27" : { 
+            "Ability" : "MonstrousRage3"
+        },
+        "28" : { 
+            "Ability" : "ShrillCommand3"
+        },
+        "30" : { 
+            "Ability" : "NimbleLimbs2"
+        },
+        "31" : { 
+            "Ability" : "ThatllDo4"
+        },
+        "33" : { 
+            "Ability" : "FeedPet4"
+        },
+        "34" : { 
+            "Ability" : "StabledPet3"
+        },
+        "35" : { 
+            "Ability" : "SicEm4"
+        },
+        "36" : { 
+            "Ability" : "GetItOffMe4"
+        },
+        "37" : { 
+            "Ability" : "MonstrousRage4"
+        },
+        "38" : { 
+            "Ability" : "ShrillCommand4"
+        },
+        "40" : { 
+            "Ability" : "NimbleLimbs3"
+        },
+        "41" : { 
+            "Ability" : "ThatllDo5"
+        },
+        "43" : { 
+            "Ability" : "FeedPet5"
+        },
+        "44" : { 
+            "Ability" : "SicEm5"
+        },
+        "45" : { 
+            "Ability" : "StabledPet4"
+        },
+        "46" : { 
+            "Ability" : "GetItOffMe5"
+        },
+        "47" : { 
+            "Ability" : "MonstrousRage5"
+        },
+        "48" : { 
+            "Ability" : "ShrillCommand5"
+        },
+        "50" : { 
+            "Ability" : "NimbleLimbs4"
+        },
+        "51" : { 
+            "Ability" : "ThatllDo6"
+        },
+        "53" : { 
+            "Ability" : "FeedPet6"
+        },
+        "54" : { 
+            "Ability" : "SicEm6"
+        },
+        "56" : { 
+            "Ability" : "GetItOffMe6"
+        },
+        "57" : { 
+            "Ability" : "MonstrousRage6"
+        }
+
+    }
+  },
+  "BattleChemistry" : 
+  {
+    "Id" : 36,
+    "Name" : "Battle Chemistry",
+    "Description" : "Using alchemical concoctions in the heat of battle. Not for the faint of heart, or the particularly sane, this combat style specializes in area-effects of all types. Advanced practitioners can also ingest their formulae directly to take on new combat personalities. Masters can even create homonculi to serve them in battle.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "Balanced",
+    "TSysCategories" : [ "BattleChemistry" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "ToxinBomb1"
+        },
+        "2" : { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Mycology)"
+        },
+        "3" : {
+            "Notes" : "Access to new cross-discipline chemical concoction (in Fishing)"
+        },
+        "4" : { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in First Aid)"
+        },
+        "6" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "7" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Cooking)"
+        },
+        "8" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Pathology)"
+        },
+        "9" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Lore)"
+        },
+        "10" : { 
+            "Ability" : "ToxinBomb2"
+        },
+        "11" :  { 
+            "Ability" : "SummonMinigolem1"
+        },
+        "12" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Mycology)"
+        },
+        "13" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Fishing)"
+        },
+        "14" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in First Aid)"
+        },
+        "15" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Meditation)"
+        },
+        "16" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "17" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "18" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Pathology)"
+        },
+        "19" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Lore)"
+        },
+        "20" :  { 
+            "Ability" : "ToxinBomb3"
+        },
+        "21" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction"
+        },
+        "22" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Mycology)"
+        },
+        "23" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Fishing)"
+        },
+        "24" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in First Aid)"
+        },
+        "25" :  { 
+            "Ability" : "SummonMinigolem2"
+        },
+        "26" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "27" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Cooking)"
+        },
+        "28" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Pathology)"
+        },
+        "29" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Lore)"
+        },
+        "30" :  { 
+            "Ability" : "ToxinBomb4"
+        },
+        "31" :  { 
+            "Ability" : "SummonMinigolem3"
+        },
+        "32" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Mycology)"
+        },
+        "33" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Fishing)"
+        },
+        "34" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in First Aid)"
+        },
+        "35" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Meditation)"
+        },
+        "36" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "37" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Cooking)"
+        },
+        "38" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Pathology)"
+        },
+        "39" :  { 
+            "Ability" : "SummonMinigolem4"
+        },
+        "40" :  { 
+            "Ability" : "ToxinBomb5"
+        },
+        "42" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Mycology)"
+        },
+        "43" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Fishing)"
+        },
+        "44" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in First Aid)"
+        },
+        "45" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Meditation)"
+        },
+        "46" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Unarmed)"
+        },
+        "47" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Cooking)"
+        },
+        "48" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Pathology)"
+        },
+        "49" :  { 
+            "Notes" : "Access to new cross-discipline chemical concoction (in Lore)"
+        },
+        "50" :  { 
+            "Ability" : "ToxinBomb6"
+        },
+        "51" :  { 
+            "Ability" : "SummonMinigolem5"
+        }
+     }
+  },
+  "Staff" : 
+  {
+    "Id" : 37,
+    "Description" : "Mastery of the staff as a martial weapon. Staff fighting has a mix of both offensive and defensive abilities.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "HideWhenZero" : true,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Staff_60" : 50,
+        "LevelCap_Staff_70" : 60,
+        "LevelCap_Staff_80" : 70,
+        "LevelCap_Staff_90" : 80,
+        "LevelCap_Staff_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Staff, gain favor with Roshun The Traitor outside of Serbule."
+    },	
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "StaffSmash"
+        },
+        "4" : {
+            "Ability" : "StaffDoubleHit"
+        },
+        "6" :  { 
+            "Ability" : "StaffLunge"
+        },
+        "8" :  { 
+            "Ability" : "StrategicThrust"
+        },
+        "10" : { 
+            "Ability" : "DeflectiveSpin"
+        },
+        "15" : { 
+            "Ability" : "BlockingStance"
+        },
+        "18" : { 
+            "Ability" : "SafeFall"
+        },
+        "19" : { 
+            "BonusToSkill" : "Unarmed"
+        },
+        "20" : { 
+            "Ability" : "StaffSmash2"
+        },
+        "25" : { 
+            "Ability" : "StaffDoubleHit2"
+        },
+        "28" :  { 
+            "Ability" : "StrategicThrust2"
+        },
+        "30" : { 
+            "Ability" : "Redirect"
+        },
+        "31" : { 
+            "Ability" : "SafeFall2"
+        },
+        "33" : { 
+            "Ability" : "StaffLunge2"
+        },
+        "35" : { 
+            "Ability" : "DeflectiveSpin2"
+        },
+        "37" : { 
+            "Ability" : "BlockingStance2"
+        },
+        "39" : { 
+            "BonusToSkill" : "Unarmed"
+        },
+        "43" : { 
+            "Ability" : "StaffSmash3"
+        },
+        "44" : { 
+            "Ability" : "SafeFall3"
+        },
+        "45" : { 
+            "Ability" : "StaffDoubleHit3"
+        },
+        "46" : { 
+            "Ability" : "Redirect2"
+        },
+        "48" :  { 
+            "Ability" : "StrategicThrust3"
+        },
+        "50" : { 
+            "Ability" : "StaffLunge3"
+        }
+	}
+  },
+  "Necromancy" : 
+  {
+    "Id" : 38,
+    "Description" : "Necromancy is control over the undead, along with other powers that trifle with mortality. To use necromantic abilities, you must be wielding or wearing a necromancy gem. You can often find these on weapons, and less often on pieces of armor. (If you are in a beast form, necromancy gems in weapons won't work, but ones in armor will.)",
+    "HideWhenZero" : true,
+    "Combat" : true,
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Necromancy_60" : 50,
+        "LevelCap_Necromancy_70" : 60,
+        "LevelCap_Necromancy_80" : 70,
+        "LevelCap_Necromancy_90" : 80,
+        "LevelCap_Necromancy_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Necromancy, gain favor with Daniel Murderdark in Amulna."
+    },
+    "Rewards" :
+  	{
+        "1" : {
+            "Ability" : "DeathsHold1"
+        },
+        "2" : {
+            "Ability" : "RaiseSkeletonArcher"
+        },
+        "3" : {
+            "Ability" : "ProvokeUndead1"
+        },
+        "4" : {
+            "Ability" : "LifeCrush"
+        },
+        "5" : {
+            "Ability" : "SparkOfDeath"
+        },
+        "6" :  { 
+            "Ability" : "HealUndead"
+        },
+        "8" :  { 
+            "Ability" : "LifeSteal"
+        },
+        "9" :  { 
+            "Ability" : "RebuildUndead"
+        },
+        "10" : { 
+            "Ability" : "CreateZombie"
+        },
+        "11" : { 
+            "BonusToSkill" : "Pathology"
+        },
+        "12" : { 
+            "Ability" : "Deathgaze"
+        },
+        "13" : { 
+            "Ability" : "RaiseSkeletonSwordsman"
+        },
+        "15" : {
+            "Ability" : "DeathsHold2"
+        },
+        "16" :  { 
+            "Ability" : "HealUndead2"
+        },
+        "18" : { 
+            "Ability" : "RaiseSkeletonMage"
+        },
+        "19" :  { 
+            "Ability" : "RebuildUndead2"
+        },
+        "20" : { 
+            "Ability" : "HeartsPower"
+        },
+        "21" : {
+            "Ability" : "ProvokeUndead2"
+        },
+        "23" : { 
+            "Ability" : "LifeCrush2"
+        },
+        "24" : { 
+            "Ability" : "WaveOfDarkness"
+        },
+        "25" : { 
+            "Ability" : "RaiseSkeletonArcher2"
+        },
+        "26" :  { 
+            "Ability" : "HealUndead3"
+        },
+        "28" : { 
+            "BonusToSkill" : "GiantBat"
+        },
+        "29" :  { 
+            "Ability" : "RebuildUndead3"
+        },
+        "30" : { 
+            "Ability" : "CreateZombie2"
+        },
+        "31" : {
+            "Ability" : "SparkOfDeath2"
+        },
+        "32" : { 
+            "Ability" : "RaiseSkeletonSwordsman2"
+        },
+        "34" : { 
+            "Ability" : "Deathgaze2"
+        },
+        "35" : { 
+            "Ability" : "LifeSteal2"
+        },
+        "36" :  { 
+            "Ability" : "HealUndead4"
+        },
+        "37" : { 
+            "BonusToSkill" : "Dying"
+        },
+        "38" : { 
+            "Ability" : "RaiseSkeletonMage2"
+        },
+        "39" :  { 
+            "Ability" : "RebuildUndead4"
+        },
+        "40" : { 
+            "Ability" : "CreateZombie3"
+        },
+        "41" : { 
+            "Ability" : "Deathgaze3"
+        },
+        "42" : { 
+            "Ability" : "DeathsHold3"
+        },
+        "43" : {
+            "Ability" : "ProvokeUndead3"
+        },
+        "44" : {
+            "Ability" : "WaveOfDarkness2"
+        },
+        "45" : { 
+            "Ability" : "LifeCrush3"
+        },
+        "46" :  { 
+            "Ability" : "HealUndead5"
+        },
+        "47" : {
+            "Ability" : "SparkOfDeath3"
+        },
+        "48" :  { 
+            "Ability" : "RebuildUndead5"
+        },
+        "49" :  { 
+            "Ability" : "RaiseSkeletonSwordsman3"
+        },
+        "50" : { 
+            "Ability" : "LifeSteal3"
+        }
+	}
+  },
+  "Skinning" : 
+  {
+    "Id" : 39,
+    "Description" : "Skill in the act of removing fur or skin from an animal. You need to be carrying a Skinning Knife in order to skin a corpse. Corpses of sentient creatures, such as goblins and humans, can't be skinned.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Tanning"
+        },
+        "20" : { 
+            "BonusToSkill" : "Leatherworking"
+        },
+        "30" : { 
+            "BonusToSkill" : "Tanning"
+        },
+        "40" : { 
+            "BonusToSkill" : "Butchering"
+        },
+        "50" : { 
+            "BonusToSkill" : "Tanning"
+        }
+	}
+  },
+  "Tanning" : 
+  {
+    "Id" : 40,
+    "Description" : "The craft of turning disgusting animal skins, furs, and hides into leather, fleece, and other material ready to be used in clothing and armor.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Textiles"
+        },
+        "20" : { 
+            "BonusToSkill" : "Skinning"
+        },
+        "30" : { 
+            "BonusToSkill" : "Textiles"
+        },
+        "40" : { 
+            "BonusToSkill" : "Tailoring"
+        },
+        "50" : { 
+            "BonusToSkill" : "Leatherworking"
+        }
+	}
+  },
+  "Mentalism" : 
+  {
+    "Id" : 41,
+    "Name" : "Mentalism",
+    "Description" : "The power of mind over matter: psychic powers! This combat skill focuses on recovery and restoration, but it also has multiple damaging abilities.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "Parents" : [ ],
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Mentalism_60" : 50,
+        "LevelCap_Mentalism_70" : 60,
+        "LevelCap_Mentalism_80" : 70,
+        "LevelCap_Mentalism_90" : 80,
+        "LevelCap_Mentalism_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Mentalism, gain favor with Rohina in Sun Vale."
+    },	
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "HealthWave1"
+        },
+        "3" : {
+            "Ability" : "Mindreave1"
+        },
+        "5" :  { 
+            "Ability" : "ArmorWave1"
+        },
+        "7" :  { 
+            "Ability" : "SystemShock1"
+        },
+        "10" : { 
+            "Ability" : "PowerWave1"
+        },
+        "13" : { 
+            "Ability" : "Reconstruct1"
+        },
+        "15" : { 
+            "BonusToSkill" : "Psychology"
+        },
+        "16" : { 
+            "Ability" : "AdrenalineWave1"
+        },
+        "18" : { 
+            "Ability" : "Mindreave2"
+        },
+        "20" : { 
+            "Ability" : "HealthWave2"
+        },
+        "23" : { 
+            "Ability" : "Reconstruct2"
+        },
+        "25" : { 
+            "Ability" : "ArmorWave2"
+        },
+        "26" : { 
+            "Ability" : "PanicCharge1"
+        },
+        "30" : { 
+            "Ability" : "SystemShock2"
+        },
+        "33" : { 
+            "Ability" : "PowerWave2"
+        },
+        "35" : { 
+            "Ability" : "Mindreave3"
+        },
+        "37" : { 
+            "Ability" : "PanicCharge2"
+        },
+        "38" : { 
+            "Ability" : "HealthWave3"
+        },
+        "40" : { 
+            "Ability" : "AdrenalineWave2"
+        },
+        "43" : { 
+            "Ability" : "Reconstruct3"
+        },
+        "44" : { 
+            "BonusToSkill" : "Psychology"
+        },
+        "45" : { 
+            "Ability" : "ArmorWave3"
+        },
+        "47" : { 
+            "Ability" : "SystemShock3"
+        },
+        "48" : { 
+            "Ability" : "PanicCharge3"
+        },
+        "49" : { 
+            "Ability" : "PowerWave3"
+        },
+        "50" : { 
+            "Ability" : "Mindreave4"
+        }
+	}
+  },
+  "Anatomy_Elves" : 
+  {
+    "Id" : 42,
+    "Name" : "Elven Anatomy",
+    "Description" : "Knowledge of the physiology of elves.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Rakshasa" : 
+  {
+    "Id" : 43,
+    "Name" : "Rakshasa Anatomy",
+    "Description" : "Knowledge of the physiology of rakshasa.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Canines" : 
+  {
+    "Id" : 44,
+    "Name" : "Canine Anatomy",
+    "Description" : "Knowledge of the physiology of dogs, wolves, and werewolves. Gives bonuses to killing, skinning, and raising these creatures.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : {  "BonusToSkill" : "Anatomy", "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Cats" : 
+  {
+    "Id" : 45,
+    "Name" : "Cat Anatomy",
+    "Description" : "Knowledge of the physiology of cats of all types.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Arthropods" : 
+  {
+    "Id" : 46,
+    "Name" : "Arthropod Anatomy",
+    "Description" : "Knowledge of the physiology of spiders, insects, and scorpions.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Ruminants" : 
+  {
+    "Id" : 47,
+    "Name" : "Ruminant Anatomy",
+    "Description" : "Knowledge of the physiology of cud-chewing herbivores such as cows, sheep, deer, and camels.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Ungulates" : 
+  {
+    "Id" : 48,
+    "Name" : "Non-Ruminant Ungulate Anatomy",
+    "Description" : "Knowledge of the physiology of large herbivores that do NOT chew cud, such as pigs, rhinos, and horses.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Bears" : 
+  {
+    "Id" : 49,
+    "Name" : "Bear and Bugbear Anatomy",
+    "Description" : "Knowledge of the physiology of bears. Bugbears, which are half-goblin and half-bear, are also covered by this skill, as they take after their bear side more than the goblin side.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Goblins" : 
+  {
+    "Id" : 50,
+    "Name" : "Goblin Anatomy",
+    "Description" : "Knowledge of the physiology of goblins.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Fey" : 
+  {
+    "Id" : 51,
+    "Name" : "Fey Anatomy",
+    "Description" : "Knowledge of the physiology of faeries and fey creatures, including some animals that look mundane but aren't, such as the fey panther.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Orcs" : 
+  {
+    "Id" : 52,
+    "Name" : "Orc Anatomy",
+    "Description" : "Knowledge of the physiology of orcs.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Giants" : 
+  {
+    "Id" : 53,
+    "Name" : "Giant Anatomy",
+    "Description" : "Knowledge of the physiology of giant-kin such as yetis and ogres.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Aberrations" : 
+  {
+    "Id" : 54,
+    "Name" : "Aberration Anatomy",
+    "Description" : "Knowledge of the physiology of creatures made by mad science or dark chemistry.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Elementals" : 
+  {
+    "Id" : 55,
+    "Name" : "Elemental Anatomy",
+    "Description" : "Knowledge of the physiology of elementals.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Constructs" : 
+  {
+    "Id" : 56,
+    "Name" : "Construct Anatomy",
+    "Description" : "Knowledge of the physiology of constructs such as golems.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Fish" : 
+  {
+    "Id" : 57,
+    "Name" : "Fish and Snail Anatomy",
+    "Description" : "Knowledge of the physiology of fish. Also snails. They're very similar. Really.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+    }
+  },
+  "Anatomy_Fungoids" : 
+  {
+    "Id" : 58,
+    "Name" : "Fungoid Anatomy",
+    "Description" : "Knowledge of the physiology of fungus people, slime monsters, overgrown bacteria, and ooze beasts.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Rodents" : 
+  {
+    "Id" : 59,
+    "Name" : "Rodent Anatomy",
+    "Description" : "Knowledge of the physiology of rodents.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+	}
+  },
+  "Anatomy_Demons" : 
+  {
+    "Id" : 60,
+    "Name" : "Demon Anatomy",
+    "Description" : "Knowledge of the physiology of demons.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Dinosaurs" : 
+  {
+    "Id" : 61,
+    "Name" : "Dinosaur Anatomy",
+    "Description" : "Knowledge of the physiology of dinosaurs. This skill also covers birds, which are descended from dinosaurs, and dragons, which are descended from birds.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+
+	}
+  },
+  "Teleportation" : 
+  {
+    "Id" : 62,
+    "Description" : "The magical art of suddenly being somewhere else.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "ModestPassive",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { "Recipe" : "BindCircle1" },
+        "2" : { "Recipe" : "RecallCircle1" },
+        "10" : { "Recipe" : "RecallCircle1B" },
+        "20" : { "Recipe" : "Evac1" },
+        "30" : { "BonusToSkill" : "Lore" }
+	},
+    "Reports" :
+    {
+        "1" : "Get Binding Info",
+        "2" : "List Used Teleport Locations"
+    }
+  },  
+  "Archery" : 
+  {
+    "Id" : 63,
+    "Description" : "Expertise with using bows to hunt and kill.",
+    "XpTable" : "TypicalCombatSkillExt",
+    "HideWhenZero" : false,
+    "AdvancementTable" : "Balanced",
+    "TSysCategories" : [ "OffHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Archery_60" : 50,
+        "LevelCap_Archery_70" : 60,
+        "LevelCap_Archery_80" : 70,
+        "LevelCap_Archery_90" : 80,
+        "LevelCap_Archery_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Archery, gain favor with Alravesa the All-Hunter in Rahu."
+    },	
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "BasicShot1"
+        },
+        "2" : {
+            "Ability" : "BowBash1"
+        },
+        "4" : {
+            "Ability" : "AimedShot1"
+        },
+        "7" : {
+            "Ability" : "HookShot1"
+        },
+        "8" : {
+            "Ability" : "MultiShot1"
+        },
+        "10" : {
+            "Ability" : "BlitzShot1"
+        },
+        "12" : {
+            "Ability" : "LongShot1"
+        },
+        "14" : {
+            "Ability" : "BasicShot2"
+        },
+        "16" : {
+            "Ability" : "BowBash2"
+        },
+        "18" : {
+            "Ability" : "AimedShot2"
+        },
+        "19" : {
+            "BonusToSkill" : "Fletching"
+        },
+        "20" : {
+            "Ability" : "HookShot2"
+        },
+        "23" : {
+            "Ability" : "MultiShot2"
+        },
+        "25" : {
+            "Ability" : "BlitzShot2"
+        },
+        "28" : {
+            "Ability" : "LongShot2"
+        },
+        "30" : {
+            "Ability" : "BasicShot3"
+        },
+        "33" : {
+            "Ability" : "BowBash3"
+        },
+        "35" : {
+            "Ability" : "AimedShot3"
+        },
+        "38" : {
+            "Ability" : "HookShot3"
+        },
+        "40" : {
+            "Ability" : "MultiShot3"
+        },
+        "42" : {
+            "Ability" : "BlitzShot3"
+        },
+        "44" : {
+            "Ability" : "BasicShot4"
+        },
+        "45" : {
+            "Ability" : "LongShot3"
+        },
+        "46" : {
+            "BonusToSkill" : "Fletching"
+        },
+        "49" : {
+            "Ability" : "BowBash4"
+        },
+        "50" : {
+            "Ability" : "AimedShot4"
+        }
+	}
+  },
+  "Fletching" : 
+  {
+    "Id" : 64,
+    "Description" : "The craft of arrow-making. Most fletching recipes require elements obtained from Carpentry, so it's often handy to know both skills well. At higher level, fletchers also need various Alchemy components.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "ModestPassive",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : { "Recipe" : "ArrowHead1" },
+        "2" : { "Recipe" : "ArrowShaft1" },
+        "3" : { "Recipe" : "Arrow1" },
+        "4" : { "Recipe" : "BarbedArrow1" },
+        "6" : { "Recipe" : "LongArrow1" },
+        "8" : { "Recipe" : "ReservoirArrow1" },
+        "10" : { "Recipe" : "ArrowHead2", "Notes" : "Can now maintain two Fletching Boxes at once" },
+        "11" : { "Recipe" : "ArrowShaft2" },
+        "12" : { "Recipe" : "Fletching2" },
+        "13" : { "Recipe" : "Arrow2" },
+        "14" : { "Recipe" : "BarbedArrow2" },
+        "15" : { "BonusToSkill" : "Archery" },
+        "16" : { "Recipe" : "LongArrow2" },
+        "18" : { "Recipe" : "ReservoirArrow2" },
+        "20" : { "Recipe" : "ArrowHead3", "Notes" : "Can now maintain three Fletching Boxes at once"  },
+        "21" : { "Recipe" : "ArrowShaft3" },
+        "22" : { "Recipe" : "Arrow3" },
+        "24" : { "Recipe" : "BarbedArrow3" },
+        "25" : { "BonusToSkill" : "Carpentry" },
+        "26" : { "Recipe" : "LongArrow3" },
+        "28" : { "Recipe" : "ReservoirArrow3" },
+        "29" : { "BonusToSkill" : "Archery" },
+        "30" : { "Recipe" : "ArrowHead4", "Notes" : "Can now maintain four Fletching Boxes at once"  },
+        "31" : { "Recipe" : "ArrowShaft4" },
+        "32" : { "Recipe" : "Fletching4" },
+        "33" : { "Recipe" : "Arrow4" },
+        "34" : { "Recipe" : "BarbedArrow4" },
+        "36" : { "Recipe" : "LongArrow4" },
+        "38" : { "Recipe" : "ReservoirArrow4" },
+        "40" : { "Recipe" : "ArrowHead5", "Notes" : "Can now maintain five Fletching Boxes at once"  },
+        "41" : { "Recipe" : "ArrowShaft5" },
+        "42" : { "Recipe" : "Arrow5" },
+        "43" : { "BonusToSkill" : "Archery" },
+        "44" : { "Recipe" : "BarbedArrow5" },
+        "46" : { "Recipe" : "LongArrow5" },
+        "48" : { "Recipe" : "ReservoirArrow5" },
+        "50" : { "BonusToSkill": "Carpentry", "Notes" : "Can now maintain six Fletching Boxes at once"  }
+        
+	}
+  },
+  "Leatherworking" : 
+  {
+    "Id" : 65,
+    "Description" : "Turning leathers into armor and goods.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "15" : { "BonusToSkill" : "Skinning" },
+        "30" : { "BonusToSkill" : "Tailoring" },
+        "45" : { "BonusToSkill" : "Tailoring" }
+	}
+  },
+  "SigilScripting" : 
+  {
+    "Id" : 66,
+    "Name" : "Sigil Scripting",
+    "Description" : "Using magical inks and arcane rituals to create areas of power.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Calligraphy"
+        },
+        "20" : { 
+            "BonusToSkill" : "Carpentry"
+        },
+        "30" : { 
+            "BonusToSkill" : "Calligraphy"
+        },
+        "40" : { 
+            "BonusToSkill" : "Leatherworking"
+        },
+        "50" : { 
+            "BonusToSkill" : "Calligraphy"
+        }
+	}
+  },
+  "Spider" : 
+  {
+    "Id" : 67,
+    "Description" : "The art of living and fighting as a spider.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "PlayerSpider",
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" :  {
+            "Ability" : "PlayerSpiderBite1"
+        },
+        "3" :  { 
+            "Ability" : "InjectVenom1"
+        },
+        "6" :  { 
+            "Ability" : "InfiniteLegs1"
+        },
+        "8" :  { 
+            "Ability" : "Gripjaw1"
+        },
+        "10" : { 
+            "Ability" : "PlayerSpiderBite2"
+        },
+        "13" : { 
+            "Ability" : "WebTrap1"
+        },
+        "15" : { 
+            "Ability" : "SpiderGrapple1"
+        },
+        "16" :  { 
+            "Ability" : "InfiniteLegs2"
+        },
+        "18" : { 
+            "Ability" : "SpiderDash1"
+        },
+        "20" : { 
+            "Ability" : "PlayerSpiderBite3"
+        },
+        "23" : { 
+            "Ability" : "SpiderFear1"
+        },
+        "25" : { 
+            "Ability" : "Gripjaw2"
+        },
+        "26" :  { 
+            "Ability" : "InfiniteLegs3"
+        },
+        "27" : { 
+            "BonusToSkill" : "Alchemy"
+        },
+        "28" : { 
+            "Ability" : "InjectVenom2"
+        },
+        "30" : { 
+            "Ability" : "PlayerSpiderBite4"
+        },
+        "35" : { 
+            "Ability" : "SpiderGrapple2"
+        },
+        "36" :  { 
+            "Ability" : "InfiniteLegs4"
+        },
+        "37" : { 
+            "Ability" : "SpiderFear2"
+        },
+        "40" : { 
+            "Ability" : "PlayerSpiderBite5"
+        },
+        "41" : { 
+            "BonusToSkill" : "Alchemy"
+        },
+        "43" : { 
+            "Ability" : "InjectVenom3"
+        },
+        "45" : { 
+            "Ability" : "Gripjaw3"
+        },
+        "46" :  { 
+            "Ability" : "InfiniteLegs5"
+        },
+        "48" : { 
+            "Ability" : "SpiderDash2"
+        },
+        "50" : { 
+            "Ability" : "PlayerSpiderBite6"
+        }
+	}
+  },
+  "Endurance" : 
+  {
+    "Id" : 68,
+    "Name" : "Endurance",
+    "Description" : "The ability to endure heavy loads and uncomfortable situations without getting tired. Your Endurance increases the speed of your armor regeneration between fights, among other things.\n\n(The most common way to raise Endurance is simply to take armor damage in combat.)",
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Endurance",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Endurance_60" : 50,
+        "LevelCap_Endurance_70" : 60,
+        "LevelCap_Endurance_80" : 70,
+        "LevelCap_Endurance_90" : 80,
+        "LevelCap_Endurance_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Endurance, gain favor with Lamashu in Kur Mountains."
+    },
+    "Rewards" :
+  	{
+        "2" : {
+            "Ability" : "DigDeep1"
+        },
+        "17" : {
+            "Ability" : "DigDeep2"
+        },
+        "25" : {
+            "Ability" : "DigDeep3"
+        },
+        "30" : {
+            "BonusToSkill" : "Unarmed"
+        },
+        "38" : {
+            "Ability" : "DigDeep4"
+        },
+        "45" : {
+            "BonusToSkill" : "Unarmed"
+        },
+        "50" : {
+            "Ability" : "DigDeep5"
+        }
+	}
+  },
+  "Blacksmithing" : 
+  {
+    "Id" : 69,
+    "Name" : "Blacksmithing",
+    "Description" : "Making and enhancing metal equipment. Blacksmiths don't create armor directly, but they can buttress metal armor's effectiveness. They also create metal parts for many other skills.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : {
+            "Recipe" : "BlacksmithReinforceShoes"
+        },
+        "5" : {
+            "Recipe" : "BlacksmithReinforceGloves"
+        },
+        "10" : {
+            "Recipe" : "BlacksmithReinforceHelms"
+        },
+        "15" : {
+            "Recipe" : "BlacksmithReinforcePants"
+        },
+        "20" : {
+            "Recipe" : "BlacksmithReinforceShirt"
+        },
+        "25" : {
+            "BonusToSkill" : "Leatherworking"
+        },
+        "35" : {
+            "BonusToSkill" : "ArmorPatching"
+        },
+        "45" : {
+            "BonusToSkill" : "Carpentry"
+        }
+	}
+  },
+  "Surveying" : 
+  {
+    "Id" : 70,
+    "Name" : "Surveying",
+    "Description" : "Analyzing the land to locate valuable resources or important locations. Surveying has many uses, but is most commonly used to make resource maps for Geology and Mining.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : "Surveying",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" : {
+            "Recipe" : "GeologySurveySerbule0"
+        },
+        "5" : {
+            "Recipe" : "GeologySurveySerbule1"
+        },
+        "10" : {
+            "Recipe" : "MiningSurveySerbule1"
+        },
+        "15" : {
+            "Recipe" : "GeologySurveySerbule2"
+        },
+        "16" : {
+            "BonusToSkill" : "Foraging"
+        },
+        "20" : {
+            "Recipe" : "MiningSurveySerbule2"
+        },
+        "25" : {
+            "Recipe" : "GeologySurveyEltibule3"
+        },
+        "30" : {
+            "Recipe" : "MiningSurveyEltibule3"
+        },
+        "33" : {
+            "BonusToSkill" : "Foraging"
+        },
+        "35" : {
+            "Recipe" : "GeologySurveyEltibule4"
+        },
+        "40" : {
+            "Recipe" : "MiningSurveyEltibule4"
+        },
+        "45" : {
+            "Recipe" : "MiningSurveyEltibule5"
+        },
+        "46" : {
+            "BonusToSkill" : "Foraging"
+        },
+        "48" : {
+            "Recipe" : "GeologySurveySerbule3"
+        },
+        "50" : {
+            "Recipe" : "GeologySurveySerbule4"
+        }
+        
+	}
+  },
+  "Geology" : 
+  {
+    "Id" : 71,
+    "Description" : "Digging crystals out of the ground, and knowing what they do.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : {
+            "BonusToSkill" : "Surveying"
+        },
+        "20" : {
+            "BonusToSkill" : "Surveying"
+        },
+        "30" : {
+            "BonusToSkill" : "Mining"
+        },
+        "40" : {
+            "BonusToSkill" : "Calligraphy"
+        },
+        "50" : {
+            "BonusToSkill" : "Lore"
+        }
+	}
+  },
+  "Notoriety" : 
+  {
+    "Id" : 72,
+    "Description" : "A measure of your renown. You earn Notoriety the first time you defeat certain enemies (typically any monster with a proper name), and for completing particularly difficult quests.",
+    "XpTable" : "Notoriety",
+    "AdvancementTable" : "Notoriety",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	},
+    "Reports" :
+    {
+        "1" : "List Notorious Deeds"
+    }
+  },
+  "Anatomy_Humans" : 
+  {
+    "Id" : 73,
+    "Name" : "Human Anatomy",
+    "Description" : "Knowledge of the physiology of humans.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Undead" : 
+  {
+    "Id" : 74,
+    "Name" : "Undead Anatomy",
+    "Description" : "Knowledge of the physiology of undead, such as skeletons, zombies, and liches. This skill doesn't cover undead without bodies, such as ghosts and wraiths.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Anatomy_Incorporeal" : 
+  {
+    "Id" : 75,
+    "Name" : "Incorporeal Creature Anatomy",
+    "Description" : "Knowledge of the physiology of incorporeal creatures, such as ghosts and shadow illusions.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "Goblinese" : 
+  {
+    "Id" : 76,
+    "Name" : "Goblinese",
+    "Description" : "Fluency in the language of goblins.",
+    "XpTable" : "Goblinese",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" :  { "BonusToSkill" : "Anatomy_Goblins" },
+        "15" :  { "BonusToSkill" : "Sword" },
+        "20" :  { "BonusToSkill" : "Anatomy_Goblins" },
+        "25" :  { "BonusToSkill" : "Staff" },
+        "30" :  { "BonusToSkill" : "Anatomy_Goblins" },
+        "35" :  { "BonusToSkill" : "Sword" },
+        "40" :  { "BonusToSkill" : "Anatomy_Goblins" },
+        "45" :  { "BonusToSkill" : "Staff" },
+        "50" :  { "BonusToSkill" : "Anatomy_Goblins" }
+	}
+  },
+  "Cheesemaking" : 
+  {
+    "Id" : 77,
+    "Name" : "Cheesemaking",
+    "Description" : "Making cheese, butter, and other dairy products. But mostly: cheese.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Cooking"
+        },
+        "20" : { 
+            "BonusToSkill" : "Mycology"
+        },
+        "25" : { 
+            "BonusToSkill" : "Cow"
+        },
+        "30" : { 
+            "BonusToSkill" : "Alchemy"
+        },
+        "40" : { 
+            "BonusToSkill" : "Mycology"
+        },
+        "45" : { 
+            "BonusToSkill" : "Cow"
+        },
+        "50" : { 
+            "BonusToSkill" : "Cooking"
+        }
+	},
+    "Reports" :
+    {
+        "1" : "Check Cheese Casks"
+    }
+
+  },
+  "Textiles" : 
+  {
+    "Id" : 78,
+    "Description" : "The craft of turning raw ingredients into cloth. Textile creation includes cotton, wool, silk, and many other fiber types. Cloth made from animal hides (e.g. leather) comes from the Tanning skill instead.",
+    "Name" : "Textile Creation",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Skinning"
+        },
+        "30" : { 
+            "BonusToSkill" : "Tailoring"
+        },
+        "40" : { 
+            "BonusToSkill" : "Leatherworking"
+        },
+        "50" : { 
+            "BonusToSkill" : "Tailoring"
+        }
+	}
+  },
+  "Butchering" : 
+  {
+    "Id" : 79,
+    "Description" : "Skill in the act of removing meat and useful body organs from a corpse. You need to be carrying a Butcher Knife in order to butcher a corpse. Corpses of sentient creatures, such as goblins and humans, can't be butchered.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Skinning"
+        },
+        "20" : { 
+            "BonusToSkill" : "Cooking"
+        },
+        "30" : { 
+            "BonusToSkill" : "Skinning"
+        },
+        "40" : { 
+            "BonusToSkill" : "Cooking"
+        },
+        "50" : { 
+            "BonusToSkill" : "Skinning"
+        }
+	}
+  },
+  "IocaineResistance" : 
+  {
+    "Id" : 80,
+    "Name" : "Iocaine Resistance",
+    "Description" : "Practiced resistance to the deadly mushroom poison known as Iocaine. (Each point of this skill reduces the damage from Iocaine-based poisons by 1%.)",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Mycology"
+        },
+        "20" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "40" : { 
+            "BonusToSkill" : "Endurance"
+        }
+	}
+  },
+  "Tailoring" : 
+  {
+    "Id" : 81,
+    "Description" : "Tailoring has two aspects: first, you use it to turn textiles into clothing. Second, you can use tailoring to make clothing and leather armor more cofortable, more useful, or more stylish.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Textiles"
+        },
+        "20" : { 
+            "BonusToSkill" : "Leatherworking"
+        },
+        "30" : { 
+            "BonusToSkill" : "Artistry"
+        },
+        "40" : { 
+            "BonusToSkill" : "Leatherworking"
+        },
+        "50" : { 
+            "BonusToSkill" : "Textiles"
+        }
+	}
+  },
+  "Shield" : 
+  {
+    "Id" : 82,
+    "Description" : "Expertise in the use of a shield, both as a weapon and as a defensive tool.",
+    "HideWhenZero" : true,
+    "Combat" : true,
+    "XpTable" : "TypicalCombatSkillExt",
+    "TSysCategories" : [ "OffHandWeapon" ],
+    "AdvancementTable" : "Balanced",
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Shield_60" : 50,
+        "LevelCap_Shield_70" : 60,
+        "LevelCap_Shield_80" : 70,
+        "LevelCap_Shield_90" : 80,
+        "LevelCap_Shield_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Shield, gain favor with Sir Johnson in Rahu. Wait, he's in Amulna for now."
+    },	
+	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "StunningBash1"
+        },
+        "2" : {
+            "Ability" : "DisruptingBash1"
+        },
+        "4" : {
+            "Ability" : "DeflectArrows1"
+        },
+        "5" :  { 
+            "Ability" : "EmergencyBash1"
+        },
+        "8" :  { 
+            "Ability" : "TakeTheLead1"
+        },
+        "10" : { 
+            "Ability" : "Reinforce1"
+        },
+        "13" : { 
+            "Ability" : "StrategicPreparation1"
+        },
+        "15" : { 
+            "Ability" : "FinishIt1"
+        },
+        "17" : { 
+            "Ability" : "DisruptingBash2"
+        },
+        "19" : { 
+            "Ability" : "StunningBash2"
+        },
+        "20" : { 
+            "Ability" : "Reinforce2"
+        },
+        "21" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "23" : { 
+            "Ability" : "DeflectArrows2"
+        },
+        "25" : { 
+            "Ability" : "FinishIt2"
+        },
+        "26" : { 
+            "Ability" : "EmergencyBash2"
+        },
+        "28" : { 
+            "Ability" : "TakeTheLead2"
+        },
+        "30" : { 
+            "Ability" : "Reinforce3"
+        },
+        "31" : { 
+            "Ability" : "StunningBash3"
+        },
+        "33" : { 
+            "Ability" : "StrategicPreparation2"
+        },
+        "35" : { 
+            "Ability" : "DeflectArrows3"
+        },
+        "36" : { 
+            "Ability" : "DisruptingBash3"
+        },
+        "37" : { 
+            "Ability" : "EmergencyBash3"
+        },
+        "38" : { 
+            "Ability" : "FinishIt3"
+        },
+        "40" : { 
+            "Ability" : "Reinforce4"
+        },
+        "41" : { 
+            "BonusToSkill" : "Endurance"
+        },
+        "42" : { 
+            "Ability" : "TakeTheLead3"
+        },
+        "44" : { 
+            "Ability" : "FinishIt4"
+        },
+        "45" : { 
+            "Ability" : "StrategicPreparation3"
+        },
+        "46" : { 
+            "Ability" : "StunningBash4"
+        },
+        "47" : { 
+            "Ability" : "DeflectArrows4"
+        },
+        "49" : { 
+            "Ability" : "EmergencyBash4"
+        },
+        "50" : { 
+            "Ability" : "Reinforce5"
+        }
+	}
+  },
+  "Stoneworking" : 
+  {
+    "Id" : 83,
+    "Name" : "Stone Working",
+    "Description" : "The use of stone in construction and decoration.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Oratory" : 
+  {
+    "Id" : 84,
+    "Name" : "Oratory",
+    "Description" : "The ability to speak in public in a way that moves your audience.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Compassion" : 
+  {
+    "Id" : 85,
+    "Description" : "The ability to feel empathy, even for creatures not at all like yourself.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "10" : { 
+            "BonusToSkill" : "Meditation"
+        },
+        "20" : { 
+            "BonusToSkill" : "Dying"
+        },
+        "30" : { 
+            "BonusToSkill" : "Lore"
+        },
+        "40" : { 
+            "BonusToSkill" : "Psychology"
+        },
+        "50" : { 
+            "BonusToSkill" : "Meditation"
+        }
+	}
+  },
+  "Phrenology" : 
+  {
+    "Id" : 86,
+    "Description" : "An understanding of how sentient creatures think and feel, based on careful study of the shape of their skulls. This base skill represents your overall Phrenological prowess. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "15" : { 
+            "BonusToSkill" : "Meditation"
+        },
+        "35" : { 
+            "BonusToSkill" : "Psychology"
+        },
+        "50" : { 
+            "BonusToSkill" : "Mentalism"
+        }
+	}
+  },
+  "Phrenology_Humans" : 
+  {
+    "Id" : 87,
+    "Name" : "Human Phrenology",
+    "Description" : "An understanding of how humans think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Elves" : 
+  {
+    "Id" : 88,
+    "Name" : "Elf Phrenology",
+    "Description" : "An understanding of how elves think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Rakshasa" : 
+  {
+    "Id" : 89,
+    "Name" : "Rakshasa Phrenology",
+    "Description" : "An understanding of how rakshasa think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Fae" : 
+  {
+    "Id" : 90,
+    "Name" : "Fae Phrenology",
+    "Description" : "An understanding of how fairies think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Goblins" : 
+  {
+    "Id" : 91,
+    "Name" : "Goblin Phrenology",
+    "Description" : "An understanding of how goblins think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Orcs" : 
+  {
+    "Id" : 92,
+    "Name" : "Orc Phrenology",
+    "Description" : "An understanding of how orcs think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Giants" : 
+  {
+    "Id" : 93,
+    "Name" : "Giant Phrenology",
+    "Description" : "An understanding of how humans think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Demons" : 
+  {
+    "Id" : 94,
+    "Name" : "Demon Phrenology",
+    "Description" : "An understanding of how demons think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Aberrations" : 
+  {
+    "Id" : 95,
+    "Name" : "Aberration Phrenology",
+    "Description" : "An understanding of how sentient aberrations think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Phrenology_Crones" : 
+  {
+    "Id" : 96,
+    "Name" : "Crone-Kin Phrenology",
+    "Description" : "An understanding of how crones think and feel, based on careful study of the shape of their skulls. (Phrenology skills provide critical-hit chances to all Psychology and Mentalism attacks against the corresponding type of creature. Phrenology also has more esoteric uses.)",
+    "XpTable" : "Phrenology",
+    "Parents" : [ "Phrenology" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1"  : { "BonusToSkill" : "Phrenology" },
+        "6" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1%" },
+        "12" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 2%)" },
+        "15"  : { "BonusToSkill" : "Phrenology" },
+        "18" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 3%)" },
+        "20" : { "BonusToSkill" : "Meditation" },
+        "24" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 4%)" },
+        "25"  : { "BonusToSkill" : "Phrenology" },
+        "30" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 5%)" },
+        "35" : { "BonusToSkill" : "Psychology" },
+        "36" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 6%)" },
+        "42" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 7%)" },
+        "45"  : { "BonusToSkill" : "Phrenology" },
+        "48" :  { "Notes" : "Mentalism/Psychology critical hit chance: +1% (total 8%)" },
+        "50" : { "BonusToSkill" : "Mentalism" }
+	}
+  },
+  "Anatomy_Crones" : 
+  {
+    "Id" : 97,
+    "Name" : "Crone-Kin Anatomy",
+    "Description" : "Knowledge of the physiology of crones and their ilk, including harpies, hags, and striga.",
+    "XpTable" : "CorpseActionSkill",
+    "Parents" : [ "Anatomy" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" }
+	}
+  },
+  "DyeMaking" : 
+  {
+    "Id" : 98,
+    "Name" : "Dye Making",
+    "Description" : "Skill in producing dye. These dyes can be used to color armor.\n\nThis skill covers only the creation of the dye; Textile Creation, Tanning, or Blacksmithing is used to apply the dye, depending on what the armor is made of.",
+    "XpTable" : "DyeMaking",
+    "Parents" : [ ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Textiles"
+        },
+        "40" : { 
+            "BonusToSkill" : "Textiles"
+        },
+        "50" : { 
+            "BonusToSkill" : "Artistry"
+        }
+        
+	}
+  },
+  "Hoplology" : 
+  {
+    "Id" : 99,
+    "Name" : "Hoplology",
+    "Description" : "The study of weapons and armor, with a focus on the benefits and weaknesses of different kinds of equipment.\n\nAs the skill increases, Staff users will find that their combat abilities also restore Armor.",
+    "XpTable" : "Hoplology",
+    "Parents" : [ ],
+    "AdvancementTable" : "Hoplology",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "20" : { 
+            "BonusToSkill" : "Staff"
+        },
+        "30" : { 
+            "BonusToSkill" : "Unarmed"
+        },
+        "40" : { 
+            "BonusToSkill" : "Sword"
+        },
+        "50" : { 
+            "BonusToSkill" : "Staff"
+        }
+	},
+    "Reports" :
+    {
+        "1" : "List Studied Items"
+    }
+  },
+  "Hammer" : 
+  {
+    "Id" : 100,
+    "Description" : "Mastery of the use of hammers and clubs in combat. Power consumption is higher than average, but so is damage. Hammers excel at rapidly murdering enemies, no more and no less.",
+    "HideWhenZero" : true,
+    "XpTable" : "TypicalCombatSkillExt",
+    "AdvancementTable" : "Balanced",
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "Combat" : true,
+    "MaxBonusLevels" : 25,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Hammer_60" : 50,
+        "LevelCap_Hammer_70" : 60,
+        "LevelCap_Hammer_80" : 70,
+        "LevelCap_Hammer_90" : 80,
+        "LevelCap_Hammer_100" : 90
+    },
+    "AdvancementHints" : 
+    {
+        "50" : "To earn more XP in Hammer, gain favor with Falkrin Overstrike in Rahu. Wait, he's in Amulna for now."
+    },	
+	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "Pound1"
+        },
+        "2" : {
+            "Ability" : "RecklessSlam1"
+        },
+        "3" : {
+            "Ability" : "LeapingSmash1"
+        },
+        "5" : {
+            "Ability" : "RibShatter1"
+        },
+        "9" : {
+            "Ability" : "ReverberatingStrike1"
+        },
+        "10" : {
+            "Ability" : "LookAtMyHammer1"
+        },
+        "11" : { 
+            "BonusToSkill" : "Carpentry"
+        },
+        "12" : {
+            "Ability" : "Pound2"
+        },
+        "13" : {
+            "Ability" : "RecklessSlam2"
+        },
+        "15" : {
+            "Ability" : "PoundToSlag1"
+        },
+        "16" : {
+            "Ability" : "LeapingSmash2"
+        },
+        "19" : {
+            "Ability" : "ReverberatingStrike2"
+        },
+        "20" : {
+            "Ability" : "LookAtMyHammer2"
+        },
+        "22" : {
+            "Ability" : "RecklessSlam3"
+        },
+        "25" : {
+            "Ability" : "RibShatter2"
+        },
+        "28" : {
+            "Ability" : "Pound3"
+        },
+        "29" : {
+            "Ability" : "ReverberatingStrike3"
+        },
+        "30" : {
+            "Ability" : "LookAtMyHammer3"
+        },
+        "31" : { 
+            "BonusToSkill" : "Toolcrafting"
+        },
+        "32" : {
+            "Ability" : "RecklessSlam4"
+        },
+        "33" : {
+            "Ability" : "PoundToSlag2"
+        },
+        "35" : {
+            "Ability" : "LeapingSmash3"
+        },
+        "37" : {
+            "Ability" : "ReverberatingStrike4"
+        },
+        "39" : {
+            "Ability" : "RibShatter3"
+        },
+        "40" : {
+            "Ability" : "LookAtMyHammer4"
+        },
+        "41" : { 
+            "BonusToSkill" : "Carpentry"
+        },
+        "42" : {
+            "Ability" : "RecklessSlam5"
+        },
+        "45" : {
+            "Ability" : "PoundToSlag3"
+        },
+        "47" : {
+            "Ability" : "Pound4"
+        },
+        "48" : {
+            "Ability" : "LeapingSmash4"
+        },
+        "49" : {
+            "Ability" : "ReverberatingStrike5"
+        },
+        "50" : {
+            "Ability" : "LookAtMyHammer5"
+        }
+
+	}
+  },
+  "Druid" : 
+  {
+    "Id" : 101,
+    "Description" : "Druidin'",
+    "HideWhenZero" : true,
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "Balanced",
+    "Combat" : true,
+    "MaxBonusLevels" : 25,
+	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "HeartThorn1"
+        },
+        "3" : {
+            "Ability" : "Brambleskin1"
+        },
+        "5" : {
+            "Ability" : "Rotskin1"
+        },
+        "7" : {
+            "Ability" : "CosmicStrike1"
+        },
+        "9" : {
+            "Ability" : "Delerium1"
+        },
+        "10" : {
+            "Ability" : "Regrowth1"
+        },
+        "11" : {
+            "Ability" : "HeartThorn2"
+        },
+        "12" : {
+            "Ability" : "HealingSanctuary1"
+        },
+        "13" : {
+            "Ability" : "Brambleskin2"
+        },
+        "15" : {
+            "Ability" : "HuntersStride1"
+        },
+        "16" : {
+            "Ability" : "Rotskin2"
+        },
+        "18" : {
+            "Ability" : "CosmicStrike2"
+        },
+        "20" : {
+            "Ability" : "Delerium2"
+        },
+        "21" : {
+            "Ability" : "HeartThorn3"
+        },
+        "22" : {
+            "BonusToSkill" : "Foraging"
+        },
+        "23" : {
+            "Ability" : "Brambleskin3"
+        },
+        "25" : {
+            "Ability" : "DeerForm1"
+        },
+        "26" : {
+            "Ability" : "Rotskin3"
+        },
+        "27" : {
+            "Ability" : "HealingSanctuary2"
+        },
+        "28" : {
+            "Ability" : "CosmicStrike3"
+        },
+        "29" : {
+            "Ability" : "Delerium3"
+        },
+        "30" : {
+            "Ability" : "HuntersStride2"
+        },
+        "31" : {
+            "Ability" : "HeartThorn4"
+        },
+        "33" : {
+            "Ability" : "Brambleskin4"
+        },
+        "34" : {
+            "BonusToSkill" : "Gardening"
+        },
+        "35" : {
+            "Ability" : "Regrowth2"
+        },
+        "36" : {
+            "Ability" : "Rotskin4"
+        },
+        "38" : {
+            "Ability" : "CosmicStrike4"
+        },
+        "40" : {
+            "Ability" : "Delerium4"
+        },
+        "41" : {
+            "Ability" : "HeartThorn5"
+        },
+        "43" : {
+            "Ability" : "Brambleskin5"
+        },
+        "44" : {
+            "Ability" : "HealingSanctuary3"
+        },
+        "45" : {
+            "Ability" : "Regrowth3"
+        },
+        "46" : {
+            "Ability" : "Rotskin5"
+        },
+        "47" : {
+            "Ability" : "HuntersStride3"
+        },
+        "48" : {
+            "Ability" : "CosmicStrike5"
+        },
+        "49" : {
+            "Ability" : "Delerium5"
+        },
+        "50" : {
+            "Ability" : "RavenForm1"
+        },
+        "51" : {
+            "Ability" : "HeartThorn6"
+        },
+        "53" : {
+            "Ability" : "Brambleskin6"
+        },
+        "56" : {
+            "Ability" : "Rotskin6"
+        },
+        "57" : {
+            "Ability" : "CosmicStrike6"
+        },
+        "59" : {
+            "Ability" : "Delerium6"
+        },
+        "60" : {
+            "Ability" : "HuntersStride4"
+        }
+	}
+    
+  },
+  "Anatomy_Plants" : 
+  {
+    "Id" : 102,
+    "Name" : "Plant Anatomy",
+    "Description" : "Knowledge of the physiology of monstrous plants.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "10" :  { "BonusToSkill" : "Carpentry" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "40" : { "Notes" : "Archery chance of critical hit: +1% (total 5%)" },
+        "45" :  { "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)" },
+        "50" :  { "BonusToSkill" : "Carpentry" }
+	}
+  },
+  "Toolcrafting" : 
+  {
+    "Id" : 103,
+    "Name" : "Toolcrafting",
+    "Description" : "Skill in the creation of advanced tools and unusual equipment. Far more than just creating hand tools, an expert Toolcrafter is a master of repurposing found materials, and can create belts, armors, and even weapons from unusual materials. This equipment is usually designed to meet very specialized needs.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "Parents" : [ ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "15" : {
+            "BonusToSkill" : "Blacksmithing"
+        },
+        "30" : {
+            "BonusToSkill" : "Carpentry"
+        },
+        "45" : {
+            "BonusToSkill" : "Tailoring"
+        }
+	}
+  },
+  "Artistry" : 
+  {
+    "Id" : 104,
+    "Name" : "Artistry",
+    "Description" : "Skill in the visual arts, including painting, sculpting, and mosaic creation.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "Parents" : [ ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Vocabulary" : 
+  {
+    "Id" : 105,
+    "Name" : "Vocabulary",
+    "Description" : "Knowledge of many words in the common language.",
+    "XpTable" : "Vocabulary",
+    "Parents" : [ ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Cartography" : 
+  {
+    "Id" : 106,
+    "Name" : "Cartography",
+    "Description" : "Umbrella skill for map-related activities.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "Parents" : [ ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "CorpseTalking" : 
+  {
+    "Id" : 107,
+    "Name" : "Corpse Talking",
+    "Description" : "Ability to commune telepathically with nearby dead bodies. Higher skill grants higher chances of persuading recalcitrant spirits, as well as higher comprehension rates when learning from the dead.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "Parents" : [ "Necromancy" ],
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "TreasureCartography" : 
+  {
+    "Id" : 108,
+    "Name" : "Treasure Cartography",
+    "Description" : "Experience creating maps from old clues. The maps can lead to treasure... or tragedy.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "Parents" : [ ],
+    "AdvancementTable" : "TreasureHunting",
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "IceMagic" : 
+  {
+    "Id" : 109,
+    "Name" : "Ice Magic",
+    "Description" : "A specialization of Fire Magic that focuses entirely upon lowering temperature instead of raising it. It has protective and controlling abilities as well as offensive abilities.",
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "FireMagic",
+    "TSysCategories" : [ "MainHandWeapon" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" : { "Recipe" : "IceMagic1", "Notes" : "Access to new research recipe" },
+        "5" : { "Notes" : "Access to new research recipe" },
+        "10" : { "Notes" : "Access to new research recipe" },
+        "15" : { "Notes" : "Access to new research recipe" },
+        "20" : { "Notes" : "Access to new research recipe" },
+        "23" : { "BonusToSkill" : "Anatomy_Plants" },
+        "25" : { "Notes" : "Access to new research recipe" },
+        "30" : { "Notes" : "Access to new research recipe" },
+        "35" : { "Notes" : "Access to new research recipe" },
+        "40" : { "Notes" : "Access to new research recipe" },
+        "43" : { "BonusToSkill" : "FireMagic" },
+        "45" : { "Notes" : "Access to new research recipe" },
+        "50" : { "Notes" : "Access to new research recipe" }
+	}
+  },
+  "Anatomy_Reptiles" : 
+  {
+    "Id" : 110,
+    "Name" : "Reptile Anatomy",
+    "Description" : "Knowledge of the physiology of snakes, snake-people, and generally snakey things.",
+    "XpTable" : "CorpseActionSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 25,
+    "Parents" : [ "Anatomy" ],
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1" :  { "BonusToSkill" : "Anatomy", "Notes" : "Basic Combat Info Shown" },
+        "5" :  { "Notes": "More Combat Info Shown" },
+        "6" :  { "Notes": "Butchering yields extra bones: +2%" },
+        "7" :  { "Notes" : "Skinning yields exotic items: +2%" },
+        "8" :  { "Notes" : "Archery chance of critical hit: +1%" },
+        "9" :  { "Notes" : "Butchery yields rare meat or organs: +3%" },
+        "10" : { "Notes" : "Skinning yields a trophy skin: +1%" },
+        "12" :  { "Notes": "Butchering yields extra bones: +2% (total 4%)" },
+        "14" : { "Notes" : "Skinning yields exotic items: +2% (total 4%)" },
+        "15" :  { "BonusToSkill" : "Anatomy" },
+        "16" :  { "Notes" : "Archery chance of critical hit: +1% (total 2%)" },
+        "18" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 6%)\nButchery yields extra bones: +2% (total 6%)" },
+        "20" : { "Notes" : "Skinning yields a trophy skin: +1% (total 2%)" },
+        "21" : { "Notes" : "Skinning yields exotic items: +2% (total 6%)" },
+        "24" :  { "Notes" : "Archery chance of critical hit: +1% (total 3%)\nButchery yields extra bones: +2% (total 8%)" },
+        "25" :  { "BonusToSkill" : "Anatomy" },
+        "27" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 9%)" },
+        "28" : { "Notes" : "Skinning yields exotic items: +2% (total 8%)" },
+        "30" : { "Notes" : "Skinning yields a trophy skin: +1% (total 3%)\nButchery yields extra bones: +2% (total 10%)" },
+        "32" :  { "Notes" : "Archery chance of critical hit: +1% (total 4%)" },
+        "35" : { "Notes" : "Skinning yields exotic items: +2% (total 10%)" },
+        "36" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 12%)\nButchery yields extra bones: +2% (total 12%)" },
+        "40" : { "Notes" : "Skinning yields a trophy skin: +1% (total 4%)\nArchery chance of critical hit: +1% (total 5%)" },
+        "42" : { "Notes" : "Skinning yields exotic items: +2% (total 12%)\nButchery yields extra bones: +2% (total 14%)" },
+        "45" :  { "Notes" : "Butchery yields rare meat or organs: +3% (total 15%)", "BonusToSkill" : "Anatomy" },
+        "48" : { "Notes" : "Archery chance of critical hit: +1% (total 6%)\nButchery yields extra bones: +2% (total 16%)" },
+        "49" : { "Notes" : "Skinning yields exotic items: +2% (total 14%)" },
+        "50" : { "Notes" : "Skinning yields a trophy skin: +1% (total 5%)" }
+
+	}
+  },
+  "Performance" : 
+  {
+    "Id" : 111,
+    "Name" : "Performance",
+    "Description" : "This umbrella skill represents your ability to entertain with performances of music, acrobatics, dance, art, recitals, and so on.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 125,
+    "SkipBonusLevelsIfSkillUnlearned" : false,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Performance_Strings" : 
+  {
+    "Id" : 112,
+    "Name" : "Stringed Instruments",
+    "Description" : "Skill in performing with stringed instruments such as harps, lutes, and guitars.",
+    "XpTable" : "PerformanceSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Performance" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Performance_Strings20" : 10
+    },
+  	"Rewards" :
+  	{
+        "1" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Lute1"
+        },
+        "2" : {
+            "Ability" : "Lute2"
+        },
+        "4" : {
+            "Ability" : "Lute3"
+        },
+        "6" : {
+            "Ability" : "Lute4"
+        },
+        "8" : {
+            "Ability" : "Lute5"
+        },
+        "10" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Lute6"
+        }	
+	}
+  },
+  "Performance_Percussion" : 
+  {
+    "Id" : 113,
+    "Name" : "Percussion Instruments",
+    "Description" : "Skill in performing with percussion instruments such as drums, bells, and dulcimers.",
+    "XpTable" : "PerformanceSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Performance" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Performance_Percussion20" : 10
+    },
+  	"Rewards" :
+  	{
+        "1" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Drum1"
+        },
+        "2" : {
+            "Ability" : "Drum2"
+        },
+        "4" : {
+            "Ability" : "Drum3"
+        },
+        "6" : {
+            "Ability" : "Drum4"
+        },
+        "8" : {
+            "Ability" : "Drum5"
+        },
+        "10" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Drum6"
+        },
+        "11" : {
+            "Ability" : "Dulcimer1"
+        },
+        "12" : {
+            "Ability" : "Dulcimer2"
+        },
+        "14" : {
+            "Ability" : "Dulcimer3"
+        },
+        "15" : {
+            "BonusToSkill" : "Performance"
+        },
+        "16" : {
+            "Ability" : "Dulcimer4"
+        },
+        "18" : {
+            "Ability" : "Dulcimer5"
+        },
+        "20" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Dulcimer6"
+        }	
+    }
+  },
+  "Performance_Wind" : 
+  {
+    "Id" : 114,
+    "Name" : "Wind Instruments",
+    "Description" : "Skill in performing with brass and woodwind instruments such as trumpets, ocarinas, and flutes.",
+    "XpTable" : "PerformanceSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Performance" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+    "InteractionFlagLevelCaps" :
+    {
+        "LevelCap_Performance_Wind20" : 10
+    },
+  	"Rewards" :
+  	{
+        "1" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Ocarina1"
+        },
+        "2" : {
+            "Ability" : "Ocarina2"
+        },
+        "4" : {
+            "Ability" : "Ocarina3"
+        },
+        "6" : {
+            "Ability" : "Ocarina4"
+        },
+        "8" : {
+            "Ability" : "Ocarina5"
+        },
+        "10" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Ocarina6"
+        },
+        "11" : {
+            "Ability" : "Tuba1"
+        },
+        "12" : {
+            "Ability" : "Tuba2"
+        },
+        "14" : {
+            "Ability" : "Tuba3"
+        },
+        "15" : {
+            "BonusToSkill" : "Performance"
+        },
+        "16" : {
+            "Ability" : "Tuba4"
+        },
+        "18" : {
+            "Ability" : "Tuba5"
+        },
+        "20" : {
+            "BonusToSkill" : "Performance",
+            "Ability" : "Tuba6"
+        }
+	}
+  },
+  "ArmorAugmentBrewing" : 
+  {
+    "Id" : 115,
+    "Name" : "Armor Augmentation",
+    "Description" : "Knowledge of the techniques for creating Chest-Armor Augments and Leg-Armor Augments. (Augments for other types of equipment are covered by other skills.)",
+    "XpTable" : "AugmentBrewingSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Augmentation" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "35" : { "BonusToSkill" : "Alchemy" }
+	}
+  },
+  "WeaponAugmentBrewing" : 
+  {
+    "Id" : 116,
+    "Name" : "Weapon Augmentation",
+    "Description" : "Knowledge of the techniques for creating Weapon Augments, Off-Hand Augments, and Glove Augments. (Augments for other types of equipment are covered by other skills.)",
+    "XpTable" : "AugmentBrewingSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Augmentation" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "35" : { "BonusToSkill" : "Alchemy" }
+	}
+  },
+  "AncillaryArmorAugmentBrewing" : 
+  {
+    "Id" : 117,
+    "Name" : "Ancillary-Armor Augmentation",
+    "Description" : "Knowledge of the techniques for creating Helm Augments and Shoes Augments. (Augments for other types of equipment are covered by other skills.)",
+    "XpTable" : "AugmentBrewingSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Augmentation" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "35" : { "BonusToSkill" : "Alchemy" }
+	}
+  },
+  "JewelryAugmentBrewing" : 
+  {
+    "Id" : 118,
+    "Name" : "Jewelry Augmentation",
+    "Description" : "Knowledge of the techniques for creating Necklace Augments and Ring Augments. (Augments for other types of equipment are covered by other skills.)",
+    "XpTable" : "AugmentBrewingSkill",
+    "AdvancementTable" : null,
+    "Parents" : [ "Augmentation" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "35" : { "BonusToSkill" : "Alchemy" }
+	}
+  },
+  "CivicPride" : 
+  {
+    "Id" : 119,
+    "Name" : "Civic Pride",
+    "Description" : "Represents your willingness to tackle the small, mundane tasks in your community, and your understanding of why that's important. This skill is especially valued by humans.",
+    "XpTable" : "CivicPride",
+    "AdvancementTable" : "CivicPride",
+    "Parents" : [ ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Assessment" :
+  {
+    "Id" : 120,
+    "Name" : "Assessment",
+    "Description" : "Skill in determining things about somebody based on their visible appearance. A high Assessment skill lets you see more information about other players when you examine them.",
+    "XpTable" : "CivicPride",
+    "AdvancementTable" : "CivicPride",
+    "Parents" : [ ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Productivity" :
+  {
+    "Id" : 121,
+    "Name" : "Productivity",
+    "Description" : "(unused)",
+    "XpTable" : "CivicPride",
+    "AdvancementTable" : null,
+    "Parents" : [ ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Industry" : 
+  {
+    "Id" : 122,
+    "Name" : "Industry",
+    "Description" : "Competence in completing tasks to specification. Highly industrious workers can juggle more tasks at once, and earn slightly higher rewards for their hard work.",
+    "XpTable" : "Industry",
+    "AdvancementTable" : "Industry",
+    "Parents" : [ ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "Transmutation" : 
+  {
+    "Id" : 123,
+    "Name" : "Transmutation",
+    "Description" : "The science of permanently altering how a magical item works. Also covers manipulation of the basic materials of magic, such as phlogiston.",
+    "XpTable" : "Transmutation",
+    "AdvancementTable" : null,
+    "Parents" : [ "Alchemy" ],
+    "MaxBonusLevels" : 25,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+        "1": {
+            "Recipe" : "DistillSimpleMagicalItem"
+        }
+	}
+  },
+  "Augmentation" : 
+  {
+    "Id" : 124,
+    "Name" : "Augmentation",
+    "Description" : "Skill in creating magical augments. This is an umbrella skill representing your overall knowledge of augmentation.",
+    "XpTable" : "TypicalNoncombatSkill",
+    "AdvancementTable" : null,
+    "MaxBonusLevels" : 125,
+    "SkipBonusLevelsIfSkillUnlearned" : false,
+    "Combat" : false,
+  	"Rewards" :
+  	{
+	}
+  },
+  "GiantBat" : 
+  {
+    "Id" : 125,
+    "Name" : "Giant Bat",
+    "Description" : "Skill in living and fighting as a bat.",
+    "TSysCategories" : [ "AnimalForm", "BattleChemistry", "OffHandWeapon", "MainHandWeapon" ],
+    "XpTable" : "TypicalCombatSkill",
+    "AdvancementTable" : "PlayerBat",
+    "MaxBonusLevels" : 25,
+    "Combat" : true,
+  	"Rewards" :
+  	{
+        "1" : {
+            "Ability" : "Rip1"
+        },
+        "2" : {
+            "Ability" : "Tear1"
+        },
+        "3" : {
+            "Ability" : "Echolocation"
+        },
+        "4" : {
+            "Ability" : "WingVortex1"
+        },
+        "7" : {
+            "Ability" : "DrinkBlood1"
+        },
+        "8" : {
+            "Ability" : "VirulentBite1"
+        },
+        "9" : {
+            "Ability" : "BatStability1"
+        },
+        "11" : {
+            "Ability" : "Rip2"
+        },
+        "13" : {
+            "Ability" : "SonicBurst1"
+        },
+        "14" : {
+            "Ability" : "WingVortex2"
+        },
+        "15" : {
+            "Ability" : "Tear2"
+        },
+        "17" : {
+            "Ability" : "DrinkBlood2"
+        },
+        "18" : {
+            "Ability" : "VirulentBite2"
+        },
+        "19" : {
+            "Ability" : "ConfusingDouble1"
+        },
+        "21" : {
+            "Ability" : "Rip3"
+        },
+        "23" : {
+            "Ability" : "SonicBurst2"
+        },
+        "24" : {
+            "Ability" : "WingVortex3"
+        },
+        "25" : {
+            "Ability" : "Tear3"
+        },
+        "27" : {
+            "Ability" : "DrinkBlood3"
+        },
+        "28" : {
+            "Ability" : "VirulentBite3"
+        },
+        "29" : {
+            "Ability" : "BatStability2"
+        },
+        "31" : {
+            "Ability" : "Rip4"
+        },
+        "33" : {
+            "Ability" : "SonicBurst3"
+        },
+        "34" : {
+            "Ability" : "WingVortex4"
+        },
+        "35" : {
+            "Ability" : "Tear4"
+        },
+        "37" : {
+            "Ability" : "DrinkBlood4"
+        },
+        "38" : {
+            "Ability" : "VirulentBite4"
+        },
+        "39" : {
+            "Ability" : "ConfusingDouble2"
+        },
+        "41" : {
+            "Ability" : "Rip5"
+        },
+        "43" : {
+            "Ability" : "SonicBurst4"
+        },
+        "44" : {
+            "Ability" : "WingVortex5"
+        },
+        "45" : {
+            "Ability" : "Tear5"
+        },
+        "47" : {
+            "Ability" : "DrinkBlood5"
+        },
+        "48" : {
+            "Ability" : "VirulentBite5"
+        },
+        "49" : {
+            "Ability" : "BatStability3"
+        },
+        "50" : {
+            "Ability" : "ConfusingDouble3"
+        },
+        "51" : {
+            "Ability" : "Rip6"
+        }
+        
+    }
+  }
+  
+}
+          

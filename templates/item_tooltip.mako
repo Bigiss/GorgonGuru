@@ -1,8 +1,7 @@
 <%
   from gorgon.utils import colorize
 
-  kwords = u"<br>".join(item.keywords)
-  effects = colorize(u"<br>".join(item.effects))
+  effects = colorize(u"<br>".join(item.effects or []))
   iconimg = item.RenderIcon()
   slot = item.slot or "-"
 %>
@@ -31,6 +30,19 @@
             <ul>
 %   for keyword in item.keywords:
                 <li>${keyword}</li>
+%   endfor
+            </ul>
+        </div>
+% endif
+% if item.sellers:
+        <div id="sellers">
+            Sold by: <ul>
+%   for seller in item.sellers:
+%      if seller.Item(item).multiple > 1:
+                <li>${seller.name} (${seller.Item(item).multiple} for ${seller.Item(item).price})</li>
+%      else:
+                <li>${seller.name} (${seller.Item(item).price})</li>
+%      endif:
 %   endfor
             </ul>
         </div>

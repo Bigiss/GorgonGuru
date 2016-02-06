@@ -20,7 +20,7 @@ class Calculator(object):
                 continue
             flat_mod += flat
 
-        return ability_base_damage * (base_ability_mod + pct_mod) + flat_mod
+        return ability_base_damage * (base_ability_mod + pct_mod) + (flat_mod*pct_mod)
 
     def CalculateAvgDamage(self, ability_base_damage, base_ability_mod, ability_pct_mods, ability_flat_mods):
         if not ability_base_damage:
@@ -37,13 +37,16 @@ class Calculator(object):
             avg_chance_num += 1
 
         for flat, chance, _ in ability_flat_mods:
-            avg_flat_mod = flat * chance
+            avg_flat_mod += flat * chance
             avg_chance += chance
             avg_chance_num += 1
 
         chance = 1
         if avg_chance_num:
             chance = avg_chance / avg_chance_num
+
+        if chance > 1:
+            raise RuntimeError("Chance higher than 100&")
 
         damage = ability_base_damage * (base_ability_mod + avg_ability_mod) + (avg_flat_mod * avg_ability_mod)
         return damage, chance

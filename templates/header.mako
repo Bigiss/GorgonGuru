@@ -1,3 +1,4 @@
+<% import re %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +18,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/s/bs/dt-1.10.10,fh-3.1.0,r-2.0.0/datatables.min.js"></script>
     <script type="text/javascript" charset="utf8" src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/jquery.qtip.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/style.css">
@@ -50,6 +50,7 @@
   <body>
 
     <nav id="navMenu" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="last-update">Last updated: ${lastupdate}</div>
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -80,7 +81,7 @@
                         <a href="#">Combat</a>
                         <ul class="dropdown-menu">
 % for skill in combat_skills:
-                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}">${skill.name}</a></li>
 % endfor
                         </ul>
                     </li>
@@ -88,7 +89,7 @@
                         <a href="#">Crafting</a>
                         <ul class="dropdown-menu">
 % for skill in crafting_skills:
-                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}">${skill.name}</a></li>
 % endfor
                         </ul>
                     </li>
@@ -96,7 +97,7 @@
                         <a href="#">Foraging</a>
                         <ul class="dropdown-menu">
 % for skill in foraging_skills:
-                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}">${skill.name}</a></li>
 % endfor
                         </ul>
                     </li>
@@ -104,7 +105,7 @@
                         <a href="#">Other (A..M)</a>
                         <ul class="dropdown-menu">
 % for skill in [s for s in other_skills if re.match("[A-Ma-m]", s.name[0])]:
-                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}">${skill.name}</a></li>
 % endfor
                         </ul>
                     </li>
@@ -112,14 +113,25 @@
                         <a href="#">Other (N..Z)</a>
                         <ul class="dropdown-menu">
 % for skill in [s for s in other_skills if re.match("[N-Zn-z]", s.name[0])]:
-                            <li><a href="/skills/${skill.id}.html" title="${skill.description}"">${skill.name}</a></li>
+                            <li><a href="/skills/${skill.id}.html" title="${skill.description}">${skill.name}</a></li>
 % endfor
                         </ul>
-                    </li>                </ul>
+                    </li>
+                </ul>
             </li>
             <li><a href="${abilities_location}">Abilities</a></li>
             <li><a href="${powers_location}">Mods</a></li>
             <li><a href="${recipes_location}">Recipes</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" title="Explore changes for every update">
+                    Updates <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+% for v1, v2 in version_pairs:
+                    <li><a href="/changes/${v1}_to_${v2}.html">Update ${v2}</a></li>
+% endfor
+                </ul>
+            </li>
             <li><a style="color: red; font-weight: bold" href="https://github.com/dmnthia/gorgon/issues">Report bug!</a></li>
           </ul>
         </div><!--/.nav-collapse -->

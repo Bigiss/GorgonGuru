@@ -1,0 +1,244 @@
+{
+    "Way": {
+        "Sells": {
+            "PowerPotion1": {
+                "Price": 100
+            },
+            "ArmorPotion1": {
+                "Price": 100
+            },
+            "JunkGoblet": {
+                "Price": 75
+            },
+            "Beak": {
+                "Price": 50
+            },
+            "MetalSlab1": {
+                "Price": 50
+            },
+            "RawhideLiner": {
+                "Price": 250
+            }
+        },
+        "Buys": {
+            "*": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 10000, 0, 0, 0, 17500],
+        "Zone": "Serbule",
+        "Location": "Myconian Cave"
+    },
+    "Marna": {
+        "Sells": {
+            "PoisonDispelWeak": {
+                "Price": 30
+            },
+            "WordGame": {
+                "Price": 75
+            },
+            "ClassicLute": {
+                "Price": 75
+            },
+            "FirstAidKit1": {
+                "Price": 15
+            },
+            "FirstAidKit2": {
+                "Price": 30
+            },
+            "FirstAidKit3": {
+                "Price": 75
+            },
+            "ArmorPatchKit1": {
+                "Price": 7
+            },
+            "ArmorPatchKit2": {
+                "Price": 15
+            },
+            "ArmorPatchKit3": {
+                "Price": 75
+            },
+            "DiseaseCure_FeebleFever": {
+                "Price": 22
+            },
+            "DiseaseCure_Roundworms": {
+                "Price": 225
+            },
+            "DiseaseCure_SlimyTremors": {
+                "Price": 225
+            },
+            "DiseaseCure_Creakliver": {
+            },
+            "DiseaseCure_LunaticShakes": {
+            },
+            "LuckyBeltOfTheAlchemist": {
+                "Price": 180
+            },
+            "LuckyBeltOfTheSupportArcher": {
+                "Price": 180
+            }
+        },
+        "Buys": {
+            "*": {
+            }
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 3200, 0, 0],
+        "Zone": "Serbule",
+        "Location": "Marna's shop",
+        "Trains": {
+            "Archery": {},
+            "Lore": {}
+        }
+    },
+    "Fainor": {
+        "Sells": {
+            "Salt": {
+                "Price": 37,
+                "Num": 5
+            },
+            "Flour": {
+                "Price": 37,
+                "Num": 5
+            },
+            "Sugar": {
+                "Price": 7,
+                "Num": 5
+            },
+            "ButcherKnife1": {
+                "Price": 250
+            }
+        },
+        "Buys": {
+            "Recipe": {},
+            "Food": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 0, 25000, 0],
+        "Zone": "Serbule",
+        "Location": "Serbule Keep Inn",
+        "BeastSpeak": true,
+        "Trains": {
+            "Cooking": {}
+        }
+    },
+    "Sir Coth": {
+        "Sells": {
+            "ArmorPatchKit1": {
+                "Price": 5
+            },
+            "ArmorPatchKit2": {
+                "Price": 12
+            },
+            "ArmorPatchKit3": {
+                "Price": 60
+            },
+            "ArmorPatchKit4": {
+                "Price": 120
+            },
+            "BasicInk": {
+                "Price": 12
+            }
+        },
+        "Buys": {
+            "Painting": {},
+            "AncientCoin": {},
+            "VendorTrash": {}
+        },
+        "Likes": {
+            "Painting": {},
+            "Ivory": {},
+            "FlawlessSkin": {}
+        },
+        "Hates": {
+            "Potion": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 10000, 20000, 40000, 50000, 60000],
+        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 400, 800, 1000, 12000],
+        "Zone": "Serbule",
+        "Location": "Serbule Keep Entrance"
+    },
+    "Dummy Name": {
+        "Sells": {
+            "Item1": {
+                "Price": 0
+            }
+        },
+        "Buys": {
+            "KEYWORD": {}
+        },
+        "Likes": {
+            "KEYWORD": {}
+        },
+        "Loves": {
+            "KEYWORD": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "Zone": "Serbule",
+        "Location": "Serbule",
+        "BeastSpeak": true,
+        "Trains": {
+            "Skill": {
+                "Ability": {
+                    "Price": 0,
+                    "Favor": 0
+                }
+            }
+        }
+    },
+    "Dummy Name": {
+        "Sells": {
+            "Item1": {
+                "Price": 0
+            }
+        },
+        "Buys": {
+            "KEYWORD": {}
+        },
+        "Likes": {
+            "KEYWORD": {}
+        },
+        "Loves": {
+            "KEYWORD": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "Zone": "Serbule",
+        "Location": "Serbule",
+        "BeastSpeak": true,
+        "Trains": {
+            "Skill": {
+                "Ability": {
+                    "Price": 0,
+                    "Favor": 0
+                }
+            }
+        }
+    },
+    "Dummy Name": {
+        "Sells": {
+            "Item1": {
+                "Price": 0
+            }
+        },
+        "Buys": {
+            "KEYWORD": {}
+        },
+        "Likes": {
+            "KEYWORD": {}
+        },
+        "Loves": {
+            "KEYWORD": {}
+        },
+        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "Zone": "Serbule",
+        "Location": "Serbule",
+        "BeastSpeak": true,
+        "Trains": {
+            "Skill": {
+                "Ability": {
+                    "Price": 0,
+                    "Favor": 0
+                }
+            }
+        }
+    }
+}

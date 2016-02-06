@@ -18,7 +18,7 @@ parser.add_argument('--dry', action="store_true",
                     help="Don't write anything, just try generating.")
 parser.add_argument('--console', action="store_true",
                     help="Spawn an IPython console after parsing. For easier debugging.")
-parser.add_argument('--assets', default="index,items,powers,skills,abilities,recipes,tooltips",
+parser.add_argument('--assets', default="index,items,powers,skills,abilities,recipes,tooltips,changes,itemkeys",
                     help="Which assets to rebuild.")
 args = parser.parse_args()
 args.assets = args.assets.split(",")
@@ -31,7 +31,7 @@ def Output(filename, data):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.WARN)
 
     try:
         version = args.version
@@ -48,23 +48,33 @@ if __name__ == "__main__":
             except OSError:
                 pass
 
+        if not args.dry and "changes" in args.assets:
+            reporter.ChangesReport(os.path.join(args.version_output_directory, "changes/"))
+
         if "index" in args.assets:
             Output("index.html", reporter.IndexReport())
+
         if "items" in args.assets:
             Output("items.html", reporter.ItemsReport())
+
+        if not args.dry and "itemkeys" in args.assets:
+            reporter.DumpItemKeys(os.path.join(args.version_output_directory, "itemkeys/"))
+
         if "powers" in args.assets:
             Output("powers.html", reporter.PowersReport())
+
         if "abilities" in args.assets:
             Output("abilities.html", reporter.AbilitiesReport())
+
         if "recipes" in args.assets:
             Output("recipes.html", reporter.RecipesReport())
+
         if not args.dry and "skills" in args.assets:
             reporter.DumpSkills(os.path.join(args.version_output_directory, "skills/"))
 
         if not args.dry and "tooltips" in args.assets:
             reporter.DumpItems(os.path.join(args.version_output_directory, "items/"))
 
-        version = args.version
 
     except Exception:
         import pdb; pdb.post_mortem(sys.exc_info()[2])

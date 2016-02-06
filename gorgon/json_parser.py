@@ -41,6 +41,8 @@ class GorgonJsonParser(object):
         self.items_properties = set()
         self.items = dict()
         self.items_alias = dict()
+        # Stores a list of all unique ItemKeys so they can be exported for recipe popups.
+        self.item_keys = set()
         self.effects = dict()
         self.effects_properties = set()
         self.effects_alias = dict()
@@ -57,23 +59,44 @@ class GorgonJsonParser(object):
         self.recipes = dict()
         self.recipe_properties = set()
         self.recipes_alias = dict()
+        self.merchants = dict()
+        self.merchants_alias = dict()
+        self.data_directory = None
 
     def Parse(self, directory):
         """Initializes this parser by parsing source JSON files."""
-        self.directory = os.path.join(directory, "v%d" % self.version)
+        self.data_directory = directory
+        self.version_directory = os.path.join(directory, "v%d" % self.version)
         self.ParseAttributes()
         self.ParseItems()
         self.ParseEffects()
         self.ParseAbilities()
-        self.ParseSkills()
-        self.LinkSkills()
-        self.ParseTSysClientInfo()
         self.ParseRecipes()
+        self.ParseSkills()
+        self.PostprocessSkills()
+        self.ParseTSysClientInfo()
+        self.ParseMerchants()
+        self.LinkRecipesToSkills()
 
     def _OpenDataFile(self, filename):
         """Helper function to load JSON data files."""
-        file_path = os.path.join(self.directory, filename)
-        return json.load(codecs.open(file_path, "rb", encoding="latin-1"))
+        file_path = os.path.join(self.version_directory, filename)
+        data = {}
+        try:
+            data = json.load(codecs.open(file_path, "rb", encoding="latin-1"))
+        except (IOError, TypeError):
+            pass
+        return self.Overlay(data, filename)
+
+    def Overlay(self, json_dict, filename):
+        """Applies the relevant overlay to the data source file."""
+        overlay_path = os.path.join(self.data_directory, *["overlays", filename])
+        try:
+            overlay = json.load(codecs.open(overlay_path, "rb", encoding="latin-1"))
+        except (IOError, TypeError):
+            return json_dict
+        json_dict.update(overlay)
+        return json_dict
 
     def _ParseEffect(self, effect):
         """Obtains all parameters for effects."""
@@ -114,6 +137,7 @@ class GorgonJsonParser(object):
             name = item_data.get("Name")
             desc = item_data.get("Description")
             skill_reqs = item_data.get("SkillReqs")
+            internal_name = item_data.get("InternalName")
             required_appearance = item_data.get("RequiredAppreance")
             effects = item_data.get("EffectDescs", [])
             effects = [self._FormatEffect(e) for e in effects]
@@ -125,10 +149,11 @@ class GorgonJsonParser(object):
             item = model.Item(name=name, description=desc, id=item_id,
                               required_appearance=required_appearance, skill_reqs=skill_reqs,
                               value=value, icon=icon_id, effects=effects, slot=slot, keywords=keywords,
-                              version=self.version, stack_size=stack_size)
+                              version=self.version, stack_size=stack_size, internal_name=internal_name)
             self.items[item_id] = item
             self.items_alias[item_id] = item
             self.items_alias[name] = item
+            self.items_alias[internal_name] = item
 
     def GetItem(self, id_, default=None):
         return self.items_alias.get(id_, default)
@@ -136,10 +161,22 @@ class GorgonJsonParser(object):
     def ParseEffects(self):
         data = self._OpenDataFile("effects.json")
 
-        for item_id, item_data in data.iteritems():
+        for effect_id, data in data.iteritems():
             # Store a list of properties
-            for key in item_data:
+
+            effect_id = int(effect_id.lstrip("effect_"))
+            name = data.get("Name")
+            desc = data.get("Desc")
+            icon = data.get("IconId")
+            duration = data.get("Duration")
+
+            for key in data:
                 self.effects_properties.add(key)
+
+            effect = model.Effect(id=effect_id, name=name, desc=desc, icon=icon, duration=duration)
+            self.effects[effect_id] = effect
+            self.effects_alias[effect_id] = effect
+            self.effects_alias[name] = effect
 
     def ParseTSysClientInfo(self):
         data = self._OpenDataFile("tsysclientinfo.json")
@@ -151,6 +188,8 @@ class GorgonJsonParser(object):
             suffix = power_data.get("Suffix")
             prefix = power_data.get("Prefix")
             _tiers = power_data.get("Tiers")
+            slots = power_data.get("Slots")
+            skill = power_data.get("Skill")
             tiers = dict()
 
             for tier, tier_data in sorted(_tiers.iteritems()):
@@ -162,24 +201,28 @@ class GorgonJsonParser(object):
             for key in power_data:
                 self.powers_properties.add(key)
 
-            power = model.Power(prefix=prefix, suffix=suffix, tiers=tiers)
+            power = model.Power(prefix=prefix, suffix=suffix, tiers=tiers, slots=slots, skill=skill)
             self.powers[power_id] = power
             self.powers_alias[power_id] = power
 
+
             for ability_name, skill_bonus, chance, flat_bonus, flat_chance, source in self.ExtractDamageMod(
                     self.powers[power_id]):
-                logging.info("Found mod %s(%s, %s, %s, %s) in %s", ability_name, skill_bonus, chance, flat_bonus,
+                logging.debug("Found mod %s(%s, %s, %s, %s) in %s", ability_name, skill_bonus, chance, flat_bonus,
                              flat_chance, tiers[max(tiers.keys())][0])
                 if not skill_bonus and not flat_bonus:
                     continue
                 for _, ability in self.abilities.iteritems():
                     if ability.name.startswith(ability_name):
-                        if skill_bonus:
-                            ability.mods["SkillBase"].append((skill_bonus, chance, source))
-                            ability.mods["SkillBase"].append((skill_bonus, chance, source))
-                        if flat_bonus:
-                            ability.mods["SkillFlat"].append((flat_bonus, flat_chance, source))
-                            if flat_chance < 1.0:
+                        slots = getattr(self.GetPower(power_id, {}), "slots", ["Dummy Slot"])
+                        if slots:
+                            num_slots = len(slots)
+                        else:
+                            num_slots = 2
+                        for _ in range(num_slots):
+                            if skill_bonus:
+                                ability.mods["SkillBase"].append((skill_bonus, chance, source))
+                            if flat_bonus:
                                 ability.mods["SkillFlat"].append((flat_bonus, flat_chance, source))
 
     def GetPower(self, id_, default=None):
@@ -287,33 +330,21 @@ class GorgonJsonParser(object):
             parents = skill_data.get("Parents", [])
             _rewards = skill_data.get("Rewards")
             name = skill_data.get("Name", skill)
-            rewards = {}
             crafting = skill in self.CRAFTING_SKILLS
             foraging = skill in self.FORAGING_SKILLS
 
-            for level, reward_dict in _rewards.iteritems():
-                level = int(level)
-                grant_ability = reward_dict.get("Ability")
-                grant_ability = self.GetAbility(grant_ability, grant_ability)
-                skill_bonus = reward_dict.get("BonusToSkill")
-                if skill_bonus:
-                    skill_bonus = "+1 %s" % self.GetSkills(skill_bonus, skill_bonus)
-                recipe_bonus = reward_dict.get("Recipe")
-                recipe_bonus = self.GetRecipe(recipe_bonus, recipe_bonus)
-                note_bonus = reward_dict.get("Notes")
-                rewards[level] = filter(None, [grant_ability, skill_bonus, recipe_bonus, note_bonus])
-
-            skill = model.Skill(id=id_, name=name, description=desc, combat=combat, maxlevel=maxlevel,
-                                rewards=rewards, advtable=advtable, xptable=xptable, parents=parents,
-                                crafting=crafting, foraging=foraging)
-            self.skills[id_] = skill
-            self.skills_alias[id_] = skill
-            self.skills_alias[name] = skill
+            skill_obj = model.Skill(id=id_, name=name, description=desc, combat=combat, maxlevel=maxlevel,
+                                _rewards=_rewards, advtable=advtable, xptable=xptable, parents=parents,
+                                crafting=crafting, foraging=foraging, internal_name=skill)
+            self.skills[id_] = skill_obj
+            self.skills_alias[id_] = skill_obj
+            self.skills_alias[name] = skill_obj
+            self.skills_alias[skill] = skill_obj
 
             for key in skill_data:
                 self.skills_properties.add(key)
 
-    def LinkSkills(self):
+    def PostprocessSkills(self):
         for skill in self.skills.values():
             if skill.parents:
                 for parent in skill.parents:
@@ -322,6 +353,18 @@ class GorgonJsonParser(object):
                         logging.error("Unable to find parent skill %s of %s", parent, skill.name)
                         continue
                     parent_skill.subskills.append(skill)
+            rewards = {}
+            for level, reward_dict in skill._rewards.iteritems():
+                level = int(level)
+                grant_ability = reward_dict.get("Ability")
+                grant_ability = self.GetAbility(grant_ability, grant_ability)
+                skill_bonus = reward_dict.get("BonusToSkill")
+                skill_bonus = self.GetSkills(skill_bonus, skill_bonus)
+                recipe_bonus = reward_dict.get("Recipe")
+                recipe_bonus = self.GetRecipe(recipe_bonus, recipe_bonus)
+                note_bonus = reward_dict.get("Notes")
+                rewards[level] = filter(None, [grant_ability, skill_bonus, recipe_bonus, note_bonus])
+            skill.rewards = rewards
 
     def GetSkills(self, id_, default=None):
         return self.skills_alias.get(id_, default)
@@ -351,6 +394,7 @@ class GorgonJsonParser(object):
             damage = self._FindAbilityDamage(ability_data)
             damage_type = ability_data.get("DamageType")
             internal_name = ability_data.get("InternalName")
+            icon = ability_data.get("IconID")
 
             power_cost = ability_data.get("PvE", {}).get("PowerCost")
             if power_cost:
@@ -370,12 +414,16 @@ class GorgonJsonParser(object):
 
             skill = ability_data.get("Skill")
             self.ability2skill[internal_name] = skill
+            self.ability2skill[name] = skill
+            self.ability2skill[ability] = skill
             ability_obj = model.Ability(id=id_, name=name, description=desc, damage=damage,
                                         damage_type=damage_type, internal_name=internal_name, range=range_,
-                                        power_cost=power_cost, cooldown=cooldown, level=level, skill=skill)
+                                        power_cost=power_cost, cooldown=cooldown, level=level, skill=skill, icon=icon,
+                                        version=self.version)
             self.abilities[id_] = ability_obj
             self.abilities_alias[id_] = ability_obj
             self.abilities_alias[internal_name] = ability_obj
+            self.abilities_alias[name] = ability_obj
 
             for p in ability_data.get("PvE"):
                 pve_properties.add(p)
@@ -395,20 +443,28 @@ class GorgonJsonParser(object):
         except ValueError:
             pass
 
-        if not item_code:
-            return desc, stack_size
+        if item_code:
+            try:
+                item_code = int(item_code)
+                item = self.GetItem(item_code, "ITEM_%s" % item_code)
+            except ValueError:
+                pass
+            except TypeError:
+                import ipdb;
+                ipdb.set_trace()
+                pass
+            return item, stack_size
+        elif item_keys:
+            for key in item_keys:
+                try:
+                    _, _ = key.split(":")
+                except ValueError:
+                    key = "Keyword:" + key
+                self.item_keys.add(key)
+            return model.ItemFilter(keys=item_keys, desc=desc), stack_size
+        else:
+           return desc, stack_size
 
-        try:
-            item_code = int(item_code)
-            item = self.GetItem(item_code, "ITEM_%s" % item_code)
-        except ValueError:
-            pass
-        except TypeError:
-            import ipdb;
-            ipdb.set_trace()
-            pass
-
-        return item, stack_size
 
     def ParseRecipes(self):
         data = self._OpenDataFile("recipes.json")
@@ -427,7 +483,7 @@ class GorgonJsonParser(object):
 
             iconid = recipe_data.get("IconId")
             skill = recipe_data.get("Skill")
-            skill = self.skills.get(skill) or skill
+            skill = self.GetSkills(skill, skill)
             skill_level_req = recipe_data.get("SkillLevelReq")
             try:
                 skill_level_req = int(skill_level_req)
@@ -439,6 +495,12 @@ class GorgonJsonParser(object):
             for item in results_json:
                 item, num = self._GetRecipeItem(item)
                 results.append((num, item))
+
+            result_effects_json = recipe_data.get("ResultEffects", [])
+            result_effects = []
+            for effect in result_effects_json:
+                effect, description = self._ParseResultEffect(effect=effect)
+                result_effects.append((effect, description))
 
             server_info = recipe_data.get("ServerInfo")
             reward_skill = server_info.get("RewardSkill")
@@ -454,10 +516,11 @@ class GorgonJsonParser(object):
             except ValueError:
                 pass
 
-            recipe_obj = model.Recipe(id=id_, name=name, desc=description, iconid=iconid, internal_name=internal_name,
+            recipe_obj = model.Recipe(id=id_, name=name, description=description, icon=iconid, internal_name=internal_name,
                                       skill=skill, skill_level_req=skill_level_req, reward_skill=reward_skill,
                                       reward_skill_xp_1st=reward_skill_xp_1st, reward_skill_xp=reward_skill_xp,
-                                      ingredients=ingredients, results=results)
+                                      ingredients=ingredients, results=results, version=self.version,
+                                      result_effects=result_effects)
             self.recipes[id_] = recipe_obj
             self.recipes_alias[id_] = recipe_obj
             self.recipes_alias[internal_name] = recipe_obj
@@ -465,15 +528,113 @@ class GorgonJsonParser(object):
             for key in recipe_data:
                 self.recipe_properties.add(key)
 
+    def _ParseResultEffect(self, effect):
+        """Parses a recipe ResultEffects.
+
+        Returns a tuple (result, description).
+        """
+        regexp = ("(?P<effect>[^(]+)"
+                  "(?:\()(?P<params>[^)]+)(?:\))")
+        matches = re.match(regexp, effect)
+        if not matches:
+            # This is a standard description
+            return effect, effect
+
+        parsed_effect = matches.group("effect")
+        try:
+            parsed_params = matches.group("params")
+        except IndexError:
+            parsed_params = None
+
+        if parsed_effect == "TSysCraftedEquipment":
+            item, maxenchanted, restriction = self._ParseCraftedEquipmentEffect(parsed_params)
+            description = []
+            if maxenchanted:
+                description.append("(Max-Enchanted)")
+            if restriction:
+                description.append("(Restriction: %s)" % restriction)
+            return item, u" ".join(description)
+        else:
+            return effect, effect
+
+    def _ParseCraftedEquipmentEffect(self, params):
+        params = params.split(",")
+        if len(params) == 1:
+            item = self.GetItem(params[0])
+            return item, False, None
+        elif len(params) == 2:
+            item = self.GetItem(params[0])
+            maxenchanted = int(params[1])
+            return item, maxenchanted, None
+        elif len(params) == 3:
+            item = self.GetItem(params[0])
+            maxenchanted = int(params[1])
+            restriction = params[2]
+            return item, maxenchanted, restriction
+        else:
+            import ipdb;ipdb.set_trace()
+
+
+    def LinkRecipesToSkills(self):
+        for recipe in self.recipes.values():
+            recipe.skill = self.GetSkills(recipe.skill, recipe.skill)
+
     def GetRecipe(self, id_, default=None):
         return self.recipes_alias.get(id_, default)
+
+    def ParseMerchants(self):
+        merchants = self._OpenDataFile("merchants.json")
+        for merchant_id, merchant in merchants.iteritems():
+            merchant_obj = model.Merchant(name=merchant_id)
+            sells = merchant.get("Sells", {})
+            sales = {}
+            for item_name, item_data in sells.iteritems():
+                item_obj = self.GetItem(item_name)
+                price = item_data.get("Price")
+                if price:
+                    price = int(price)
+                multiple = item_data.get("Num")
+                if multiple:
+                    multiple = int(multiple)
+
+                if not item_obj:
+                    logging.error("Merchant %s sells unknown item %s", merchant_id, item_name)
+                    continue
+                sales[item_obj] = model.ShopItem(price=price, multiple=multiple)
+                item_obj.sellers.append(merchant_obj)
+            merchant_obj.sales = sales
+            self.merchants[merchant_id] = merchant_obj
+            self.merchants_alias[merchant_id] = merchant_obj
+
 
     def __sub__(self, other):
         new_items = dict([(id_, self.GetItem(id_)) for id_ in self.items if id_ not in other.items])
         new_powers = dict([(id_, self.GetPower(id_)) for id_ in self.powers if id_ not in other.powers])
         new_abilities = dict([(id_, self.GetAbility(id_)) for id_ in self.abilities if id_ not in other.abilities])
-        result = GorgonJsonParser()
-        result.items = new_items
-        result.powers = new_powers
-        result.abilities = new_abilities
-        return result
+        additions = GorgonJsonParser()
+        additions.items = new_items
+        additions.powers = new_powers
+        additions.abilities = new_abilities
+
+        changes = {
+            "items": {},
+            "abilities": {},
+        }
+
+        for item_id, item in self.items.iteritems():
+            other_item = other.GetItem(item_id)
+            if not other_item:
+                continue
+            diffs = item.Differences(other_item)
+            if diffs:
+                changes["items"][item] = diffs
+
+        for ability_id, ability in self.abilities.iteritems():
+            other_ability = other.GetAbility(ability_id)
+            if not other_ability:
+                continue
+            diffs = ability.Differences(other_ability)
+            if diffs:
+                changes["abilities"][ability] = diffs
+
+        return additions, changes

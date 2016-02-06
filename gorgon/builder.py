@@ -1,9 +1,12 @@
 import codecs
+import datetime
 import os
+import re
 
 from mako.template import Template
+from mako.lookup import TemplateLookup
 
-from gorgon import calculator
+from gorgon import calculator, json_parser
 
 
 def html(func):
@@ -17,7 +20,9 @@ def html(func):
             powers_location="/powers.html",
             recipes_location="/recipes.html",
             abilities_location="/abilities.html",
-            parser=builder.parser)
+            parser=builder.parser,
+            lastupdate=datetime.datetime.now().strftime("%Y-%m-%d"),
+            version_pairs=builder.FindVersionPairs())
         footer = Template(filename="templates/footer.mako").render()
         return header + func(*args, **kwargs) + footer
 
@@ -28,22 +33,54 @@ class Builder(object):
     def __init__(self, parser):
         self.parser = parser
         self.calculator = calculator.Calculator(parser)
+        self.template_lookup = TemplateLookup(".")
+
+    def Template(self, filename):
+        return Template(filename=filename, lookup=self.template_lookup)
 
     @html
     def IndexReport(self):
-        return Template(filename="templates/index.mako").render()
+        return self.Template("templates/index.mako").render()
 
     @html
     def ItemsReport(self):
-        return Template(filename="templates/item_table.mako").render(items=self.parser.items.values())
+        return self.Template("templates/items_page.mako").render(items=self.parser.items.values())
+
+    def DumpItemKeys(self, directory):
+        key2field = {
+            "Keyword": "keywords",
+            "EquipmentSlot": "slot",
+        }
+        print "Dumping itemkeys to directory: %s" % directory
+        try:
+            os.makedirs(directory)
+        except OSError:
+            pass
+
+        for item_key in self.parser.item_keys:
+            field, value = item_key.split(":")
+            item_field = key2field.get(field)
+            if not item_field:
+                continue
+
+            filtered_items = []
+            for item in self.parser.items.values():
+                item_field = getattr(item, key2field.get(field)) or []
+                if value in item_field:
+                    filtered_items.append(item)
+                elif any([x.startswith(value+"=") for x in item_field]):
+                    filtered_items.append(item)
+            filtered_items = sorted(filtered_items, key=lambda x:x.name)
+            with codecs.open(os.path.join(directory, "items_%s.html" % item_key), "wb", encoding="utf-8") as fd:
+                fd.write(self.Template("templates/items_tiny.mako").render(items=filtered_items))
 
     @html
     def RecipesReport(self):
-        return Template(filename="templates/recipes_table.mako").render(recipes=self.parser.recipes.values())
+        return self.Template("templates/recipes_page.mako").render(recipes=self.parser.recipes.values())
 
     @html
     def PowersReport(self):
-        return Template(filename="templates/powers_table.mako").render(powers=self.parser.powers.values())
+        return self.Template("templates/powers_page.mako").render(powers=self.parser.powers.values())
 
     def DumpSkills(self, directory):
         print "Dumping skills to directory: %s" % directory
@@ -57,7 +94,9 @@ class Builder(object):
                 continue
 
             with codecs.open(os.path.join(directory, "%d.html" % skill.id), "wb", encoding="utf-8") as fd:
-                skill_page = Template(filename="templates/skill_page.mako").render(skill=skill, skills=self.parser.skills)
+                skill_page = self.Template("templates/skill_page.mako").render(
+                        skill=skill, skills=self.parser.skills, abilities=self.parser.abilities.values(),
+                        recipes=self.parser.recipes.values())
                 content = html(lambda x:skill_page)(self)
                 fd.write(content)
 
@@ -82,6 +121,10 @@ class Builder(object):
             else:
                 max_ = ""
 
+            # Correct for float rounding
+            min_ = min(min_, max_)
+            avg = min(avg, max_)
+
             percent_mods = []
             for skill_base, chance, source in ability.mods["SkillBase"]:
                 if chance < 1.0:
@@ -99,7 +142,7 @@ class Builder(object):
                     flat_mods.append('<span title="%s">%d</span>' % (source, flat_bonus))
 
             ability_data.append((ability, min_, avg, pct, max_, percent_mods, flat_mods))
-        return Template(filename="templates/abilities_table.mako").render(abilities=ability_data)
+        return self.Template("templates/abilities_page.mako").render(abilities=ability_data)
 
     def DumpItems(self, directory):
         print "Dumping items to directory: %s" % directory
@@ -113,4 +156,34 @@ class Builder(object):
                 continue
 
             with codecs.open(os.path.join(directory, "item_%d.html" % item.id), "wb", encoding="utf-8") as fd:
-                fd.write(Template(filename="templates/item_tooltip.mako").render(item=item))
+                fd.write(self.Template("templates/item_tooltip.mako").render(item=item))
+
+    def ChangesReport(self, directory):
+        self.changes_directory = directory
+        try:
+            os.makedirs(directory)
+        except OSError:
+            pass
+
+        for v1, v2 in self.FindVersionPairs():
+            prev_version = json_parser.GorgonJsonParser(v1)
+            prev_version.Parse("data")
+            next_version = json_parser.GorgonJsonParser(v2)
+            next_version.Parse("data")
+            differences, changes = next_version - prev_version
+
+            with codecs.open(os.path.join(directory, "%d_to_%d.html" % (v1, v2)), "wb", encoding="utf-8") as fd:
+                changes_page = self.Template("templates/changes_template.mako").render(
+                    old_version=v1, new_version=v2,
+                    items=differences.items.values(),
+                    abilities=differences.abilities.values(),
+                    skills=differences.skills.values(),
+                    powers=differences.powers.values(),
+                    changes=changes)
+                fd.write(html(lambda x:changes_page)(self))
+
+    def FindVersionPairs(self):
+        root, versions, _ = os.walk(self.parser.data_directory).next()
+        versions = sorted(filter(lambda x:re.match("v[0-9]+", x), versions))
+        for v1, v2 in zip(versions[::-1][1:], versions[::-1][:-1]):
+            yield int(v1[1:]), int(v2[1:])
