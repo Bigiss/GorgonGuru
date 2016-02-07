@@ -97,4 +97,48 @@
 </div>
 % endif
 
+% if changes["powers"]:
+<h3 id="modchanges">Mod changes</h3>
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <table class="changes display compact table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>Mod skill</td>
+                    <td>Attribute</td>
+                    <td>Before</td>
+                    <td></td>
+                    <td>After</td>
+                </tr>
+            </thead>
+            <tbody>
+%   for mod, mod_changes in sorted(changes["powers"].iteritems(), key=lambda x:(x[0].prefix,x[0].suffix)):
+%     for attr, (before, after) in mod_changes.iteritems():
+<%
+        # Skip not having slot data in 248
+        if attr == "slots" and before == None or attr == "skill" and before == None:
+            continue
+
+        if isinstance(before, list):
+            before = "<br/>".join([str(b) for b in before])
+        elif isinstance(before, dict):
+            before = "<br/>".join(["%s: %s" % (k, " ".join(v)) for (k, v) in before.iteritems()])
+
+        if isinstance(after, list):
+            after = "<br/>".join([str(a) for a in after])
+        elif isinstance(after, dict):
+            after = "<br/>".join(["%s: %s" % (k, " ".join(v)) for (k, v) in after.iteritems()])
+
+%>
+                <tr><td class="ability-name">${mod.skill}</td><td class="attribute-name">${attr}</td><td>${before}</td><td class="arrows">&#x2192;</td><td>${after}</td></tr>
+%     endfor
+%   endfor
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+% endif
+
 </div>
