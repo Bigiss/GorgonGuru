@@ -1,10 +1,11 @@
 import codecs
 import datetime
+import logging
 import os
 import re
 
-from mako.template import Template
 from mako.lookup import TemplateLookup
+from mako.template import Template
 
 from gorgon import calculator, json_parser
 
@@ -105,6 +106,10 @@ class Builder(object):
         ability_data = []
         for name, ability in sorted(self.parser.abilities.iteritems(), key=lambda x: x[1].skill):
             min_, avg, pct, max_ = self.calculator.CalculateDamage(name)
+            adpp = ""
+            if avg and ability.power_cost:
+                adpp = "%.0f" % (avg / ability.power_cost)
+
             if min_:
                 min_ = "%d" % min_
             else:
@@ -121,10 +126,6 @@ class Builder(object):
             else:
                 max_ = ""
 
-            # Correct for float rounding
-            min_ = min(min_, max_)
-            avg = min(avg, max_)
-
             percent_mods = []
             for skill_base, chance, source in ability.mods["SkillBase"]:
                 if chance < 1.0:
@@ -137,11 +138,11 @@ class Builder(object):
             for flat_bonus, flat_chance, source in ability.mods["SkillFlat"]:
                 if flat_chance < 1.0:
                     flat_mods.append(
-                            '<span title="%s">%d (%d%%)</span>' % (source, flat_bonus * 100, flat_chance * 100))
+                            '<span title="%s">%d (%d%%)</span>' % (source, flat_bonus, flat_chance * 100))
                 else:
                     flat_mods.append('<span title="%s">%d</span>' % (source, flat_bonus))
 
-            ability_data.append((ability, min_, avg, pct, max_, percent_mods, flat_mods))
+            ability_data.append((ability, min_, avg, pct, max_, percent_mods, flat_mods, adpp))
         return self.Template("templates/abilities_page.mako").render(abilities=ability_data)
 
     def DumpItems(self, directory):
@@ -166,6 +167,7 @@ class Builder(object):
             pass
 
         for v1, v2 in self.FindVersionPairs():
+            logging.info("Building %s vs %s", v1, v2)
             prev_version = json_parser.GorgonJsonParser(v1)
             prev_version.Parse("data")
             next_version = json_parser.GorgonJsonParser(v2)
@@ -179,6 +181,7 @@ class Builder(object):
                     abilities=differences.abilities.values(),
                     skills=differences.skills.values(),
                     powers=differences.powers.values(),
+                    recipes=differences.recipes.values(),
                     changes=changes)
                 fd.write(html(lambda x:changes_page)(self))
 

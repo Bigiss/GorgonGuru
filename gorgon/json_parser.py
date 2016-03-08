@@ -281,7 +281,7 @@ class GorgonJsonParser(object):
             # Werewolf Bite attacks have a 50% chance to deal 12 extra damage
             flat_chance, flat_bonus = re.search("([0-9]+)% chance to deal \+([0-9]+)(?:(?: direct)? health)? damage",
                                                 mod).groups()
-            flat_bonus = int(flat_bonus) / 100.0
+            flat_bonus = int(flat_bonus)
             flat_chance = int(flat_chance) / 100.0
         except AttributeError:
             pass
@@ -528,6 +528,9 @@ class GorgonJsonParser(object):
             for key in recipe_data:
                 self.recipe_properties.add(key)
 
+    def GetRecipe(self, id_, default=None):
+        return self.recipes_alias.get(id_, default)
+
     def _ParseResultEffect(self, effect):
         """Parses a recipe ResultEffects.
 
@@ -611,10 +614,12 @@ class GorgonJsonParser(object):
         new_items = dict([(id_, self.GetItem(id_)) for id_ in self.items if id_ not in other.items])
         new_powers = dict([(id_, self.GetPower(id_)) for id_ in self.powers if id_ not in other.powers])
         new_abilities = dict([(id_, self.GetAbility(id_)) for id_ in self.abilities if id_ not in other.abilities])
+        new_recipes = dict([(id_, self.GetRecipe(id_)) for id_ in self.recipes if id_ not in other.recipes])
         additions = GorgonJsonParser()
         additions.items = new_items
         additions.powers = new_powers
         additions.abilities = new_abilities
+        additions.recipes = new_recipes
 
         changes = {
             "items": {},

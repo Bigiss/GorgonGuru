@@ -28,6 +28,7 @@
         { title: "%% <span class=\"label label-danger\">BETA</span>" },
         { title: "aDPS <span class=\"label label-danger\">BETA</span>" },
         { title: "MDMG <span class=\"label label-danger\">BETA</span>" },
+        { title: "ADPP <span class=\"label label-danger\">BETA</span>" },
         { title: "% mods <span class=\"label label-danger\">BETA</span>" },
         { title: "+flat mods <span class=\"label label-danger\">BETA</span>" },
         { title: "DESC", contentPadding: "mmmmmmmmmmmmmmmmmmmmmmmmmmmm" },
@@ -43,7 +44,7 @@
 
 % for ability_ in abilities:
 <%
-    ability, mDAM, aDAM, aDAMpct, MDAM, pct_mods, flat_mods = ability_
+    ability, mDAM, aDAM, aDAMpct, MDAM, pct_mods, flat_mods, aDPP = ability_
     damage = ability.damage or "-"
     power = ability.power_cost or "-"
     cooldown = str(ability.cooldown) or "-"
@@ -59,7 +60,7 @@
     flat_mods = u"+".join(flat_mods)
     icon_img = ability.RenderIcon(hidden=True, height=32, width=32)
 %>
-    ["${ability.skill | myescape}", ${ability.level | myescape}, "${icon_img|myescape} ${ability.name|myescape}", "${damage|myescape}", "${power|myescape}", "${cooldown|myescape}", "${mDAM}", "${aDAM}", "${aDAMpct}", "${aDAMdps}", "${MDAM}", "${pct_mods|myescape}", "${flat_mods|myescape}", "${ability.description|myescape}" ],
+    ["${ability.skill | myescape}", ${ability.level | myescape}, "${icon_img|myescape} ${ability.name|myescape}", "${damage|myescape}", "${power|myescape}", "${cooldown|myescape}", "${mDAM}", "${aDAM}", "${aDAMpct}", "${aDAMdps}", "${MDAM}", "${aDPP}", "${pct_mods|myescape}", "${flat_mods|myescape}", "${ability.description|myescape}" ],
 % endfor
   ];
 </script>

@@ -3,6 +3,18 @@
   <p class="lead">A website to browse most of the data in <a href="#">Project: Gorgon</a>'s publicy available data.</p>
 </div>
 <h1>What's new?</h1>
+<h2>2016-03-08</h2>
+<p>All data has been updated to the game version of March 8th (249).
+  <h3>Additions</h3>
+  <ul>
+    <li>The abilities table now has an aDPP column (average Damage per Power) to show </li>
+  </ul>
+  <h3>Changes</h3>
+  <ul>
+    <li>Damage calculations should be much more accurate (unless Citan changed the damage formula in this patch!)</li>
+  </ul>
+</p>
+
 <h2>2016-02-07</h2>
 <p>All data has been updated to the game version of February 2nd.
   <h3>Additions</h3>

@@ -154,32 +154,78 @@
         "Zone": "Serbule",
         "Location": "Serbule Keep Entrance"
     },
-    "Dummy Name": {
+    "Lamashu": {
         "Sells": {
-            "Item1": {
-                "Price": 0
+            "Handsaw": {
+                "Price": 250
+            },
+            "Nails1": {
+                "Price": 15
+            },
+            "Nails2": {
+                "Price": 60
             }
         },
         "Buys": {
-            "KEYWORD": {}
+            "LeatherRoll": {},
+            "Skin": {},
+            "Wood": {},
+            "Tannin": {},
+            "Furniture": {}
         },
         "Likes": {
-            "KEYWORD": {}
+            "Fashionable,SLOT:Feet": {},
+            "WinterCourtArmor,SLOT:Gloves": {},
+            "Fashionable,SLOT:Feet": {}
         },
         "Loves": {
-            "KEYWORD": {}
+            "MagicOil": {},
+            "ITEM:Onyx": {}
         },
-        "MoneyPool": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        "Zone": "Serbule",
-        "Location": "Serbule",
-        "BeastSpeak": true,
+        "MoneyPool": [0, 0, 0, 0, 0, 10000, 10000, 20000, 35000, 0, 0],
+        "MaxPurchase": [0, 0, 0, 0, 0, 0, 0, 0, 743, 0, 0],
+        "Zone": "Kur Mountains",
+        "Location": "North",
+        "BeastSpeak": false,
         "Trains": {
-            "Skill": {
-                "Ability": {
-                    "Price": 0,
+            "Endurance": {
+                "StakeTheHeart1": {
+                    "Price": 2755,
+                    "Favor": 0
+                },
+                "StakeTheHeart2": {
+                    "Price": 8455,
+                    "Favor": 0
+                },
+                "StakeTheHeart3": {
+                    "Price": 13680,
                     "Favor": 0
                 }
+            },
+            "Carpentry": {
+                "RECIPE:StorageCrate1": {
+                    "Price": 1615,
+                    "Favor": 0
+                },
+                "RECIPE:StorageCrate2": {
+                    "Price": 2565,
+                    "Favor": 0
+                },
+                "RECIPE:StorageCrate3": {
+                    "Price": 4465,
+                    "Favor": 0
+                },
+                "RECIPE:StorageCrate4": {
+                    "Price": 6840,
+                    "Favor": 0
+                }
+            }
+        },
+        "Unlocks": {
+            "Endurance": {
+                "Price": 19000,
+                "MinLevel": 51,
+                "MaxLevel": 60
             }
         }
     },
