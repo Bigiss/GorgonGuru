@@ -59,7 +59,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="${home_location}">GorgonEye <span class="label label-danger">BETA</span></a>
+          <a class="navbar-brand" href="${home_location}">GorgonEye <span class="label label-info">GAMMA</span></a>
         </div>
 <%
     combat_skills = sorted([s for s in parser.skills.values() if s.combat and not s.parents], key=lambda x:x.name)
@@ -122,6 +122,7 @@
             <li><a href="${abilities_location}">Abilities</a></li>
             <li><a href="${powers_location}">Mods</a></li>
             <li><a href="${recipes_location}">Recipes</a></li>
+            <li><a href="${simulator_location}">Build simulator <span class="label label-danger">ALPHA</span></a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" title="Explore changes for every update">
                     Updates <span class="caret"></span>

@@ -18,7 +18,7 @@ parser.add_argument('--dry', action="store_true",
                     help="Don't write anything, just try generating.")
 parser.add_argument('--console', action="store_true",
                     help="Spawn an IPython console after parsing. For easier debugging.")
-parser.add_argument('--assets', default="index,items,powers,skills,abilities,recipes,tooltips,changes,itemkeys",
+parser.add_argument('--assets', default="index,items,powers,skills,abilities,recipes,tooltips,changes,itemkeys,builder",
                     help="Which assets to rebuild.")
 args = parser.parse_args()
 args.assets = args.assets.split(",")
@@ -75,7 +75,13 @@ if __name__ == "__main__":
         if not args.dry and "tooltips" in args.assets:
             reporter.DumpItems(os.path.join(args.version_output_directory, "items/"))
 
+        if not args.dry and "builder" in args.assets:
+            Output("simulator.html", reporter.BuilderReport())
+            Output("builder.js", reporter.BuilderJavascriptReport())
+            Output("generated_powers.js", reporter.GeneratedPowersReport())
+
+
 
     except Exception:
-        import pdb; pdb.post_mortem(sys.exc_info()[2])
+        # import pdb; pdb.post_mortem(sys.exc_info()[2])
         raise

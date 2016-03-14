@@ -21,6 +21,7 @@ def html(func):
             powers_location="/powers.html",
             recipes_location="/recipes.html",
             abilities_location="/abilities.html",
+            simulator_location="/simulator.html",
             parser=builder.parser,
             lastupdate=datetime.datetime.now().strftime("%Y-%m-%d"),
             version_pairs=builder.FindVersionPairs())
@@ -184,6 +185,16 @@ class Builder(object):
                     recipes=differences.recipes.values(),
                     changes=changes)
                 fd.write(html(lambda x:changes_page)(self))
+
+    @html
+    def BuilderReport(self):
+        return self.Template("templates/simulator_page.mako").render()
+
+    def GeneratedPowersReport(self):
+        return self.Template("templates/generated_powers.mako").render(powers=self.parser.powers)
+
+    def BuilderJavascriptReport(self):
+        return self.Template("templates/builder.js").render()
 
     def FindVersionPairs(self):
         root, versions, _ = os.walk(self.parser.data_directory).next()
