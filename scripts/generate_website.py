@@ -72,16 +72,19 @@ if __name__ == "__main__":
         if "recipes" in args.assets:
             Output("recipes.html", reporter.RecipesReport())
 
-        if "builder" in args.assets:
-            Output("generated_powers.json", reporter.GeneratedModsReport())
-
         if not args.dry and "skills" in args.assets:
             reporter.DumpSkills(os.path.join(args.version_output_directory, "skills/"))
 
         if not args.dry and "tooltips" in args.assets:
             reporter.DumpItems(os.path.join(args.version_output_directory, "items/"))
 
+        if not args.dry and "builder" in args.assets:
+            Output("simulator.html", reporter.BuilderReport())
+            Output("builder.js", reporter.BuilderJavascriptReport())
+            Output("generated_powers.js", reporter.GeneratedPowersReport())
+
+
 
     except Exception:
-        import pdb; pdb.post_mortem(sys.exc_info()[2])
+        # import pdb; pdb.post_mortem(sys.exc_info()[2])
         raise
