@@ -1,5 +1,6 @@
 import argparse
 import codecs
+import json
 import logging
 import os
 import sys
@@ -18,7 +19,9 @@ parser.add_argument('--dry', action="store_true",
                     help="Don't write anything, just try generating.")
 parser.add_argument('--console', action="store_true",
                     help="Spawn an IPython console after parsing. For easier debugging.")
-parser.add_argument('--assets', default="index,items,powers,skills,abilities,recipes,tooltips,changes,itemkeys",
+parser.add_argument('--assets',
+                    default=("index,items,powers,skills,abilities,recipes,"
+                             "tooltips,changes,itemkeys,builder"),
                     help="Which assets to rebuild.")
 args = parser.parse_args()
 args.assets = args.assets.split(",")
@@ -68,6 +71,9 @@ if __name__ == "__main__":
 
         if "recipes" in args.assets:
             Output("recipes.html", reporter.RecipesReport())
+
+        if "builder" in args.assets:
+            Output("generated_powers.json", reporter.GeneratedModsReport())
 
         if not args.dry and "skills" in args.assets:
             reporter.DumpSkills(os.path.join(args.version_output_directory, "skills/"))

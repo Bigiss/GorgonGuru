@@ -348,7 +348,7 @@ class GorgonJsonParser(object):
         for skill in self.skills.values():
             if skill.parents:
                 for parent in skill.parents:
-                    parent_skill = self.GetSkills(parent)
+                    parent_skill = self.GetSkill(parent)
                     if not parent_skill:
                         logging.error("Unable to find parent skill %s of %s", parent, skill.name)
                         continue
@@ -359,14 +359,14 @@ class GorgonJsonParser(object):
                 grant_ability = reward_dict.get("Ability")
                 grant_ability = self.GetAbility(grant_ability, grant_ability)
                 skill_bonus = reward_dict.get("BonusToSkill")
-                skill_bonus = self.GetSkills(skill_bonus, skill_bonus)
+                skill_bonus = self.GetSkill(skill_bonus, skill_bonus)
                 recipe_bonus = reward_dict.get("Recipe")
                 recipe_bonus = self.GetRecipe(recipe_bonus, recipe_bonus)
                 note_bonus = reward_dict.get("Notes")
                 rewards[level] = filter(None, [grant_ability, skill_bonus, recipe_bonus, note_bonus])
             skill.rewards = rewards
 
-    def GetSkills(self, id_, default=None):
+    def GetSkill(self, id_, default=None):
         return self.skills_alias.get(id_, default)
 
     def _FindAbilityDamage(self, ability):
@@ -483,7 +483,7 @@ class GorgonJsonParser(object):
 
             iconid = recipe_data.get("IconId")
             skill = recipe_data.get("Skill")
-            skill = self.GetSkills(skill, skill)
+            skill = self.GetSkill(skill, skill)
             skill_level_req = recipe_data.get("SkillLevelReq")
             try:
                 skill_level_req = int(skill_level_req)
@@ -580,7 +580,7 @@ class GorgonJsonParser(object):
 
     def LinkRecipesToSkills(self):
         for recipe in self.recipes.values():
-            recipe.skill = self.GetSkills(recipe.skill, recipe.skill)
+            recipe.skill = self.GetSkill(recipe.skill, recipe.skill)
 
     def GetRecipe(self, id_, default=None):
         return self.recipes_alias.get(id_, default)
@@ -615,11 +615,13 @@ class GorgonJsonParser(object):
         new_powers = dict([(id_, self.GetPower(id_)) for id_ in self.powers if id_ not in other.powers])
         new_abilities = dict([(id_, self.GetAbility(id_)) for id_ in self.abilities if id_ not in other.abilities])
         new_recipes = dict([(id_, self.GetRecipe(id_)) for id_ in self.recipes if id_ not in other.recipes])
+        new_skills = dict([(id_, self.GetSkill(id_)) for id_ in self.skills if id_ not in other.skills])
         additions = GorgonJsonParser()
         additions.items = new_items
         additions.powers = new_powers
         additions.abilities = new_abilities
         additions.recipes = new_recipes
+        additions.skills = new_skills
 
         changes = {
             "items": {},

@@ -185,6 +185,10 @@ class Builder(object):
                     changes=changes)
                 fd.write(html(lambda x:changes_page)(self))
 
+    def GeneratedModsReport(self):
+        return self.Template("templates/generated_powers.mako").render(
+            powers=self.parser.powers)
+
     def FindVersionPairs(self):
         root, versions, _ = os.walk(self.parser.data_directory).next()
         versions = sorted(filter(lambda x:re.match("v[0-9]+", x), versions))

@@ -3,6 +3,19 @@
     <div class="alert alert-warning"><strong>THIS SECTION IS IN BETA!</strong> Not all changes are detected yet.</div>
 <h2>Additions</h2>
 
+% if skills:
+<h3>New skills</h3>
+  <table class="compact table table-striped table-bordered">
+    <thead>
+      <tr><td>SKILL</td><td>Description</td>
+    </thead>
+    <tbody>
+%   for skill in skills:
+      <tr><td><a href="/skills/${skill.id}.html">${skill.name}</a></td><td>${skill.description}</td></tr>
+%   endfor
+    </tbody>
+  </table>
+% endif
 % if abilities:
 <h3>New abilities</h3>
 <%include file="abilities_table_simple.mako"/>
