@@ -1,0 +1,1368 @@
+{
+	"MAX_HEALTH": {
+		"Label": "Max Health"
+	},
+	"CUR_HEALTH": {
+		"Label": "Current Health"
+	},
+	"COMBAT_REGEN_HEALTH_MOD": {
+		"Label": "Health Regen (In-Combat) %"
+	},
+	"NONCOMBAT_REGEN_HEALTH_MOD": {
+		"Label": "Health Regen %"
+	},
+	"COMBAT_REGEN_HEALTH_DELTA": {
+		"Label": "In-Combat Health Regen"
+	},
+	"NONCOMBAT_REGEN_HEALTH_DELTA": {
+		"Label": "Health Regeneration"
+	},
+	"MAX_POWER": {
+		"Label": "Max Power"
+	},
+	"CUR_POWER": {
+		"Label": "Current Power"
+	},
+	"COMBAT_REGEN_POWER_MOD": {
+		"Label": "Power Regen (In-Combat) %"
+	},
+	"NONCOMBAT_REGEN_POWER_MOD": {
+		"Label": "Power Regen %"
+	},
+	"COMBAT_REGEN_POWER_DELTA": {
+		"Label": "In-Combat Power Regen"
+	},
+	"NONCOMBAT_REGEN_POWER_DELTA": {
+		"Label": "Power Regeneration"
+	},
+	"MAX_ARMOR": {
+		"Label": "Max Armor"
+	},
+	"CUR_ARMOR": {
+		"Label": "Current Armor"
+	},
+	"COMBAT_REGEN_ARMOR_MOD": {
+		"Label": "Armor Regen (In-Combat) %"
+	},
+	"NONCOMBAT_REGEN_ARMOR_MOD": {
+		"Label": "Armor Regen %"
+	},
+	"COMBAT_REGEN_ARMOR_DELTA": {
+		"Label": "In-Combat Armor Regen"
+	},
+	"NONCOMBAT_REGEN_ARMOR_DELTA": {
+		"Label": "Armor Regeneration"
+	},
+	"MAX_RAGE": {
+		"Label": "Max Rage (!?)"
+	},
+	"CUR_RAGE": {
+		"Label": "Current Rage (!?)"
+	},
+	"MAX_INVENTORY_SIZE": {
+		"Label": "Inventory Slots"
+	},
+	"MAX_STABLE_SLOTS": {
+		"Label": "Stable Slots"
+	},
+	"MAX_PERSONAL_VAULT_SIZE": {
+		"Label": "Global Vault Slots"
+	},
+	"MOVEMENT_SPEED": {
+		"Label": "Movement Speed"
+	},
+	"SPRINT_BOOST": {
+		"Label": "Sprint Speed Boost"
+	},
+	"NONCOMBAT_SPRINT_BOOST": {
+		"Label": "Sprint Boost (Out of Combat)"
+	},
+	"SPRINT_COST_PER_SEC": {
+		"Label": "Sprint Cost (Per Second)"
+	},
+	"FALLING_DAMAGE_MOD": {
+		"Label": "Falling Damage %"
+	},
+	"ABILITY_COST_DELTA": {
+		"Label": "Ability Cost"
+	},
+	"RAGE_INFLICT_MOD": {
+		"Label": "Monster Rage Boost %"
+	},
+	"TAUNT_MOD": {
+		"Label": "Taunt Boost %"
+	},
+	"IS_VULNERABLE": {
+		"Label": "Combat Vulnerability"
+	},
+	"COMBAT_XP_EARNED_MOD": {
+		"Label": "Combat XP Boost %"
+	},
+	"CRAFTING_XP_EARNED_MOD": {
+		"Label": "Crafting XP Boost %"
+	},
+	"DETECTABLE_RANGE_DELTA": {
+		"Label": "Detected-By-Monsters Range",
+		"Id": 227
+	},
+	"DETECTABLE_RANGE_MOD": {
+		"Label": "Detected-By-Monsters Range %",
+		"Id": 228
+	},
+	"GRAVITY": {
+		"Label": "Falling Speed"
+	},
+	"JUMP_BURST": {
+		"Label": "Jump Power"
+	},
+	"JUMP_BURST_DURATION": {
+		"Label": "Jump Duration"
+	},
+	"FLY_FASTSPEED_BOOST": {
+		"Label": "Flying Speed"
+	},
+	"FLY_COST_PER_SEC": {
+		"Label": "Flying Cost (Per Second)"
+	},
+	"SWIM_FASTSPEED_BOOST": {
+		"Label": "Swimming Speed Boost"
+	},
+	"SWIM_SPEED_MOD": {
+		"Label": "Swimming Speed %"
+	},
+	"MAX_BREATH": {
+		"Label": "Max Underwater Held Breath"
+	},
+	"CUR_BREATH": {
+		"Label": "Cur Underwater Held Breath (?!!)"
+	},
+	"BREATH_COST_PER_SEC": {
+		"Label": "Breath Reduction Underwater"
+	},
+	"UNDERWATER_GRAVITY": {
+		"Label": "Sinking Speed Underwater"
+	},
+	"CURSE_RANDOM_DIRECTION": {
+		"Label": "Chance of Changing Direction When Disoriented %"
+	},
+	"VULN_UNIVERSAL_DIRECT": {
+		"Label": "Vulnerability to Direct Damage %"
+	},
+	"VULN_UNIVERSAL_INDIRECT": {
+		"Label": "Vulnerability to Indirect Damage %"
+	},
+	"VULN_CRUSHING": {
+		"Label": "Vulnerability to Crushing %"
+	},
+	"VULN_SLASHING": {
+		"Label": "Vulnerability to Slashing %"
+	},
+	"VULN_PIERCING": {
+		"Label": "Vulnerability to Piercing %"
+	},
+	"VULN_FIRE": {
+		"Label": "Vulnerability to Fire %"
+	},
+	"VULN_COLD": {
+		"Label": "Vulnerability to Cold %"
+	},
+	"VULN_PSYCHIC": {
+		"Label": "Vulnerability to Psychic %"
+	},
+	"VULN_POISON": {
+		"Label": "Vulnerability to Poison %"
+	},
+	"VULN_NATURE": {
+		"Label": "Vulnerability to Nature %"
+	},
+	"VULN_FUNGUS": {
+		"Label": "Vulnerability to Fungus %"
+	},
+	"VULN_SEAFOOD": {
+		"Label": "Vulnerability to Seafood %"
+	},
+	"VULN_ELECTRICITY": {
+		"Label": "Vulnerability to Electricity %"
+	},
+	"VULN_ACID": {
+		"Label": "Vulnerability to Acid %"
+	},
+	"VULN_DARKNESS": {
+		"Label": "Vulnerability to Darkness %"
+	},
+	"VULN_TRAUMA": {
+		"Label": "Vulnerability to Trauma %"
+	},
+	"VULN_CRUSHING_DIRECT": {
+		"Label": "Vulnerability to Direct Crushing %"
+	},
+	"VULN_SLASHING_DIRECT": {
+		"Label": "Vulnerability to Direct Slashing %"
+	},
+	"VULN_PIERCING_DIRECT": {
+		"Label": "Vulnerability to Direct Piercing %"
+	},
+	"VULN_FIRE_DIRECT": {
+		"Label": "Vulnerability to Direct Fire %"
+	},
+	"VULN_COLD_DIRECT": {
+		"Label": "Vulnerability to Direct Cold %"
+	},
+	"VULN_PSYCHIC_DIRECT": {
+		"Label": "Vulnerability to Direct Psychic %"
+	},
+	"VULN_POISON_DIRECT": {
+		"Label": "Vulnerability to Direct Poison %"
+	},
+	"VULN_NATURE_DIRECT": {
+		"Label": "Vulnerability to Direct Nature %"
+	},
+	"VULN_FUNGUS_DIRECT": {
+		"Label": "Vulnerability to Direct Fungus %"
+	},
+	"VULN_SEAFOOD_DIRECT": {
+		"Label": "Vulnerability to Direct Seafood %"
+	},
+	"VULN_ELECTRICITY_DIRECT": {
+		"Label": "Vulnerability to Direct Electricity %"
+	},
+	"VULN_ACID_DIRECT": {
+		"Label": "Vulnerability to Direct Acid %"
+	},
+	"VULN_DARKNESS_DIRECT": {
+		"Label": "Vulnerability to Direct Darkness %"
+	},
+	"VULN_TRAUMA_DIRECT": {
+		"Label": "Vulnerability to Direct Trauma %"
+	},
+	"VULN_CRUSHING_INDIRECT": {
+		"Label": "Vulnerability to Indirect Crushing %"
+	},
+	"VULN_SLASHING_INDIRECT": {
+		"Label": "Vulnerability to Indirect Slashing %"
+	},
+	"VULN_PIERCING_INDIRECT": {
+		"Label": "Vulnerability to Indirect Piercing %"
+	},
+	"VULN_FIRE_INDIRECT": {
+		"Label": "Vulnerability to Indirect Fire %"
+	},
+	"VULN_COLD_INDIRECT": {
+		"Label": "Vulnerability to Indirect Cold %"
+	},
+	"VULN_PSYCHIC_INDIRECT": {
+		"Label": "Vulnerability to Indirect Psychic %"
+	},
+	"VULN_POISON_INDIRECT": {
+		"Label": "Vulnerability to Indirect Poison %"
+	},
+	"VULN_NATURE_INDIRECT": {
+		"Label": "Vulnerability to Indirect Nature %"
+	},
+	"VULN_FUNGUS_INDIRECT": {
+		"Label": "Vulnerability to Indirect Fungus %"
+	},
+	"VULN_SEAFOOD_INDIRECT": {
+		"Label": "Vulnerability to Indirect Seafood %"
+	},
+	"VULN_ELECTRICITY_INDIRECT": {
+		"Label": "Vulnerability to Indirect Electricity %"
+	},
+	"VULN_ACID_INDIRECT": {
+		"Label": "Vulnerability to Indirect Acid %"
+	},
+	"VULN_DARKNESS_INDIRECT": {
+		"Label": "Vulnerability to Indirect Darkness %"
+	},
+	"VULN_TRAUMA_INDIRECT": {
+		"Label": "Vulnerability to Indirect Trauma %"
+	},
+	"MITIGATION_UNIVERSAL": {
+		"Label": "Universal Damage Reduction"
+	},
+	"MITIGATION_CRUSHING": {
+		"Label": "Crushing Damage Reduction"
+	},
+	"MITIGATION_SLASHING": {
+		"Label": "Slashing Damage Reduction"
+	},
+	"MITIGATION_PIERCING": {
+		"Label": "Piercing Damage Reduction"
+	},
+	"MITIGATION_FIRE": {
+		"Label": "Fire Damage Reduction"
+	},
+	"MITIGATION_COLD": {
+		"Label": "Cold Damage Reduction"
+	},
+	"MITIGATION_PSYCHIC": {
+		"Label": "Psychic Damage Reduction"
+	},
+	"MITIGATION_POISON": {
+		"Label": "Poison Damage Reduction"
+	},
+	"MITIGATION_NATURE": {
+		"Label": "Nature Damage Reduction"
+	},
+	"MITIGATION_FUNGUS": {
+		"Label": "Fungus Damage Reduction"
+	},
+	"MITIGATION_SEAFOOD": {
+		"Label": "Seafood Damage Reduction"
+	},
+	"MITIGATION_ELECTRICITY": {
+		"Label": "Electricity Damage Reduction"
+	},
+	"MITIGATION_ACID": {
+		"Label": "Acid Damage Reduction"
+	},
+	"MITIGATION_DARKNESS": {
+		"Label": "Darkness Damage Reduction"
+	},
+	"MITIGATION_TRAUMA": {
+		"Label": "Trauma Damage Reduction"
+	},
+	"MITIGATION_UNIVERSAL_DIRECT": {
+		"Label": "Universal Direct Damage Reduction"
+	},
+	"MITIGATION_CRUSHING_DIRECT": {
+		"Label": "Direct Crushing Damage Reduction"
+	},
+	"MITIGATION_SLASHING_DIRECT": {
+		"Label": "Direct Slashing Damage Reduction"
+	},
+	"MITIGATION_PIERCING_DIRECT": {
+		"Label": "Direct Piercing Damage Reduction"
+	},
+	"MITIGATION_FIRE_DIRECT": {
+		"Label": "Direct Fire Damage Reduction"
+	},
+	"MITIGATION_COLD_DIRECT": {
+		"Label": "Direct Cold Damage Reduction"
+	},
+	"MITIGATION_PSYCHIC_DIRECT": {
+		"Label": "Direct Psychic Damage Reduction"
+	},
+	"MITIGATION_POISON_DIRECT": {
+		"Label": "Direct Poison Damage Reduction"
+	},
+	"MITIGATION_NATURE_DIRECT": {
+		"Label": "Direct Nature Damage Reduction"
+	},
+	"MITIGATION_FUNGUS_DIRECT": {
+		"Label": "Direct Fungus Damage Reduction"
+	},
+	"MITIGATION_SEAFOOD_DIRECT": {
+		"Label": "Direct Seafood Damage Reduction"
+	},
+	"MITIGATION_ELECTRICITY_DIRECT": {
+		"Label": "Direct Electricity Damage Reduction"
+	},
+	"MITIGATION_ACID_DIRECT": {
+		"Label": "Direct Acid Damage Reduction"
+	},
+	"MITIGATION_DARKNESS_DIRECT": {
+		"Label": "Direct Darkness Damage Reduction"
+	},
+	"MITIGATION_TRAUMA_DIRECT": {
+		"Label": "Direct Trauma Damage Reduction"
+	},
+	"MITIGATION_UNIVERSAL_INDIRECT": {
+		"Label": "Universal Indirect Damage Reduction"
+	},
+	"MITIGATION_CRUSHING_INDIRECT": {
+		"Label": "Indirect Crushing Damage Reduction"
+	},
+	"MITIGATION_SLASHING_INDIRECT": {
+		"Label": "Indirect Slashing Damage Reduction"
+	},
+	"MITIGATION_PIERCING_INDIRECT": {
+		"Label": "Indirect Piercing Damage Reduction"
+	},
+	"MITIGATION_FIRE_INDIRECT": {
+		"Label": "Indirect Fire Damage Reduction"
+	},
+	"MITIGATION_COLD_INDIRECT": {
+		"Label": "Indirect Cold Damage Reduction"
+	},
+	"MITIGATION_PSYCHIC_INDIRECT": {
+		"Label": "Indirect Psychic Damage Reduction"
+	},
+	"MITIGATION_POISON_INDIRECT": {
+		"Label": "Indirect Poison Damage Reduction"
+	},
+	"MITIGATION_NATURE_INDIRECT": {
+		"Label": "Indirect Nature Damage Reduction"
+	},
+	"MITIGATION_FUNGUS_INDIRECT": {
+		"Label": "Mitigation vs. Indirect Fungus"
+	},
+	"MITIGATION_SEAFOOD_INDIRECT": {
+		"Label": "Indirect Seafood Damage Reduction"
+	},
+	"MITIGATION_ELECTRICITY_INDIRECT": {
+		"Label": "Indirect Electricity Damage Reduction"
+	},
+	"MITIGATION_ACID_INDIRECT": {
+		"Label": "Indirect Acid Damage Reduction"
+	},
+	"MITIGATION_DARKNESS_INDIRECT": {
+		"Label": "Indirect Darkness Damage Reduction"
+	},
+	"MITIGATION_TRAUMA_INDIRECT": {
+		"Label": "Indirect Trauma Damage Reduction"
+	},
+	"BOOST_UNIVERSAL": {
+		"Label": "All Damage"
+	},
+	"BOOST_CRUSHING": {
+		"Label": "Crushing Damage"
+	},
+	"BOOST_SLASHING": {
+		"Label": "Slashing Damage"
+	},
+	"BOOST_PIERCING": {
+		"Label": "Piercing Damage"
+	},
+	"BOOST_FIRE": {
+		"Label": "Fire Damage"
+	},
+	"BOOST_COLD": {
+		"Label": "Cold Damage"
+	},
+	"BOOST_PSYCHIC": {
+		"Label": "Psychic Damage"
+	},
+	"BOOST_POISON": {
+		"Label": "Poison Damage"
+	},
+	"BOOST_NATURE": {
+		"Label": "Nature Damage"
+	},
+	"BOOST_FUNGUS": {
+		"Label": "Fungus Damage"
+	},
+	"BOOST_SEAFOOD": {
+		"Label": "Seafood Damage"
+	},
+	"BOOST_ELECTRICITY": {
+		"Label": "Electricity Damage"
+	},
+	"BOOST_ACID": {
+		"Label": "Acid Damage"
+	},
+	"BOOST_DARKNESS": {
+		"Label": "Darkness Damage"
+	},
+	"BOOST_TRAUMA": {
+		"Label": "Trauma Damage"
+	},
+	"BOOST_UNIVERSAL_DIRECT": {
+		"Label": "All Direct Damage"
+	},
+	"BOOST_CRUSHING_DIRECT": {
+		"Label": "Direct Crushing Damage"
+	},
+	"BOOST_SLASHING_DIRECT": {
+		"Label": "Direct Slashing Damage"
+	},
+	"BOOST_PIERCING_DIRECT": {
+		"Label": "Direct Piercing Damage"
+	},
+	"BOOST_FIRE_DIRECT": {
+		"Label": "Direct Fire Damage"
+	},
+	"BOOST_COLD_DIRECT": {
+		"Label": "Direct Cold Damage"
+	},
+	"BOOST_PSYCHIC_DIRECT": {
+		"Label": "Direct Psychic Damage"
+	},
+	"BOOST_POISON_DIRECT": {
+		"Label": "Direct Poison Damage"
+	},
+	"BOOST_NATURE_DIRECT": {
+		"Label": "Direct Nature Damage"
+	},
+	"BOOST_FUNGUS_DIRECT": {
+		"Label": "Direct Fungus Damage"
+	},
+	"BOOST_SEAFOOD_DIRECT": {
+		"Label": "Direct Seafood Damage"
+	},
+	"BOOST_ELECTRICITY_DIRECT": {
+		"Label": "Direct Electricity Damage"
+	},
+	"BOOST_ACID_DIRECT": {
+		"Label": "Direct Acid Damage"
+	},
+	"BOOST_DARKNESS_DIRECT": {
+		"Label": "Direct Darkness Damage"
+	},
+	"BOOST_TRAUMA_DIRECT": {
+		"Label": "Direct Trauma Damage"
+	},
+	"BOOST_UNIVERSAL_INDIRECT": {
+		"Label": "All Indirect Damage"
+	},
+	"BOOST_CRUSHING_INDIRECT": {
+		"Label": "Indirect Crushing Damage"
+	},
+	"BOOST_SLASHING_INDIRECT": {
+		"Label": "Indirect Slashing Damage"
+	},
+	"BOOST_PIERCING_INDIRECT": {
+		"Label": "Indirect Piercing Damage"
+	},
+	"BOOST_FIRE_INDIRECT": {
+		"Label": "Indirect Fire Damage"
+	},
+	"BOOST_COLD_INDIRECT": {
+		"Label": "Indirect Cold Damage"
+	},
+	"BOOST_PSYCHIC_INDIRECT": {
+		"Label": "Indirect Psychic Damage"
+	},
+	"BOOST_POISON_INDIRECT": {
+		"Label": "Indirect Poison Damage"
+	},
+	"BOOST_NATURE_INDIRECT": {
+		"Label": "Indirect Nature Damage"
+	},
+	"BOOST_FUNGUS_INDIRECT": {
+		"Label": "Indirect Fungus Damage"
+	},
+	"BOOST_SEAFOOD_INDIRECT": {
+		"Label": "Indirect Seafood Damage"
+	},
+	"BOOST_ELECTRICITY_INDIRECT": {
+		"Label": "Indirect Electricity Damage"
+	},
+	"BOOST_ACID_INDIRECT": {
+		"Label": "Indirect Acid Damage"
+	},
+	"BOOST_DARKNESS_INDIRECT": {
+		"Label": "Indirect Darkness Damage"
+	},
+	"BOOST_TRAUMA_INDIRECT": {
+		"Label": "Indirect Trauma Damage"
+	},
+	"BOOST_SKILL_UNARMED": {
+		"Label": "Unarmed Damage"
+	},
+	"BOOST_SKILL_SWORD": {
+		"Label": "Sword Damage"
+	},
+	"BOOST_SKILL_FIREMAGIC": {
+		"Label": "Fire-Magic Damage"
+	},
+	"BOOST_SKILL_WEREWOLF": {
+		"Label": "Werewolf Damage"
+	},
+	"BOOST_ABILITY_PACKATTACK": {
+		"Label": "Pack-Attack Ability Damage"
+	},
+	"BOOST_SKILL_PSYCHOLOGY": {
+		"Label": "Psychology Damage"
+	},
+	"BOOST_SKILL_STAFF": {
+		"Label": "Staff Damage"
+	},
+	"BOOST_SKILL_NECROMANCY": {
+		"Label": "Necromancy Damage"
+	},
+	"BOOST_WEREWOLFMETABOLISM_HEALTHREGEN": {
+		"Label": "Beast Metabolism Health Regen"
+	},
+	"BOOST_EFFECT_FIREDOT": {
+		"Label": "Ongoing Burn Damage"
+	},
+	"BOOST_SKILL_MENTALISM": {
+		"Label": "Mentalism Damage"
+	},
+	"BOOST_SKILL_BATTLECHEMISTRY": {
+		"Label": "Battle Chemistry Damage"
+	},
+	"BOOST_SKILL_MISCANIMAL": {
+		"Label": "Misc Animal Skill Damage"
+	},
+	"BOOST_SKILL_ICEMAGIC": {
+		"Label": "Ice Magic Damage"
+	},
+	"BOOST_SKILL_GIANTBAT": {
+		"Label": "Giant Bat Damage"
+	},
+	"BOOST_FIRSTAID_RECEIVER": {
+		"Label": "Healing From First Aid"
+	},
+	"BOOST_FIRSTAID_SENDER": {
+		"Label": "Your First Aid Healing"
+	},
+	"BOOST_TOUGHHOOF_RECEIVER": {
+		"Label": "Tough Hoof Activation Healing"
+	},
+	"BOOST_CHEWCUD_SENDER": {
+		"Label": "Chew Cud Healing"
+	},
+	"BOOST_DRUIDAURAHEAL_SENDER": {
+		"Label": "Healing Sanctuary Boost"
+	},
+	"BOOST_ARMORREPAIR_RECEIVER": {
+		"Label": "Patch Armor Efficacy"
+	},
+	"BOOST_MISCPLAYERHEAL_RECEIVER": {
+		"Label": "Healing from Player Abilities"
+	},
+	"BOOST_BATTLECHEMISTRYHEAL_SENDER": {
+		"Label": "Battle Chemistry Healing"
+	},
+	"BOOST_BATTLECHEMISTRYGOLEMHEAL1_SENDER": {
+		"Label": "Battle Chemistry Golem Healing"
+	},
+	"BOOST_BATTLECHEMISTRYGOLEMHEAL2_SENDER": {
+		"Label": "Battle Chemistry Golem Healing"
+	},
+	"BOOST_BATTLECHEMISTRYGOLEMHEAL3_SENDER": {
+		"Label": "Battle Chemistry Golem Healing"
+	},
+	"BOOST_BATTLECHEMISTRYGOLEMHEAL4_SENDER": {
+		"Label": "Battle Chemistry Golem Healing"
+	},
+	"BOOST_BATTLECHEMISTRYGOLEMHEAL5_SENDER": {
+		"Label": "Battle Chemistry Golem Healing"
+	},
+	"BOOST_GARDENING_GROWSPEED": {
+		"Label": "Garden Plant Growth Speed"
+	},
+	"BOOST_RECONSTRUCT_SENDER": {
+		"Label": "Reconstruct Healing"
+	},
+	"BOOST_REVITALIZE_SENDER": {
+		"Label": "Revitalize Healing"
+	},
+	"BOOST_PEPTALK_SENDER": {
+		"Label": "Psychology Healing"
+	},
+	"BOOST_SKILL_ARCHERY": {
+		"Label": "Archery Damage"
+	},
+	"LOOT_BOOST_CHANCE_JUNK": {
+		"Label": "Chance of Junk Loot %"
+	},
+	"LOOT_BOOST_CHANCE_UNCOMMON": {
+		"Label": "Chance of Uncommon Loot %"
+	},
+	"LOOT_BOOST_CHANCE_RARE": {
+		"Label": "Chance of Rare Loot %"
+	},
+	"LOOT_BOOST_CHANCE_EPIC": {
+		"Label": "Chance of Epic Loot %"
+	},
+	"LOOT_BOOST_CHANCE_EXCEPTIONAL": {
+		"Label": "Chance of Exceptional Loot %"
+	},
+	"LOOT_BOOST_CHANCE_LEGENDARY": {
+		"Label": "Chance of Legendary Loot %"
+	},
+	"MOD_CALLIGRAPHY_DURATION": {
+		"Label": "Calligraphy Effect Duration %"
+	},
+	"MOD_MEDITATION_DURATION": {
+		"Label": "Meditation Effect Duration %"
+	},
+	"LOOT_SKILL_GUIDANCE1": {
+		"Label": "Loot-Focus Skill"
+	},
+	"LOOT_SKILL_GUIDANCE2": {
+		"Label": "Loot-Focus Skill 2"
+	},
+	"BOOST_AURAHEAL_RECEIVER": {
+		"Label": "Healing from Sigils"
+	},
+	"BOOST_UNDEADHEAL_SENDER": {
+		"Label": "Targeted Undead Healing"
+	},
+	"BOOST_UNDEADHEALALL_SENDER": {
+		"Label": "Bulk Undead Healing"
+	},
+	"BOOST_HEALTHWAVE_SENDER": {
+		"Label": "Psi Health Wave Healing"
+	},
+	"BOOST_ARMORWAVE_SENDER": {
+		"Label": "Psi Armor Wave Healing"
+	},
+	"BOOST_POWERWAVE_SENDER": {
+		"Label": "Psi Power Wave Healing"
+	},
+	"BOOST_REINFORCE_SENDER": {
+		"Label": "Reinforce Armor Healing"
+	},
+	"BOOST_STABLEDPETHEAL_SENDER": {
+		"Label": "Animal Handling Healing"
+	},
+	"BOOST_DRUIDHEAL_SENDER": {
+		"Label": "Regrowth Healing"
+	},
+	"BOOST_SKILL_COW": {
+		"Label": "Cow Skill Damage"
+	},
+	"BOOST_SKILL_PIG": {
+		"Label": "Pig Skill Damage"
+	},
+	"BOOST_SKILL_DEER": {
+		"Label": "Deer Skill Damage"
+	},
+	"BOOST_SKILL_SPIDER": {
+		"Label": "Spider Skill Damage"
+	},
+	"BOOST_SKILL_SHIELD": {
+		"Label": "Shield Mastery Damage"
+	},
+	"BOOST_SKILL_HAMMER": {
+		"Label": "Hammer Damage"
+	},
+	"BOOST_SKILL_DRUID": {
+		"Label": "Druid Skill Damage"
+	},
+	"STAFF_ARMOR_AUTOHEAL": {
+		"Label": "Staff Armor-Heal Amount"
+	},
+	"MAX_CLEANLINESS": {
+		"Label": "Max Cleanliness"
+	},
+	"HYGIENE_BONUS": {
+		"Label": "Hygiene"
+	},
+	"MAX_COMMUNITY": {
+		"Label": "Max Community"
+	},
+	"INDEPENDENCE_BONUS": {
+		"Label": "Independence"
+	},
+	"MAX_PEACEABLENESS": {
+		"Label": "Max Peaceableness"
+	},
+	"RIGHTEOUSNESS_BONUS": {
+		"Label": "Righteousness"
+	},
+	"EVASION_CHANCE": {
+		"Label": "Chance to Evade Attacks %"
+	},
+	"EVASION_CHANCE_PROJECTILE": {
+		"Label": "Chance to Evade Projectiles %"
+	},
+	"EVASION_CHANCE_MELEE": {
+		"Label": "Chance to Evade Melee %"
+	},
+	"EVASION_CHANCE_BURST": {
+		"Label": "Chance to Evade Bursts %"
+	},
+	"MISS_CHANCE": {
+		"Label": "Chance to Miss Attacks %"
+	},
+	"MISS_CHANCE_PROJECTILE": {
+		"Label": "Chance to Miss Projectiles %"
+	},
+	"MISS_CHANCE_MELEE": {
+		"Label": "Chance to Miss Melee %"
+	},
+	"MISS_CHANCE_BURST": {
+		"Label": "Chance to Miss Bursts %"
+	},
+	"ACCURACY_BOOST": {
+		"Label": "Accuracy Boost %",
+		"DisplayType": "AsDoubleTimes100"
+	},
+	"ACCURACY_BOOST_PROJECTILE": {
+		"Label": "Projectile Accuracy Boost %",
+		"DisplayType": "AsDoubleTimes100"
+	},
+	"ACCURACY_BOOST_MELEE": {
+		"Label": "Melee Accuracy Boost%",
+		"DisplayType": "AsDoubleTimes100"
+	},
+	"ACCURACY_BOOST_BURST": {
+		"Label": "Burst Accuracy Boost%",
+		"DisplayType": "AsDoubleTimes100"
+	},
+	"MOD_SKILL_UNARMED": {
+		"Label": "Unarmed Damage %"
+	},
+	"MOD_SKILL_SWORD": {
+		"Label": "Sword Base Damage %"
+	},
+	"MOD_SKILL_FIREMAGIC": {
+		"Label": "Fire-Magic Base Damage %"
+	},
+	"MOD_SKILL_WEREWOLF": {
+		"Label": "Werewolf Base Damage %"
+	},
+	"MOD_SKILL_PSYCHOLOGY": {
+		"Label": "Psychology Base Damage %"
+	},
+	"MOD_SKILL_STAFF": {
+		"Label": "Staff Base Damage %"
+	},
+	"MOD_SKILL_NECROMANCY": {
+		"Label": "Necromancy Base Damage %"
+	},
+	"MOD_SKILL_MENTALISM": {
+		"Label": "Mentalism Base Damage %"
+	},
+	"MOD_SKILL_BATTLECHEMISTRY": {
+		"Label": "Battle Chemistry Base Damage %"
+	},
+	"MOD_SKILL_MISCANIMAL": {
+		"Label": "Misc Animal Skill Base Damage %"
+	},
+	"MOD_SKILL_ARCHERY": {
+		"Label": "Archery Base Damage %"
+	},
+	"MOD_SKILL_COW": {
+		"Label": "Cow Skill Base Damage %"
+	},
+	"MOD_SKILL_PIG": {
+		"Label": "Pig Skill Base Damage %"
+	},
+	"MOD_SKILL_DEER": {
+		"Label": "Deer Skill Base Damage %"
+	},
+	"MOD_SKILL_SPIDER": {
+		"Label": "Spider Skill Base Damage %"
+	},
+	"MOD_SKILL_SHIELD": {
+		"Label": "Shield Mastery Base Damage %"
+	},
+	"MOD_SKILL_HAMMER": {
+		"Label": "Hammer Base Damage %"
+	},
+	"MOD_SKILL_DRUID": {
+		"Label": "Druid Skill Base Damage %"
+	},
+	"MOD_SKILL_ICEMAGIC": {
+		"Label": "Ice Magic Base Damage %"
+	},
+	"MOD_SKILL_GIANTBAT": {
+		"Label": "Giant Bat Base Damage %"
+	},
+	"MOD_UNIVERSAL": {
+		"Label": "All Damage %"
+	},
+	"MOD_CRUSHING": {
+		"Label": "Crushing Damage %"
+	},
+	"MOD_SLASHING": {
+		"Label": "Slashing Damage %"
+	},
+	"MOD_PIERCING": {
+		"Label": "Piercing Damage %"
+	},
+	"MOD_FIRE": {
+		"Label": "Fire Damage %"
+	},
+	"MOD_COLD": {
+		"Label": "Cold Damage %"
+	},
+	"MOD_PSYCHIC": {
+		"Label": "Psychic Damage %"
+	},
+	"MOD_POISON": {
+		"Label": "Poison Damage %"
+	},
+	"MOD_NATURE": {
+		"Label": "Nature Damage %"
+	},
+	"MOD_FUNGUS": {
+		"Label": "Fungus Damage %"
+	},
+	"MOD_SEAFOOD": {
+		"Label": "Seafood Damage %"
+	},
+	"MOD_ELECTRICITY": {
+		"Label": "Electricity Damage %"
+	},
+	"MOD_ACID": {
+		"Label": "Acid Damage %"
+	},
+	"MOD_DARKNESS": {
+		"Label": "Darkness Damage %"
+	},
+	"MOD_TRAUMA": {
+		"Label": "Trauma Damage %"
+	},
+	"MOD_UNIVERSAL_DIRECT": {
+		"Label": "All Direct Damage %"
+	},
+	"MOD_CRUSHING_DIRECT": {
+		"Label": "Direct Crushing Damage %"
+	},
+	"MOD_SLASHING_DIRECT": {
+		"Label": "Direct Slashing Damage %"
+	},
+	"MOD_PIERCING_DIRECT": {
+		"Label": "Direct Piercing Damage %"
+	},
+	"MOD_FIRE_DIRECT": {
+		"Label": "Direct Fire Damage %"
+	},
+	"MOD_COLD_DIRECT": {
+		"Label": "Direct Cold Damage %"
+	},
+	"MOD_PSYCHIC_DIRECT": {
+		"Label": "Direct Psychic Damage %"
+	},
+	"MOD_POISON_DIRECT": {
+		"Label": "Direct Poison Damage %"
+	},
+	"MOD_NATURE_DIRECT": {
+		"Label": "Direct Nature Damage %"
+	},
+	"MOD_FUNGUS_DIRECT": {
+		"Label": "Direct Fungus Damage %"
+	},
+	"MOD_SEAFOOD_DIRECT": {
+		"Label": "Direct Seafood Damage %"
+	},
+	"MOD_ELECTRICITY_DIRECT": {
+		"Label": "Direct Electricity Damage %"
+	},
+	"MOD_ACID_DIRECT": {
+		"Label": "Direct Acid Damage %"
+	},
+	"MOD_DARKNESS_DIRECT": {
+		"Label": "Direct Darkness Damage %"
+	},
+	"MOD_TRAUMA_DIRECT": {
+		"Label": "Direct Trauma Damage %"
+	},
+	"MOD_UNIVERSAL_INDIRECT": {
+		"Label": "All Indirect Damage %"
+	},
+	"MOD_CRUSHING_INDIRECT": {
+		"Label": "Indirect Crushing Damage %"
+	},
+	"MOD_SLASHING_INDIRECT": {
+		"Label": "Indirect Slashing Damage %"
+	},
+	"MOD_PIERCING_INDIRECT": {
+		"Label": "Indirect Piercing Damage %"
+	},
+	"MOD_FIRE_INDIRECT": {
+		"Label": "Indirect Fire Damage %"
+	},
+	"MOD_COLD_INDIRECT": {
+		"Label": "Indirect Cold Damage %"
+	},
+	"MOD_PSYCHIC_INDIRECT": {
+		"Label": "Indirect Psychic Damage %"
+	},
+	"MOD_POISON_INDIRECT": {
+		"Label": "Indirect Poison Damage %"
+	},
+	"MOD_NATURE_INDIRECT": {
+		"Label": "Indirect Nature Damage %"
+	},
+	"MOD_FUNGUS_INDIRECT": {
+		"Label": "Indirect Fungus Damage %"
+	},
+	"MOD_SEAFOOD_INDIRECT": {
+		"Label": "Indirect Seafood Damage %"
+	},
+	"MOD_ELECTRICITY_INDIRECT": {
+		"Label": "Indirect Electricity Damage %"
+	},
+	"MOD_ACID_INDIRECT": {
+		"Label": "Indirect Acid Damage %"
+	},
+	"MOD_DARKNESS_INDIRECT": {
+		"Label": "Indirect Darkness Damage %"
+	},
+	"MOD_TRAUMA_INDIRECT": {
+		"Label": "Indirect Trauma Damage %"
+	},
+	"STUN_HISTORY_OVERALL": {
+		"Label": "STUN_HISTORY_OVERALL"
+	},
+	"STUN_HISTORY_EQUIPMENT": {
+		"Label": "STUN_HISTORY_EQUIPMENT"
+	},
+	"STUN_HISTORY_BARRAGE": {
+		"Label": "STUN_HISTORY_BARRAGE"
+	},
+	"STUN_HISTORY_COBRASTRIKE": {
+		"Label": "STUN_HISTORY_COBRASTRIKE"
+	},
+	"STUN_HISTORY_POUNCINGRAKE": {
+		"Label": "STUN_HISTORY_POUNCINGRAKE"
+	},
+	"STUN_HISTORY_PLAYERDEER": {
+		"Label": "STUN_HISTORY_DEER"
+	},
+	"STUN_HISTORY_PLAYERCOW": {
+		"Label": "STUN_HISTORY_COW"
+	},
+	"STUN_HISTORY_PLAYERPIG": {
+		"Label": "STUN_HISTORY_PIG"
+	},
+	"STUN_HISTORY_PLAYERSPIDER": {
+		"Label": "STUN_HISTORY_PLAYERSPIDER"
+	},
+	"STUN_HISTORY_HEADCRACKER": {
+		"Label": "STUN_HISTORY_HEADCRACKER"
+	},
+	"STUN_HISTORY_PETSKELETON": {
+		"Label": "STUN_HISTORY_PETSKELETON"
+	},
+	"STUN_HISTORY_BOSS": {
+		"Label": "STUN_HISTORY_BOSS"
+	},
+	"STUN_HISTORY_BOSS2": {
+		"Label": "STUN_HISTORY_BOSS2"
+	},
+	"STUN_HISTORY_RHINO": {
+		"Label": "STUN_HISTORY_RHINO"
+	},
+	"STUN_HISTORY_MANTIS": {
+		"Label": "STUN_HISTORY_MANTIS"
+	},
+	"STUN_HISTORY_ALIENDOG": {
+		"Label": "STUN_HISTORY_ALIENDOG"
+	},
+	"STUN_HISTORY_WOLF": {
+		"Label": "STUN_HISTORY_WOLF"
+	},
+	"STUN_HISTORY_SKELETON": {
+		"Label": "STUN_HISTORY_SKELETON"
+	},
+	"STUN_HISTORY_ELECTRICITY": {
+		"Label": "STUN_HISTORY_ELECTRICITY"
+	},
+	"STUN_HISTORY_SPIDER": {
+		"Label": "STUN_HISTORY_SPIDER"
+	},
+	"STUN_HISTORY_SHIELD": {
+		"Label": "STUN_HISTORY_SHIELD"
+	},
+	"STUN_HISTORY_TROLL": {
+		"Label": "STUN_HISTORY_TROLL"
+	},
+	"STUN_HISTORY_OGRE": {
+		"Label": "STUN_HISTORY_OGRE"
+	},
+	"STUN_HISTORY_FAE": {
+		"Label": "STUN_HISTORY_FAE"
+	},
+	"STUN_HISTORY_OFFBALANCE": {
+		"Label": "STUN_HISTORY_OFFBALANCE"
+	},
+	"STUN_HISTORY_KNOCKDOWN": {
+		"Label": "STUN_HISTORY_KNOCKDOWN"
+	},
+	"MEZ_HISTORY_PSYCHOLOGY": {
+		"Label": "MEZ_HISTORY_PSYCHOLOGY"
+	},
+	"MEZ_HISTORY_ARCHERY": {
+		"Label": "MEZ_HISTORY_ARCHERY"
+	},
+	"MEZ_HISTORY_EQUIPMENT": {
+		"Label": "MEZ_HISTORY_EQUIPMENT"
+	},
+	"MEZ_HISTORY_ICEMAGIC": {
+		"Label": "MEZ_HISTORY_ICEMAGIC"
+	},
+	"FEAR_HISTORY_PSYCHOLOGY": {
+		"Label": "FEAR_HISTORY_PSYCHOLOGY"
+	},
+	"FEAR_HISTORY_PIG": {
+		"Label": "FEAR_HISTORY_PIG"
+	},
+	"FEAR_HISTORY_SPIDER": {
+		"Label": "FEAR_HISTORY_SPIDER"
+	},
+	"FEAR_HISTORY_NECROMANCY": {
+		"Label": "FEAR_HISTORY_NECROMANCY"
+	},
+	"FEAR_HISTORY_EQUIPMENT": {
+		"Label": "FEAR_HISTORY_EQUIPMENT"
+	},
+	"MOD_CRITICAL_HIT_DAMAGE": {
+		"Label": "Archery/Mentalism Critical Hit %"
+	},
+	"AVOID_DEATH_CHANCE": {
+		"Label": "Chance to Miraculously Avoid Death %"
+	},
+	"MAX_SIDEBAR_SLOTS": {
+		"Label": "Sidebar Slots"
+	},
+	"MAX_MAP_PINS_PER_AREA": {
+		"Label": "Max Map Pins (per map)"
+	},
+	"MAX_MAP_PIN_ICONS": {
+		"Label": "Available Map Pin Icons"
+	},
+	"AVOID_DEATH_RESETTIME": {
+		"Label": "Seconds Before Death-Avoidance Resets"
+	},
+	"CUR_FATIGUE": {
+		"Label": "Fatigue"
+	},
+	"STRINGED_INSTRUMENT_COMPETENCE": {
+		"Label": "Stringed Instrument Skill"
+	},
+	"WIND_INSTRUMENT_COMPETENCE": {
+		"Label": "Brass/Wind Instrument Skill"
+	},
+	"PERCUSSION_INSTRUMENT_COMPETENCE": {
+		"Label": "Percussion Instrument Skill"
+	},
+	"INTERPRETIVE_DANCE_COMPETENCE": {
+		"Label": "Interpretive Dance Skill"
+	},
+	"HOWL_COMPETENCE": {
+		"Label": "Howl Skill"
+	},
+	"DEATH_RESPAWN_RANDOM_RANGE": {
+		"Label": "(internal)",
+		"IsHidden": true
+	},
+	"BASICATTACK_COST_DELTA": {
+		"Label": "Basic-Attack Power Cost"
+	},
+	"FIREMAGIC_COST_DELTA": {
+		"Label": "Fire Magic Ability Power Cost"
+	},
+	"NECROMANCY_COST_DELTA": {
+		"Label": "Necromancy Ability Power Cost"
+	},
+	"HAMMER_COST_DELTA": {
+		"Label": "Hammer Ability Power Cost"
+	},
+	"MELEEATTACK_COST_DELTA": {
+		"Label": "Melee Attack Power Cost"
+	},
+	"ICEMAGIC_COST_DELTA": {
+		"Label": "Ice Magic Ability Power Cost"
+	},
+	"FIREMAGIC_COST_MOD": {
+		"Label": "Fire Magic Ability Power Cost %"
+	},
+	"NECROMANCY_COST_MOD": {
+		"Label": "Necromancy Ability Power Cost %"
+	},
+	"ABILITY_RESETTIME_BASICATTACK_DELTA": {
+		"Label": "Basic Attack Reuse Time"
+	},
+	"ABILITY_RESETTIME_MAJORHEAL_DELTA": {
+		"Label": "Major Healing Reuse Time"
+	},
+	"ABILITY_RESETTIME_DECAPITATE_DELTA": {
+		"Label": "Decapitate Reuse Time"
+	},
+	"ABILITY_RESETTIME_POUNDTOSLAG_DELTA": {
+		"Label": "Pound To Slag Reuse Time"
+	},
+	"ABILITY_RESETTIME_COSMICSTRIKE_DELTA": {
+		"Label": "Cosmic Strike Reuse Time"
+	},
+	"ABILITY_RESETTIME_PEPTALK_DELTA": {
+		"Label": "Pep Talk Reuse Time"
+	},
+	"ABILITY_RESETTIME_RECONSTRUCT_DELTA": {
+		"Label": "Reconstruct Reuse Time"
+	},
+	"ABILITY_RESETTIME_FIRSTAID_DELTA": {
+		"Label": "First Aid Reuse Time"
+	},
+	"ABILITY_RESETTIME_REGROWTH_DELTA": {
+		"Label": "Regrowth Reuse Time"
+	},
+	"ABILITY_RESETTIME_BODYSLAM_DELTA": {
+		"Label": "Bodyslam Reuse Time"
+	},
+	"ABILITY_RESETTIME_WEBTRAP_DELTA": {
+		"Label": "Web Trap Reuse Time"
+	},
+	"ABILITY_RESETTIME_DELTA": {
+		"Label": "Ability Reuse Time"
+	},
+	"HIGH_PEACEABLENESS_XP_EARNED_MOD": {
+		"Label": "Bonus XP When Feeling Peaceable %"
+	},
+	"LOW_COMMUNITY_XP_EARNED_MOD": {
+		"Label": "XP Penalty When Feeling Lonely %"
+	},
+	"HIGH_CLEANLINESS_XP_EARNED_MOD": {
+		"Label": "Bonus XP When Feeling Clean %"
+	},
+	"IGNORE_CHANCE_STUN": {
+		"Label": "Chance to Ignore Stuns %"
+	},
+	"IGNORE_CHANCE_KNOCKBACK": {
+		"Label": "Chance to Ignore Knockbacks %"
+	},
+	"IGNORE_CHANCE_MEZ": {
+		"Label": "Chance to Ignore Mesmerizing Effects %"
+	},
+	"IGNORE_CHANCE_FEAR": {
+		"Label": "Chance to Ignore Fear Effects %"
+	},
+	"IGNORE_CHANCE_SLOW": {
+		"Label": "Chance to Ignore Slowing Effects %"
+	},
+	"NPC_MOD_TRAININGCOST": {
+		"Label": "Cost of NPC Training %"
+	},
+	"NPC_MOD_MAXSALESVALUE": {
+		"Label": "NPC Max Purchase Caps %"
+	},
+	"NPC_MOD_FAVORFROMGIFTS": {
+		"Label": "Favor Earned From Gifts %"
+	},
+	"NPC_MOD_FAVORFROMHANGOUTS": {
+		"Label": "Favor Earned From Hanging Out %"
+	},
+	"MAX_ACTIVE_WORKORDERS": {
+		"Label": "Maximum Active Work Orders"
+	},
+	"WORKORDER_COIN_REWARD_MOD": {
+		"Label": "Cash Payout From Work Orders"
+	},
+	"ARMOR_MITIGATION_BYPASS_DELTA": {
+		"Label": "Armor Mitigation Bypassed"
+	},
+	"MAX_METABOLISM": {
+		"Label": "Max Metabolism",
+		"Id": 5771
+	},
+	"CUR_METABOLISM": {
+		"Label": "Current Metabolism",
+		"Id": 5772
+	},
+	"COMBAT_REGEN_METABOLISM_MOD": {
+		"Label": "Metabolism Regen (In-Combat) %",
+		"Id": 5773
+	},
+	"NONCOMBAT_REGEN_METABOLISM_MOD": {
+		"Label": "Metabolism Regen (Out-of-Combat) %",
+		"Id": 5774
+	},
+	"COMBAT_REGEN_METABOLISM_DELTA": {
+		"Label": "Metabolism Regen (In-Combat)",
+		"Id": 5775
+	},
+	"NONCOMBAT_REGEN_METABOLISM_DELTA": {
+		"Label": "Metabolism Regen (Out-of-Combat)",
+		"Id": 5776
+	},
+	"MAX_HYDRATION": {
+		"Label": "Max Hydration",
+		"Id": 6302
+	},
+	"HYDRATION_DROP_CHANCE": {
+		"Label": "Dehydration Rate",
+		"Id": 6303
+	},
+	"COMBAT_REFRESH_HEALTH_DELTA": {
+		"Label": "Bonus Health from Combat Refresh",
+		"Id": 6611
+	},
+	"COMBAT_REFRESH_ARMOR_DELTA": {
+		"Label": "Bonus Armor from Combat Refresh",
+		"Id": 6612
+	},
+	"COMBAT_REFRESH_POWER_DELTA": {
+		"Label": "Bonus Power from Combat Refresh",
+		"Id": 6613
+	},
+	"COMBAT_REFRESH_METABOLISM_DELTA": {
+		"Label": "Bonus Metabolism from Combat Refresh",
+		"Id": 6614
+	},
+	"CUR_COMBAT_WISDOM": {
+		"Label": "Current Combat Wisdom Points",
+		"Id": 6321
+	},
+	"LOOT_CHANCE_EXTRA_FISH": {
+		"Label": "Chance to Catch Bonus Fish %",
+		"Id": 6821,
+		"Tooltip": "When you catch a fish, this is the chance you catch a bonus extra fish"
+	},
+	"RECIPE_CHANCE_EXTRA_FISHSCALES": {
+		"Label": "Chance to Scrape Extra Fish Scales %",
+		"Id": 6822,
+		"Tooltip": "When you filet a fish, this is the chance that you get bonus fish scales"
+	},
+	"LOOT_CHANCE_EXTRA_MUSHROOMS": {
+		"Label": "Chance to Forage Extra Mushrooms %",
+		"Id": 6823,
+		"Tooltip": "When you forage a mushroom, this is the chance that you'll forage up a second mushroom at the same time"
+	},
+	"LOOT_CHANCE_EXTRA_BASICWOOD": {
+		"Label": "Chance to Chop Extra Wood %",
+		"Id": 6824,
+		"Tooltip": "When you chop lumber, this is the chance that you'll get an extra piece of wood"
+	},
+	"LOOT_CHANCE_EXTRA_PERFECTWOOD": {
+		"Label": "Chance to Chop Extra Perfect Wood %",
+		"Id": 6825,
+		"Tooltip": "When you chop lumber, this is the chance that you'll get an extra piece of perfect wood"
+	},
+	"LOOT_CHANCE_EXTRA_SEEDS": {
+		"Label": "Chance to Forage Extra Seeds %",
+		"Id": 6826,
+		"Tooltip": "When you collect seeds in the wilderness, this is the chance that you'll get an extra seed"
+	},
+	"LOOT_CHANCE_EXTRA_FRUIT": {
+		"Label": "Chance to Forage Extra Fruit %",
+		"Id": 6827,
+		"Tooltip": "When you forage fruit, sap, bark, juice and similar items from nature, this is the chance that you'll get an extra item"
+	},
+	"RECIPE_CHANCE_EXTRA_PERFECTCOTTON": {
+		"Label": "Chance to Card Extra Perfect Cotton %",
+		"Id": 6828,
+		"Tooltip": "When you card cotton, this is the chance that you get extra Perfect Cotton"
+	},
+	"LOOT_CHANCE_BONUS_GARDENING": {
+		"Label": "Chance for Garden Bonus %",
+		"Id": 6829,
+		"Tooltip": "When you grow your own plants and flowers, this is the chance that you'll receive an extra item when you harvest it"
+	},
+	"SHOP_LOG_DAYSKEPT": {
+		"Label": "Days of Shop Logs Retained",
+		"Id": 6851,
+		"Tooltip": "When you hire a shopkeeper to sell your wares, this is the number of days' worth of shop logs available for you to review"
+	},
+	"SHOP_HIRING_COSTMOD": {
+		"Label": "Shopkeeper Hiring Cost %",
+		"Id": 6852,
+		"Tooltip": "When you hire a shopkeeper to sell your wares, the cost per day is multiplied by this amount"
+	},
+	"SHOP_HIRING_NUMFREE": {
+		"Label": "Free Shopkeeper Days per Month",
+		"Id": 6853,
+		"Tooltip": "This is the number of times you can \"hire\" a shopkeeper for free in any given 30-day period"
+	},
+	"SHOP_HIRING_MAX_PREPAY_DAYS": {
+		"Label": "Max Pre-Paid Shop Days",
+		"Id": 6854,
+		"Tooltip": "When you hire a shopkeeper to sell your wares, you can pre-pay up to this many days in advance"
+	},
+	"SHOP_INVENTORY_SIZE_DELTA": {
+		"Label": "Shop Inventory Size",
+		"Id": 6855,
+		"Tooltip": "When you hire a shopkeeper to sell your wares, that shopkeeper's base inventory size is augmented by this number"
+	},
+	"MAIL_SHOP_COSTMOD": {
+		"Label": "Cost to Send Shop Note %",
+		"Id": 6856,
+		"Tooltip": "The cost of sending a shop-note is multiplied by this amount"
+	},
+	"MAIL_SHOP_NUMFREE": {
+		"Label": "Number of Free Shop-Notes Weekly",
+		"Id": 6857,
+		"Tooltip": "Sending a shop-note normally costs money, but this stat indicates how many notes will be free for you to send"
+	},
+	"UNKNOWN": {
+		"Label": "??? Unknown"
+	}
+}
