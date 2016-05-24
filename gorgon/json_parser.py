@@ -627,6 +627,7 @@ class GorgonJsonParser(object):
             "items": {},
             "abilities": {},
             "powers": {},
+            "recipes": {},
         }
 
         for item_id, item in self.items.iteritems():
@@ -652,5 +653,13 @@ class GorgonJsonParser(object):
             diffs = power.Differences(other_power)
             if diffs:
                 changes["powers"][power] = diffs
+
+        for recipe_id, recipe in self.recipes.iteritems():
+            other_recipe = other.GetRecipe(recipe_id)
+            if not other_recipe:
+                continue
+            diffs = recipe.Differences(other_recipe)
+            if diffs:
+                changes["recipes"][recipe] = diffs
 
         return additions, changes
