@@ -1,0 +1,16 @@
+setup.py
+gorgon/__init__.py
+gorgon/builder.py
+gorgon/calculator.py
+gorgon/data.py
+gorgon/json_parser.py
+gorgon/model.py
+gorgon/utils.py
+gorgon.egg-info/PKG-INFO
+gorgon.egg-info/SOURCES.txt
+gorgon.egg-info/dependency_links.txt
+gorgon.egg-info/requires.txt
+gorgon.egg-info/top_level.txt
+scripts/download_version.sh
+scripts/find_latest_version.sh
+scripts/generate_website.py

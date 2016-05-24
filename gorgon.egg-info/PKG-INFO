@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: gorgon
+Version: 0.1
+Summary: Gorgon MMO public JSON files parser.
+Home-page: https://dmnthia.github.io
+Author: Dementhia
+Author-email: UNKNOWN
+License: MIT
+Description: Just a few lines of code to parse some of Gorgon's JSON files and provide a better interface to the data.
+        
+        Written initially to have a personal damage calculator to gauge game mods.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python

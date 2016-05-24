@@ -52,8 +52,6 @@ class BaseGorgonObject(object):
 
 
 class Item(BaseGorgonObject, IconMixin):
-    """Base class for all Gorgon items."""
-
     def __init__(self, **kwargs):
         super(Item, self).__init__(**kwargs)
         self.effects = kwargs.get('effects', [])

@@ -154,4 +154,37 @@
 </div>
 % endif
 
+% if changes["recipes"]:
+<h3>Recipes changes</h3>
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <table class="changes display compact table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>Recipe</td>
+                    <td>Attribute</td>
+                    <td>Before</td>
+                    <td></td>
+                    <td>After</td>
+                </tr>
+            </thead>
+            <tbody>
+%   for recipe, recipe_changes in sorted(changes["recipes"].iteritems(), key=lambda x:(x[0].skill,x[0].name)):
+%     for attr, (before, after) in recipe_changes.iteritems():
+<%
+        if isinstance(before, list):
+            before = "<br/>".join([str(b) for b in before])
+        if isinstance(after, list):
+            after = "<br/>".join([str(a) for a in after])
+%>
+                <tr><td class="recipe-name">${recipe.name}</td><td class="attribute-name">${attr}</td><td>${before}</td><td class="arrows">&#x2192;</td><td>${after}</td></tr>
+%     endfor
+%   endfor
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+% endif
 </div>
