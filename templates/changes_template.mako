@@ -154,7 +154,7 @@
 </div>
 % endif
 
-% if changes["recipes"]:
+% if 0:
 <h3>Recipes changes</h3>
     <div class="row">
     <div class="col-md-2"></div>
